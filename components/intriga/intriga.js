@@ -1,7 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
+import localFont from "next/font/local"
 import Image from 'next/image'
-
 import styles from  '@/styles/sass/intro.module.sass'
+
+const fontAkira = localFont({ 
+    src: "../../fonts/AkiraExpanded-SuperBold.ttf"
+})
+
+const fontMonserratBold = localFont({ 
+    src: "../../fonts/Montserrat-Bold.ttf"
+})
+
+const fontPoppins = localFont({ 
+    src: "../../fonts/Poppins-Regular.ttf"
+})
+
+
+
 export default function Intraga() {
     let boolInit =  useRef(false)
     
@@ -93,29 +108,29 @@ export default function Intraga() {
                             <Image src='/assets/contador.png' className={styles.boxCinta} width='484' height='170' alt="Contador" />
                             <div className={styles.boxInfoContador}>
                                 <div className={styles.boxTime}>
-                                    <p>Días</p>
-                                    <h2>{days}</h2>
+                                    <p style={fontMonserratBold.style}>Días</p>
+                                    <h2 style={fontAkira.style}>{days}</h2>
                                 </div>
                                 <div className={styles.boxTime}>
-                                    <h2>:</h2>
+                                    <h2 style={fontAkira.style}>:</h2>
                                 </div>
                                 <div className={styles.boxTime}>
-                                    <p>Horas</p>
-                                    <h2>{hour}</h2>
+                                    <p style={fontMonserratBold.style}>Horas</p>
+                                    <h2 style={fontAkira.style}>{hour}</h2>
                                 </div>
                                 <div className={styles.boxTime}>
-                                    <h2>:</h2>
+                                    <h2 style={fontAkira.style}>:</h2>
                                 </div>
                                 <div className={styles.boxTime}>
-                                    <p>Minutos</p>
-                                    <h2>{minutes}</h2>
+                                    <p style={fontMonserratBold.style}>Minutos</p>
+                                    <h2 style={fontAkira.style}>{minutes}</h2>
                                 </div>
                                 <div className={styles.boxTime}>
-                                    <h2>:</h2>
+                                    <h2 style={fontAkira.style}>:</h2>
                                 </div>
                                 <div className={styles.boxTime}>
-                                    <p>Segundos</p>
-                                    <h2>{seconds}</h2>
+                                    <p style={fontMonserratBold.style}>Segundos</p>
+                                    <h2 style={fontAkira.style}>{seconds}</h2>
                                 </div>
                             </div>
                             <div className={`${styles.boxPaper} ${styles.pos1}`}>
@@ -132,7 +147,7 @@ export default function Intraga() {
                         </div>
                     </div>
                     <div className={styles.boxCNCH}>
-                        <h3>CNCH de Perú S.A. 20514584789</h3>
+                        <h3 style={fontPoppins.style}>CNCH de Perú S.A. 20514584789</h3>
                     </div>
                 </div>
             </div>
