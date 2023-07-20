@@ -1,7 +1,10 @@
 import Head from "next/head"
+import Script from 'next/script'
+
 import Header from './header'
 import Footer from './footer'
 export default function Layout({children,title='',description=''}) {
+     let GTM_ID = process.env.NEXT_PUBLIC_GTM
      return (
           <>
                <Head>
@@ -24,6 +27,16 @@ export default function Layout({children,title='',description=''}) {
                          http-equiv="Content-Security-Policy" 
                          content="default-src 'self'; img-src https://*; child-src 'none';" 
                     /> */}
+                    <Script src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`} />
+                    <Script id="google-analytics">
+                         {`
+                              window.dataLayer = window.dataLayer || [];
+                              function gtag(){dataLayer.push(arguments);}
+                              gtag('js', new Date());
+                    
+                              gtag('config', '${GTM_ID}');
+                         `}
+                    </Script>
                </Head>
                <Header />
                {children}
