@@ -192,10 +192,12 @@
                         right: -13rem
                         bottom: -11.35rem
                 .boxImgPronto
-                    // width: 694px
-                    width: 755px
-                    height: 240px
+                    width: 694px
+                    height: auto
                     object-fit: contain
+                    @media screen and (min-width: 992px)
+                        width: 755px
+                        height: 240px 
                 
         .boxCierre
             grid-column: 1 / -1
