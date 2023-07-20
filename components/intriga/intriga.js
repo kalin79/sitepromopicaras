@@ -116,7 +116,7 @@ export default function Intraga() {
                     </div>
                     <div className={styles.boxCierre}>
                         <div className={styles.cierreGrid}>
-                            <Image src='/assets/logo.svg' width='160' height='72' alt='Octogonos Picaras' />
+                            <Image src='/assets/logo2.svg' width='160' height='72' alt='Octogonos Picaras' />
                         </div>
                     </div>
                     <div className={styles.boxCNCH}>
