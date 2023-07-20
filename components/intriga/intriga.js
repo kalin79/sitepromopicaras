@@ -33,7 +33,7 @@ export default function Intraga() {
     useEffect( () => {
         if (!boolInit.current){
             boolInit.current = true
-            datetarget.current = new Date("2023-08-16")
+            datetarget.current = new Date("2023-09-16")
             // Milliseconds for the calculations
             aminute.current = asecond.current * 60
             ahour.current = aminute.current * 60
