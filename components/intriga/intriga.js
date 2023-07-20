@@ -66,8 +66,20 @@ export default function Intraga() {
                         <div className={styles.boxSubTitle}>
                             <Image src='/assets/empaque.png' width='596' height='63' alt="Junta tus Empaques" />
                         </div>
+                        <div className={styles.boxSubTitleMovil}>
+                            <Image src='/assets/empaque2.png' width='373' height='281' alt="Junta tus Empaques" />
+                        </div>
                         <div className={styles.boxPronto}>
                             <Image src='/assets/pronto.png' className={styles.boxImgPronto} width='755' height='240' alt="Muy pronto vas a comerte el mundo" />
+                            <div className={`${styles.boxPlaner} ${styles.pos1}`}>
+                                <Image src='/assets/plane1.png' width='452' height='242' alt="Avion 1" />
+                            </div>
+                            <div className={`${styles.boxPlaner} ${styles.pos2}`}>
+                                <Image src='/assets/plane2.png' width='339' height='278' alt="Avion 2" />
+                            </div>
+                        </div>
+                        <div className={styles.boxProntoMovil}>
+                            <Image src='/assets/prontomovil.png' className={styles.boxImgPronto} width='236' height='64' alt="Muy pronto vas a comerte el mundo" />
                             <div className={`${styles.boxPlaner} ${styles.pos1}`}>
                                 <Image src='/assets/plane1.png' width='452' height='242' alt="Avion 1" />
                             </div>
