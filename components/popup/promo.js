@@ -47,7 +47,7 @@ function Promo() {
             
             setTimeout(() => {
                 verPopup()
-            }, 1000)
+            }, 3000)
         }
     },[]) 
 
