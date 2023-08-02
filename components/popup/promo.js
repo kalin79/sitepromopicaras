@@ -74,10 +74,10 @@ function Promo() {
                     <div className={styles.centerCarrusel}>
                         <Slider {...settings}>
                             <div className={styles.pasosPromo}>
-                                <Image src='/assets/f12.png' width='351' height='212' alt="Close PopUp"/>
+                                <Image src='/assets/f13.png' width='351' height='212' alt="Close PopUp"/>
                             </div>
                             <div className={styles.pasosPromo}>
-                                <Image src='/assets/f22.png' width='351' height='212' alt="Close PopUp"/>
+                                <Image src='/assets/f23.png' width='351' height='212' alt="Close PopUp"/>
                             </div>
                             <div className={styles.pasosPromo}>
                                 <Image src='/assets/f32.png' width='351' height='212' alt="Close PopUp"/>

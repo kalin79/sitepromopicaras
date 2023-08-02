@@ -4,7 +4,7 @@ import '@/styles/sass/globals.sass'
 
 export default function App({ Component, pageProps }) {
     let GTM_ID = process.env.NEXT_PUBLIC_GTM
-    console.log(GTM_ID)
+    // console.log(GTM_ID)
     return (
         <>
             <Script 
