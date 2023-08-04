@@ -43,6 +43,17 @@ function Promo() {
         cssEase: "linear"
     }
 
+    const settingsTwo = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,    
+        autoplay: true,
+        autoplaySpeed: 5000,
+        cssEase: "linear"
+    }
+
 
     let boolInit =  useRef(false)
     useEffect( () => {
@@ -72,7 +83,41 @@ function Promo() {
                     <Image src='/assets/closeP.svg' width='24' height='24' alt="Close PopUp"/>
                 </button>
                 <div className={styles.viewPC}>
-                    <Image src='/assets/tambo2.png' width='680' height='383' alt="Close PopUp"/>
+                    <div className={styles.cabeceraP}>
+                        <Image src='/assets/fondoP2.png' width='1285' height='2833' alt="PopUp" />
+                    </div>
+                    <div className={styles.cabeceraF}>
+                        <Image src='/assets/fondoP2.png' width='1285' height='2833' alt="PopUp" />
+                    </div>
+                    <div className={styles.cabeceraTop}>
+                        <div className={styles.logoOctogonos}>
+                            <Image src='/assets/octagonosP.png' width='480' height='292' alt="PopUp" />
+                        </div>
+                        <div className={styles.logoTambo}>
+                            <Image src='/assets/tamboP.png' width='1160' height='780' alt="PopUp" />
+                        </div>
+                    </div>
+                    <div className={styles.centerCarrusel}>
+                        <Slider {...settingsTwo}>
+                            <div className={styles.pasosPromo}>
+                                <Image src='/assets/f13.png' width='351' height='212' alt="Close PopUp"/>
+                            </div>
+                            <div className={styles.pasosPromo}>
+                                <Image src='/assets/f23.png' width='351' height='212' alt="Close PopUp"/>
+                            </div>
+                            <div className={styles.pasosPromo}>
+                                <Image src='/assets/f32.png' width='351' height='212' alt="Close PopUp"/>
+                            </div>
+                            <div className={styles.pasosPromo}>
+                                <Image src='/assets/f42.png' width='351' height='212' alt="Close PopUp"/>
+                            </div>
+                        </Slider>
+                    </div>
+                    <div className={styles.boxLegal}>
+                        <p style={fontPoppins.style}> 
+                        Promociones válidas a nivel nacional del 01 de agosto del 2023 al 31 de agosto del 2023 y/o hasta agotar stock. Válido en tienda, app y en www.tambo.pe  No acumulable con otras promociones y/o autoliquidadles. Fotos referenciales. Premios: 10 canastas de productos Pícaras a 10 personas.
+                        </p>
+                    </div>
                 </div>
                 <div className={styles.viewMovil}>
                     <div className={styles.centerCarrusel}>

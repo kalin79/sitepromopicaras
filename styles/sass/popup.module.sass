@@ -48,8 +48,59 @@
                     height: 212px
     .viewPC
         display: none
+        border: 0px solid green
+        position: relative
+        height: 100%
+        overflow: hidden
+        border-radius: 10px
         @media screen and (min-width: 992px)
             display: block
+        .cabeceraTop
+            display: grid
+            grid-template-columns: repeat(4,1fr)
+            position: relative
+            .logoOctogonos
+                grid-column: 3 / -1
+                margin: 1rem 1rem 0 0
+                justify-self: end
+                img
+                    width: 120px
+                    height: auto
+            .logoTambo
+                grid-column: 1 / -1
+                margin-top: -.95rem
+                img
+                    width: 280px
+                    height: auto
+        .centerCarrusel
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 5.5rem
+            width: 90%
+            .pasosPromo
+                img
+                    margin: auto
+                    width: auto
+                    height: 250px
+        .cabeceraP,
+        .cabeceraF
+            position: absolute
+            top: 0
+            left: 0
+            height: 40vh
+            overflow: hidden
+            img
+                object-position: 0px -450px
+                object-fit: none
+                @media screen and (min-width: 1400px)
+                    object-position: 0px -415px
+        .cabeceraF
+            bottom: 0
+            top: auto
+            height: 50vh
+            img
+                object-position: 0px -746px
     .pageCenter
         width: 100%
         height: 100%
@@ -66,27 +117,29 @@
             margin: 0 auto
             text-align: center
             @media screen and (min-width: 992px)
-                width: 680px
-                height: 383px
+                width: 643px
+                height: 90vh
             .boxLegal
                 position: absolute
                 bottom: -0.5rem
                 left: 50%
                 transform: translateX(-50%)
                 width: 280px
-                display: block
                 @media screen and (min-width:992px)
-                    display: none
+                    width: 90%
                 p
                     font-size: 7px
                     color: white
                     text-align: left
+                    @media screen and (min-width:992px)
+                        text-align: center
             .closePopup
                 border: 0
                 background: 0
                 position: absolute
                 top: -.5rem
                 right: 1.5rem
+                z-index: 100
                 @media screen and (min-width: 992px)
                     top: -1rem
                     right: -1rem
