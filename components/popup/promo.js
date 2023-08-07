@@ -115,7 +115,7 @@ function Promo() {
                     </div>
                     <div className={styles.boxLegal}>
                         <p style={fontPoppins.style}> 
-                        Promociones válidas a nivel nacional del 01 de agosto del 2023 al 31 de agosto del 2023 y/o hasta agotar stock. Válido en tienda, app y en www.tambo.pe  No acumulable con otras promociones y/o autoliquidadles. Fotos referenciales. Premios: 10 canastas de productos Pícaras a 10 personas.
+                        Promociones válidas a nivel nacional del 15 de agosto del 2023 al 31 de agosto del 2023 y/o hasta agotar stock. Válido en tienda, app y en www.tambo.pe  No acumulable con otras promociones y/o autoliquidadles. Fotos referenciales. Premios: 10 canastas de productos Pícaras a 10 personas.
                         </p>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ function Promo() {
                 </div>
                 <div className={styles.boxLegal}>
                     <p style={fontPoppins.style}> 
-                    Promociones válidas a nivel nacional del 01 de agosto del 2023 al 31 de agosto del 2023 y/o hasta agotar stock. Válido en tienda, app y en www.tambo.pe  No acumulable con otras promociones y/o autoliquidadles. Fotos referenciales. Premios: 10 canastas de productos Pícaras a 10 personas.
+                    Promociones válidas a nivel nacional del 15 de agosto del 2023 al 31 de agosto del 2023 y/o hasta agotar stock. Válido en tienda, app y en www.tambo.pe  No acumulable con otras promociones y/o autoliquidadles. Fotos referenciales. Premios: 10 canastas de productos Pícaras a 10 personas.
                     </p>
                 </div>
             </div>
