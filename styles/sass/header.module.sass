@@ -1,0 +1,46 @@
+@import 'vars/colors'
+@import 'abstracts/mixins'
+
+.headerMain
+    position: relative
+    border: 0px solid green
+    width: 100%
+    height: 150px
+    .gridMain
+        position: relative
+        z-index: 11
+        display: grid
+        grid-template-columns: repeat(12,1fr)
+        gap: 1rem
+        padding-top: 1rem
+        .itemLeft
+            grid-column: 2 / span 2
+        .itemCenter
+            grid-column: 5 / span 4
+            &.navMain
+                display: flex
+                justify-content: flex-start
+                gap: 1rem
+                padding-top: .85rem
+                a
+                    text-decoration: none
+                    p
+                        font-size: 26px
+                        color: $marron
+                        text-transform: uppercase
+        .itemRight
+            grid-column: 11 / -1
+            &.octaganosNav
+                width: 140px
+                height: 85px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+    .fondoHeader
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 10

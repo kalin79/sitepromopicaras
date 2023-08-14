@@ -1,8 +1,48 @@
 @import 'vars/colors'
 @import 'abstracts/mixins'
-@import 'vars/fonts'
 
-.slick-dots 
+
+body
+    background: url('/assets/bg.png')
+    background-repeat: repeat
+    background-position: center 
+    width: 100%
+    min-height: 100vh
+    background-size: cover
+    overflow-x: hidden
+.slick-prev,
+.slick-next
+    &:before
+    &:before
+        content: '' !important
+        background-image: url('/assets/arrow334.png') 
+        background-repeat: no-repeat
+        width: 46px
+        height: 65px
+        display: block
+        background-size: cover !important
+
+.slick-next
+    &:before
+        content: '' !important
+        background-image: url('/assets/arrow33.png')
+.slick-prev, 
+.slick-next
+    width: 46px !important
+    height: 65px !important
+    z-index: 100 !important
+
+.slick-prev
+    left: 7px !important 
+    @media screen and (min-width: 992px)
+        left: -25px !important
+.slick-next
+    left: auto !important
+    right: 7px !important 
+    @media screen and (min-width: 992px)
+        right: -25px !important
+
+.slick-dots
     li
         width: 14px !important
         height: 14px !important
