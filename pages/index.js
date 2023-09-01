@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Intriga from '../components/intriga/intriga'
-import Popup from '../components/popup/promo'
+// import Popup from '../components/popup/promo'
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
             <meta name="robots" content="index,follow"/>
         </Head>
         <Intriga />
-        <Popup />
+        {/* <Popup /> */}
     </>
   )
 }

@@ -6,6 +6,10 @@ import styles from  '../../styles/sass/home.module.sass'
 
 import { gsap } from 'gsap/dist/gsap.js'
 
+// Validaciones
+
+import validarRegistro from '../../hooks/validarRegistro'
+
 const fontAkira = localFont({ 
     src: "../../fonts/AkiraExpanded-SuperBold.ttf"
 })
@@ -23,28 +27,58 @@ const fontPeckham = localFont({
 })
 
 
+
 const DatosPersonales = () => {
+
+    const VALORES_INICIALES = {
+        nombre: '',
+        apellido: '',
+        email: '',
+        movil: '',
+        dni: '',
+        lugar: '',
+        instagram: ''
+    }
+    
+    const [valores, setValores] = useState(VALORES_INICIALES)
+    const [errores, setErrores] = useState({})
+
+    const { nombre, apellido, email, movil, dni, lugar, instagram } = valores
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const pageID = 'pageRegister'
+        const itemPage = 2
+        let height = -1 * window.innerHeight * (itemPage - 1)
+        let containerParallax = document.getElementById('viewOverflow')
+        gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+        const erroresValidacion = validarRegistro(valores)
+        setErrores(erroresValidacion)
+    }
+
+    const handleChange = (e) => {
+        console.log(e.target.name)
+        console.log(e.target.value)
+        setValores({
+            ...valores,
+            [e.target.name] : e.target.value
+        })
+    }
+
+
     return (
         <>
-            <div className={` heightView`} id='pageRegister'>
+            <div className={`${styles.bgRegistro}  heightView`} id='pageRegister'>
                 <div className='container'>
                     <div className={`${styles.gridMain} separationTopMain`}>
                         <div className={styles.itemWorld}>
                             <div className={styles.contentWorld}>
                                 <Image src='/assets/mundo.png' width="288" height="288" className={styles.containerImg} alt='Comente el Mundo viajando' />
-                                <button type='button'>
-                                    <Image src='/assets/play.png' alt='Mira el video de la promo' width="47" height="32" />
-                                    <span style={fontPeckham.style}>
-                                        mira el <br />
-                                        video de <br />
-                                        la promo
-                                    </span>
-                                </button>
                             </div>
                         </div>
                         <form 
                             className={`${styles.itemForm} ${styles.itemFrom2}`}
-                            // onSubmit={handleSubmitDoc}
+                            onSubmit={handleSubmit}
                         >
                             <div className={styles.Form02} style={fontMonserratBold.style}>
                                 <Image src='/assets/titRegistro.svg' alt='' width="287" height="24" />
@@ -52,25 +86,56 @@ const DatosPersonales = () => {
                                 
                                 <div className={styles.grupoFormulario}>
                                     <div>
-                                        <input type="text" name="nombres" placeholder='Nombres: *' />
+                                        <input 
+                                            type="text" 
+                                            name="nombre" 
+                                            placeholder='Nombres: *' 
+                                            value={nombre}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div>
-                                        <input type="text" name="apellidos" placeholder='Apellidos: *' />
+                                        <input 
+                                            type="text" 
+                                            name="apellido" 
+                                            placeholder='Apellidos: *' 
+                                            value={apellido}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div>
-                                        <input type="text" name="email" placeholder='Correo electrónico: *' />
+                                        <input 
+                                            type="text" 
+                                            name="email" 
+                                            placeholder='Correo electrónico: *' 
+                                            value={email}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div>
-                                        <input type="text" name="movil" placeholder='Celular: *' />
+                                        <input 
+                                            type="text" 
+                                            name="movil" 
+                                            placeholder='Celular: *' 
+                                            value={movil}
+                                            onChange={handleChange}
+                                        />
                                     </div>
                                     <div>
-                                        <input type="text" name="" placeholder='Nro. de documento *' disabled />
+                                        <input 
+                                            type="text" 
+                                            name="" 
+                                            placeholder='Nro. de documento *' 
+                                            disabled 
+                                            value={dni}
+                                        />
                                     </div>
                                     <div>
                                         <select 
-                                            id='tipo_doc'
-                                            name='tipo_doc' 
+                                            name='lugar' 
                                             syle={fontMonserratSemiBold.style}
+                                            value={lugar}
+                                            onChange={handleChange}
                                         >
                                             <option value=''>¿A donde quieres viajar?: *</option>
                                             <option value='Argentina'>Argentina.</option>
@@ -80,8 +145,18 @@ const DatosPersonales = () => {
                                         </select>
                                     </div>
                                     <div>
-                                        <input type="text" name="insagran" placeholder='Cuenta de instagram: *' />
+                                        <input 
+                                            type="text" 
+                                            name="instagram" 
+                                            placeholder='Cuenta de instagram: *' 
+                                            value={instagram}
+                                            onChange={handleChange}
+                                        />
                                     </div>
+                                </div>
+
+                                <div className={styles.contentLegal}>
+                                    legal
                                 </div>
 
                                 <div className={styles.boxBtn}>
