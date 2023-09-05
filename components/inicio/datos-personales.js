@@ -21,6 +21,9 @@ const fontMonserratBold = localFont({
 const fontMonserratSemiBold = localFont({ 
     src: "../../fonts/Montserrat-SemiBold.ttf"
 })
+const fontMonserratRegular = localFont({ 
+    src: "../../fonts/Montserrat-Regular.ttf"
+})
 
 const fontPeckham = localFont({ 
     src: "../../fonts/PeckhamPress.otf"
@@ -37,40 +40,81 @@ const DatosPersonales = () => {
         movil: '',
         dni: '',
         lugar: '',
-        instagram: ''
+        instagram: '',
+        politicaDatos: '',
+        tyc: '',
+        edad: '',
     }
     
     const [valores, setValores] = useState(VALORES_INICIALES)
     const [errores, setErrores] = useState({})
+    const [submitForm, setSubmitForm] = useState(false)
 
-    const { nombre, apellido, email, movil, dni, lugar, instagram } = valores
+    const { nombre, apellido, email, movil, dni, lugar, instagram, politicaDatos, tyc, edad } = valores
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const pageID = 'pageRegister'
-        const itemPage = 2
+        const pageID = 'pageCodigo'
+        const itemPage = 3
         let height = -1 * window.innerHeight * (itemPage - 1)
         let containerParallax = document.getElementById('viewOverflow')
-        gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
         const erroresValidacion = validarRegistro(valores)
         setErrores(erroresValidacion)
+        console.log(Object.keys(errores).length)
+        if (Object.keys(errores).length === 0){
+            if (!submitForm){
+                console.log('Error')
+                setSubmitForm(true)
+                
+            }else{
+                console.log('pasamos al siguiente')
+                gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+            }
+            
+        }
     }
 
     const handleChange = (e) => {
         console.log(e.target.name)
         console.log(e.target.value)
+
         setValores({
             ...valores,
             [e.target.name] : e.target.value
         })
     }
+    const handleChangeCheckBox = (e) => {
+        console.log(e.target.name)
+        let valCheckBox = false
+        console.log(document.getElementById(e.target.name).checked)
+        if (document.getElementById(e.target.name).checked){
+            valCheckBox = true
+        }else{
+            valCheckBox = false
+        }
+        setValores({
+            ...valores,
+            [e.target.name] : valCheckBox
+        })
+        
+    }
+
+    const handleBlur = () => {
+        const erroresValidacion = validarRegistro(valores)
+        setErrores(erroresValidacion)
+    }
+
+    // useEffect (() => {
+    //     const erroresValidacion = validarRegistro(valores)
+    //     setErrores(erroresValidacion)
+    // },[])
 
 
     return (
         <>
             <div className={`${styles.bgRegistro}  heightView`} id='pageRegister'>
                 <div className='container'>
-                    <div className={`${styles.gridMain} separationTopMain`}>
+                    <div className={`${styles.gridMain} separationTopMain2`}>
                         <div className={styles.itemWorld}>
                             <div className={styles.contentWorld}>
                                 <Image src='/assets/mundo.png' width="288" height="288" className={styles.containerImg} alt='Comente el Mundo viajando' />
@@ -92,7 +136,9 @@ const DatosPersonales = () => {
                                             placeholder='Nombres: *' 
                                             value={nombre}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                         />
+                                        {errores.nombre && <label className='labelError' style={fontMonserratRegular.style}>{errores.nombre}</label>}
                                     </div>
                                     <div>
                                         <input 
@@ -101,7 +147,9 @@ const DatosPersonales = () => {
                                             placeholder='Apellidos: *' 
                                             value={apellido}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                         />
+                                        {errores.apellido && <label className='labelError' style={fontMonserratRegular.style}>{errores.apellido}</label>}
                                     </div>
                                     <div>
                                         <input 
@@ -110,7 +158,10 @@ const DatosPersonales = () => {
                                             placeholder='Correo electrónico: *' 
                                             value={email}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                         />
+                                        {errores.email && <label className='labelError' style={fontMonserratRegular.style}>{errores.email}</label>}
+
                                     </div>
                                     <div>
                                         <input 
@@ -119,7 +170,10 @@ const DatosPersonales = () => {
                                             placeholder='Celular: *' 
                                             value={movil}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                         />
+                                        {errores.movil && <label className='labelError' style={fontMonserratRegular.style}>{errores.movil}</label>}
+
                                     </div>
                                     <div>
                                         <input 
@@ -129,6 +183,7 @@ const DatosPersonales = () => {
                                             disabled 
                                             value={dni}
                                         />
+
                                     </div>
                                     <div>
                                         <select 
@@ -136,6 +191,7 @@ const DatosPersonales = () => {
                                             syle={fontMonserratSemiBold.style}
                                             value={lugar}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                         >
                                             <option value=''>¿A donde quieres viajar?: *</option>
                                             <option value='Argentina'>Argentina.</option>
@@ -143,6 +199,8 @@ const DatosPersonales = () => {
                                             <option value='Chile'>Chile</option>
                                             <option value='Brasil'>Brasil</option>
                                         </select>
+                                        {errores.lugar && <label className='labelError' style={fontMonserratRegular.style}>{errores.lugar}</label>}
+
                                     </div>
                                     <div>
                                         <input 
@@ -151,12 +209,35 @@ const DatosPersonales = () => {
                                             placeholder='Cuenta de instagram: *' 
                                             value={instagram}
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                         />
+                                        {errores.instagram && <label className='labelError' style={fontMonserratRegular.style}>{errores.instagram}</label>}
+
                                     </div>
                                 </div>
 
                                 <div className={styles.contentLegal}>
-                                    legal
+                                    <div className={styles.boxCheckbox}>
+                                        <div className={styles.contentCheckbox} style={fontMonserratSemiBold.style}>
+                                            <input type="checkbox" id='politicaDatos' name="politicaDatos"  onChange={handleChangeCheckBox} onBlur={handleBlur} value={politicaDatos}/>
+                                            <label htmlFor="politicaDatos">Acepto la <a href='#' target='_blank'>política de privacidad de datos</a> y la <a href='#' target='_blank'>política de tratamiento de datos</a>.</label>
+                                        </div>
+                                        {errores.politicaDatos && <label className='labelError' style={fontMonserratRegular.style}>{errores.politicaDatos}</label>}
+                                    </div>
+                                    <div className={styles.boxCheckbox}>
+                                        <div className={styles.contentCheckbox} style={fontMonserratSemiBold.style}>
+                                            <input type="checkbox" id='tyc' name="tyc" onChange={handleChangeCheckBox} onBlur={handleBlur} value={tyc}/>
+                                            <label htmlFor="tyc">Acepto <a href='#' target='_blank'>Términos y Condiciones</a>.</label>
+                                        </div>
+                                        {errores.tyc && <label className='labelError' style={fontMonserratRegular.style}>{errores.tyc}</label>}
+                                    </div>
+                                    <div className={styles.boxCheckbox}>
+                                        <div className={styles.contentCheckbox} style={fontMonserratSemiBold.style}>
+                                            <input type="checkbox" id='edad' name="edad"  onChange={handleChangeCheckBox} onBlur={handleBlur} value={edad}/>
+                                            <label htmlFor="edad">Soy mayor de edad.</label>
+                                        </div>  
+                                        {errores.edad && <label className='labelError' style={fontMonserratRegular.style}>{errores.edad}</label>}
+                                    </div>
                                 </div>
 
                                 <div className={styles.boxBtn}>

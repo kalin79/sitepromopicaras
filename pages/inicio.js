@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Documento from '../components/inicio/documento'
-// import Codigo from '../components/inicio/codigo'
+import Codigo from '../components/inicio/codigo'
 import DatosPersonales from '../components/inicio/datos-personales'
 // import Gracias from '../components/inicio/gracias'
 
@@ -16,9 +16,9 @@ export default function Home() {
                 <div className={styles.viewOverflow} id='viewOverflow'>
                   <Documento />
                   <DatosPersonales />
-                  {/*
+                  
                   <Codigo />
-                  <Gracias /> */}
+                  {/* <Gracias /> */}
                 </div>
             </div>
         </Layout>

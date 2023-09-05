@@ -29,6 +29,7 @@
             background-position: -19px -19px
         @media screen and (min-width: 1400px)
             background-position: -45px -19px
+    
     .gridMain
         display: grid
         grid-template-columns: repeat(12,1fr)
@@ -37,11 +38,64 @@
             border: 0px solid red
             padding-top: 5.85rem
             margin-left: -3rem
+            grid-column: 7 / -1
             &.itemFrom2
                 padding-top: 0rem
                 margin-top: -1rem
                 position: relative
                 z-index: 10
+            &.itemFrom3
+                padding-top: 0rem
+                margin-top: -3rem
+                position: relative
+                z-index: 10
+            .boxCheckbox
+                margin-bottom: 1rem
+            .contentCheckbox
+                position: relative
+                input[type="checkbox"]
+                    padding: 0
+                    height: 25px
+                    width: 25px
+                    margin-bottom: 0
+                    opacity: 0
+                    cursor: pointer
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index: 10
+                input:checked + label:after
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 5px
+                        left: 9px
+                        width: 6px
+                        height: 14px
+                        border: solid $grisOscuro3
+                        border-width: 0 2px 2px 0
+                        transform: rotate(45deg)
+                a
+                    font-size: 14px
+                    color: white
+                label
+                    position: relative
+                    cursor: pointer
+                    font-size: 14px
+                    color: white
+                    &:before
+                        content:''
+                        -webkit-appearance: none
+                        background-color: $grisClaro
+                        border: 1px solid $grisOscuro3
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05)
+                        padding: 10px
+                        display: inline-block
+                        position: relative
+                        vertical-align: middle
+                        cursor: pointer
+                        margin-right: 5px
+                        border-radius: 5px
             button[type="submit"]
                 width: 293px
                 height: 52px
@@ -172,6 +226,17 @@
                     @media screen and (min-width: 1400px)
                         width: 460px
 
-        .itemForm
-            grid-column: 7 / -1
-
+    .pageCodigo
+        .gridMain
+            .itemForm
+                .containerImgCodigo
+                    img
+                        width: 340px
+                        height: 183px
+                        object-fit: contain
+                .imgTitle
+                    margin-top: .5rem
+                    img
+                        width: 371px
+                        height: 42px
+                        object-fit: contain
