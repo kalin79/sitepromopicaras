@@ -12,6 +12,44 @@
     @media screen and (min-width: 992px)
         // background: url('/assets/bgintro2.png')
         background: url('/assets/bg.png')
+    .containerCarrusel
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-content: center
+        gap: 2rem
+        margin-top: 2rem
+        @media screen and (min-width: 992px)
+            flex-direction: row
+            align-content: flex-start
+        .boxComente
+            margin: auto
+            text-align: center
+            order: 2
+            width: 303px
+            @media screen and (min-width: 992px)
+                order: 1
+                margin: 0
+        .centerCarrusel
+            // position: relative
+            // left: 50%
+            // transform: translateX(-50%)
+            // bottom: 5.5rem
+            border: 0px solid green
+            width: 100%
+            margin-bottom: 1rem
+            order: 1
+            @media screen and (min-width: 992px)
+                width: 600px
+                order: 2
+                margin-bottom: 3rem
+            
+            .pasosPromo
+                img
+                    margin: auto
+                    @media screen and (min-width: 992px)
+                        width: 90%
+                        height: auto
     .gridContainer
         display: grid
         grid-template-columns: repeat(4,1fr)
@@ -145,7 +183,7 @@
                 @media screen and (min-width: 992px)
                     display: none
                 img
-                    width: 100%
+                    width: 271px
                     height: auto
                     object-fit: contain
             .boxProntoMovil

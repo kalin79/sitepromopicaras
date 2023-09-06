@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
+import Slider from "react-slick"
 import localFont from "next/font/local"
 import Image from 'next/image'
 import styles from  '@/styles/sass/intro.module.sass'
+
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const fontAkira = localFont({ 
     src: "../../fonts/AkiraExpanded-SuperBold.ttf"
@@ -19,6 +23,17 @@ const fontPoppins = localFont({
 
 export default function Intraga() {
     let boolInit =  useRef(false)
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,    
+        autoplay: true,
+        autoplaySpeed: 5000,
+        cssEase: "linear"
+    }
     
     const [days, setDays] = useState()
     const [hour, setHour] = useState()
@@ -82,9 +97,39 @@ export default function Intraga() {
                             <Image src='/assets/empaquePC.png' width='596' height='63' alt="Junta tus Empaques" />
                         </div>
                         <div className={styles.boxSubTitleMovil}>
-                            <Image src='/assets/empaqueMovil3.png' width='373' height='281' alt="Junta tus Empaques" />
+                            <Image src='/assets/empaqueMovil4.png' width='271' height='81' alt="Junta tus Empaques" />
                         </div>
-                        <div className={styles.boxPronto}>
+
+                        <div className={styles.containerCarrusel}>
+                            <div className={styles.boxComente}>
+                                <Image src='/assets/comete.png' width='303' height='80' alt="Muy pronto vas a comerte el mundo"  />
+                            </div>
+                            <div className={styles.centerCarrusel}>
+                                <Slider {...settings}>
+                                    <div className={styles.pasosPromo}>
+                                        <Image src='/assets/extrema.png' width='331' height='190' alt="La Extrema"/>
+                                    </div>
+                                    <div className={styles.pasosPromo}>
+                                        <Image src='/assets/clasica.png' width='331' height='190' alt="La Clasica"/>
+                                    </div>
+                                    <div className={styles.pasosPromo}>
+                                        <Image src='/assets/menta.png' width='331' height='190' alt="La Menta"/>
+                                    </div>
+                                    <div className={styles.pasosPromo}>
+                                        <Image src='/assets/fresa.png' width='331' height='190' alt="La Fresa"/>
+                                    </div>
+                                    <div className={styles.pasosPromo}>
+                                        <Image src='/assets/xl.png' width='331' height='190' alt="La XL"/>
+                                    </div>
+                                    <div className={styles.pasosPromo}>
+                                        <Image src='/assets/chips.png' width='331' height='190' alt="La Chips"/>
+                                    </div>
+                                </Slider>
+                            </div>
+                        </div>
+
+
+                        {/* <div className={styles.boxPronto}>
                             <Image src='/assets/pronto2.png' className={styles.boxImgPronto} width='755' height='240' alt="Muy pronto vas a comerte el mundo" />
                             <div className={`${styles.boxPlaner} ${styles.pos1}`}>
                                 <Image src='/assets/plane1.png' width='452' height='242' alt="Avion 1" />
@@ -101,7 +146,7 @@ export default function Intraga() {
                             <div className={`${styles.boxPlaner} ${styles.pos2}`}>
                                 <Image src='/assets/plane2.png' width='339' height='278' alt="Avion 2" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={styles.boxContador}>
                         <div className={styles.contadorContainer}>

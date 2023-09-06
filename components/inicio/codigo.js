@@ -76,10 +76,11 @@ const Codigo = () => {
     
 
     const handleBlur = () => {
-        const erroresValidacion = validarRegistro(valores)
-        setErrores(erroresValidacion)
+        // const erroresValidacion = validarRegistro(valores)
+        // setErrores(erroresValidacion)
     }
 
+    
 
 
     return (
@@ -99,6 +100,21 @@ const Codigo = () => {
                             <div className={styles.imgTitle}>
                                 <Image src='/assets/txtregistra.svg' width="371" height="42" alt='Registra los codigos de tus empaques' />
                             </div>
+                            <form>
+                                <h2 style={fontMonserratSemiBold.style}>
+                                Puedes registrar todos los códigos <br />que tengas.
+                                </h2>
+                                <div className={styles.containerCode}>
+                                    <input name="code" placeholder='Ingresa tu código...'/>
+                                    <button type='button'>AÑADIR CÓDIGO</button>
+                                </div>
+                                <div className={styles.viewCode}>
+
+                                </div>
+                                <div>
+                                    <button type='submit'>ENVIAR CÓDIGOS</button>
+                                </div>
+                            </form>
                             <div className={styles.recordatorioUser}>
                                 <Image src='/assets/recordarUsuario.png' alt='Mira el video de la promo' width="470" height="119" />
                             </div>

@@ -52,26 +52,28 @@ const DatosPersonales = () => {
 
     const { nombre, apellido, email, movil, dni, lugar, instagram, politicaDatos, tyc, edad } = valores
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const submitFormValidate = () => {
         const pageID = 'pageCodigo'
         const itemPage = 3
         let height = -1 * window.innerHeight * (itemPage - 1)
         let containerParallax = document.getElementById('viewOverflow')
-        const erroresValidacion = validarRegistro(valores)
-        setErrores(erroresValidacion)
-        console.log(Object.keys(errores).length)
         if (Object.keys(errores).length === 0){
             if (!submitForm){
                 console.log('Error')
                 setSubmitForm(true)
-                
             }else{
                 console.log('pasamos al siguiente')
                 gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
             }
-            
         }
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const erroresValidacion =  validarRegistro(valores)
+        await setErrores(erroresValidacion)
+        submitFormValidate()
+        
     }
 
     const handleChange = (e) => {
@@ -83,19 +85,20 @@ const DatosPersonales = () => {
             [e.target.name] : e.target.value
         })
     }
-    const handleChangeCheckBox = (e) => {
+    const handleChangeCheckBox =  (e) => {
         console.log(e.target.name)
-        let valCheckBox = false
         console.log(document.getElementById(e.target.name).checked)
         if (document.getElementById(e.target.name).checked){
-            valCheckBox = true
+            setValores({
+                ...valores,
+                [e.target.name] : true
+            })
         }else{
-            valCheckBox = false
+            setValores({
+                ...valores,
+                [e.target.name] : false
+            })
         }
-        setValores({
-            ...valores,
-            [e.target.name] : valCheckBox
-        })
         
     }
 

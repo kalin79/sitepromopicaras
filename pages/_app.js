@@ -1,8 +1,17 @@
+import { useState } from 'react'
+
 import Script from 'next/script'
 import 'bootstrap/dist/css/bootstrap.css'
 import '@/styles/sass/globals.sass'
 
 export default function App({ Component, pageProps }) {
+
+    const [datos, setDatos] = useState([])
+
+    const agregarDato = (dato) => {
+
+    }
+    
     let GTM_ID = process.env.NEXT_PUBLIC_GTM
     let PIXEL_ID = process.env.NEXT_PUBLIC_PIXEL
     // console.log(GTM_ID)
@@ -34,7 +43,12 @@ export default function App({ Component, pageProps }) {
                         fbq('track', 'CompleteRegistration');
                     `}
             </Script>
-            <Component {...pageProps} />
+            <Component {...pageProps} 
+                auth={false}
+                page={0}
+                agregarDato={agregarDato}
+                datos={datos}
+            />
         </>
     )
 }

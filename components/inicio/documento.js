@@ -31,11 +31,15 @@ const fontPeckham = localFont({
 })
 
 
-const Documento = () => {
+const Documento = (agregarDato) => {
 
     const [tipoDoc , setTipoDoc] = useState('')
+    const [doc , setDoc] = useState('')
 
     
+    const handleChange = () => {
+
+    }
 
     const handleSubmitDoc = (e) => {
         e.preventDefault()
@@ -52,11 +56,16 @@ const Documento = () => {
         console.log(e.keyCode)
         if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105 || e.keyCode > 188 )) {
             if (e.keyCode === 8){
+                console.log(1)
                 return false
             }else{
+                console.log(2)
+
                 e.preventDefault()
             }
         }else{
+            console.log(3)
+
             return false
         }
     }
@@ -114,7 +123,7 @@ const Documento = () => {
                                         <option value='DNI'>D.N.I.</option>
                                         <option value='CE'>C.E</option>
                                     </select>
-                                    <input type="text" name="documento" id="documento" maxLength="9" syle={fontMonserratSemiBold.style} onKeyDown={handlekeyDown} placeholder='Nro. de documento' />
+                                    <input type="text" name="documento" id="documento" maxLength="9" value={doc} onChange={handleChange} syle={fontMonserratSemiBold.style} onKeyDown={handlekeyDown} placeholder='Nro. de documento' />
                                 </div>
                                 <div className={styles.boxBtn}>
                                     <button 
