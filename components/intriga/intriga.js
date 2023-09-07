@@ -32,7 +32,8 @@ export default function Intraga() {
         slidesToScroll: 1,    
         autoplay: true,
         autoplaySpeed: 5000,
-        cssEase: "linear"
+        cssEase: "linear",
+        fade: true
     }
     
     const [days, setDays] = useState()
