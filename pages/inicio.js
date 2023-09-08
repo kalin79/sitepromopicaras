@@ -2,10 +2,10 @@ import Layout from '../components/layout'
 import Documento from '../components/inicio/documento'
 import Codigo from '../components/inicio/codigo'
 import DatosPersonales from '../components/inicio/datos-personales'
-// import Gracias from '../components/inicio/gracias'
+import Gracias from '../components/inicio/gracias'
 
 import styles from  '../styles/sass/home.module.sass'
-export default function Home({agregarDato,datos,isuser,updateUser,page,updatePage}) {
+export default function Home({agregarDato,datos,isuser,updateUser,page,updatePage,eliminarDatos}) {
   return (
     <>
         <Layout
@@ -30,9 +30,18 @@ export default function Home({agregarDato,datos,isuser,updateUser,page,updatePag
                     }
 
                     { (isuser && page === 3) &&
-                        <Codigo />
+                        <Codigo 
+                            updatePage={updatePage}
+                            datos={datos}
+                        />
                     }
-                    {/* <Gracias /> */}
+                    { (isuser && page === 4) &&
+                        <Gracias 
+                            updateUser={updateUser}
+                            updatePage={updatePage}
+                            eliminarDatos={eliminarDatos}
+                        />
+                    }
                 </div>
             </div>
         </Layout>

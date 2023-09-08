@@ -50,7 +50,7 @@ export default function Header() {
                                    <Link href='/ganadores' className={router.pathname == "/ganadores" ? `${styles.active}` : ""}>
                                         <p style={fontMont.style}>GANADORES</p>
                                    </Link>
-                                   <Link href='/comprar' className={router.pathname == "/comprar" ? `${styles.active}` : ""}>
+                                   <Link href='/encuentra-tus-picaras' className={router.pathname == "/comprar" ? `${styles.active}` : ""}>
                                         <p style={fontMont.style}>COMPRAR</p>
                                    </Link>
                               </nav>

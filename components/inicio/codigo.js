@@ -1,14 +1,22 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useRef } from 'react'
  
 import Image from 'next/image'
-import localFont from "next/font/local"
+import Popup from '../../components/popup/codigoError'
 import styles from  '../../styles/sass/home.module.sass'
+import localFont from "next/font/local"
+
+
 
 import { gsap } from 'gsap/dist/gsap.js'
 
-// Validaciones
 
-import validarRegistro from '../../hooks/validarRegistro'
+import { CSSRulePlugin } from 'gsap/dist/CSSRulePlugin.js'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js'
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin.js'
+
+gsap.registerPlugin(CSSRulePlugin)
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollToPlugin)
 
 const fontAkira = localFont({ 
     src: "../../fonts/AkiraExpanded-SuperBold.ttf"
@@ -31,60 +39,66 @@ const fontPeckham = localFont({
 
 
 
-const Codigo = () => {
+const Codigo = ({updatePage,datos}) => {
 
-    const VALORES_INICIALES = {
-        codigo: '',
-    }
+    const inputCode = useRef(null);
+
     
-    const [valores, setValores] = useState(VALORES_INICIALES)
-    const [errores, setErrores] = useState({})
-    const [submitForm, setSubmitForm] = useState(false)
+    const [codigos, setCodigos] = useState([])
+    const [errorCode, setErrorCode] = useState("")
+   
+   
 
-    const { codigo } = valores
-
-    const handleSubmit = (e) => {
+    const handleSubmitCode = (e) => {
         e.preventDefault()
-        const pageID = 'pageRegister'
-        const itemPage = 4
-        let height = -1 * window.innerHeight * (itemPage - 1)
-        let containerParallax = document.getElementById('viewOverflow')
-        const erroresValidacion = validarRegistro(valores)
-        setErrores(erroresValidacion)
-        console.log(Object.keys(errores).length)
-        if (Object.keys(errores).length === 0){
-            if (!submitForm){
-                console.log('Error')
-                setSubmitForm(true)
-                gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+        console.log(codigos)
+        if (codigos.length > 0){
+            // Debemos hacer la implementacion de la api
+            console.log("pase")
+            updatePage(4)
+
+        }else{
+            console.log('error')
+        }
+        
+    }
+
+    const handleAddCode = async () => {
+        setErrorCode("")
+        console.log(inputCode.current.value)
+        const _code = await inputCode.current.value
+        // Comprobar si hay existe el codigo dentro del arreglo
+        if (_code.trim().length != 0){
+            if (codigos.some(codigoState => codigoState === _code )){
+                console.log('Ya existe')
+                setErrorCode("Ya ingreso ese código")
             }else{
-                console.log('pasamos al siguiente')
+
+                if (_code === "123456") {
+                    // Si el codigo no existe en la BD mostramos el POPUP
+                    const tl = gsap.timeline()
+                    const codePopup = document.getElementById("codePopup")
+                    tl.to(codePopup, {display:'block'})
+                    tl.to(codePopup, {opacity: 1})
+                }else{
+                    // si el codigo no existe en el arreglo entonces lo agregamos
+                    setCodigos([_code,...codigos])
+                    inputCode.current.value = ""
+                }
             }
-            
+        }else{
+            setErrorCode("Debe ingresar el código")
         }
     }
-
-    const handleChange = (e) => {
-        console.log(e.target.name)
-        console.log(e.target.value)
-
-        setValores({
-            ...valores,
-            [e.target.name] : e.target.value
-        })
-    }
     
 
-    const handleBlur = () => {
-        // const erroresValidacion = validarRegistro(valores)
-        // setErrores(erroresValidacion)
-    }
 
     
 
 
     return (
         <>
+            <Popup />
             <div className={`${styles.bgRegistro} ${ styles.pageCodigo }  heightView`} id='pageCodigo'>
                 <div className='container'>
                 <div className={`${styles.gridMain} separationTopMain2`}>
@@ -100,23 +114,35 @@ const Codigo = () => {
                             <div className={styles.imgTitle}>
                                 <Image src='/assets/txtregistra.svg' width="371" height="42" alt='Registra los codigos de tus empaques' />
                             </div>
-                            <form>
+                            <form
+                                onSubmit={handleSubmitCode}
+                                noValidate
+                            >
                                 <h2 style={fontMonserratSemiBold.style}>
                                 Puedes registrar todos los códigos <br />que tengas.
                                 </h2>
                                 <div className={styles.containerCode} style={fontMonserratSemiBold.style}>
-                                    <input type="text" maxLength="12" name="code" placeholder='Ingresa tu código...'/>
-                                    <button type='button'>AÑADIR CÓDIGO</button>
+                                    <input type="text" ref={inputCode} maxLength="12" name="code" placeholder='Ingresa tu código...'/>
+                                    <button type='button' onClick={handleAddCode} style={fontMonserratBold.style}>AÑADIR CÓDIGO</button>
                                 </div>
-                                <div className={styles.viewCode}>
-                                    <div className={styles.items}>
-                                        <p>12345566</p>
-                                        <div>trash</div>
-
+                                {errorCode && 
+                                    <div className={`contentError ${styles.contentError}`}>
+                                        <label style={fontMonserratRegular.style}>{errorCode}</label>
                                     </div>
+                                }
+                                <div className={styles.viewCode}>
+                                    {Object.values(codigos)?.map((codigo,index) => (
+                                        <div className={styles.items} key={index}>
+                                            <p style={fontMonserratSemiBold.style}>{codigo}</p>
+                                            {/* <div className={styles.ContentTrash}>
+                                                <Image src='/assets/trash.png' width="30" height="33" alt='Eliminar Codigo' />
+                                            </div> */}
+                                        </div>
+                                    ))}
+                                    
                                 </div>
                                 <div>
-                                    <button type='submit'>ENVIAR CÓDIGOS</button>
+                                    <button type='submit' style={fontMonserratBold.style}>ENVIAR CÓDIGOS</button>
                                 </div>
                             </form>
                             <div className={styles.recordatorioUser}>

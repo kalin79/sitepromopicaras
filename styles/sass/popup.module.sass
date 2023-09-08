@@ -11,106 +11,7 @@
     z-index: 1000
     opacity: 0
     display: none
-    .viewMovil
-        background: url('/assets/fondoCarrusel.png')
-        background-position: center
-        background-repeat: no-repeat
-        width: 100%
-        height: 95vh
-        margin: 0 auto
-        background-size: contain
-        display: flex
-        justify-content: center
-        align-content: center
-        flex-direction: column
-        flex-wrap: wrap
-        @media screen and (min-width: 992px)
-            display: none
-        .centerCarrusel
-            border: 0px solid green
-            width: 100%
-            position: relative
-            top: 8.5rem
-            @media screen and (min-width: 390px)
-                top: 11rem
-        .pasosPromo
-            border: 0px solid green
-            img
-                width: 300px
-                height: auto
-                margin: 0 auto
-                text-align: center
-                @media screen and (min-width: 390px)
-                    width: 350px
-                @media screen and (min-width: 992px)
-                    width: 351px
-                    height: 212px
-    .viewPC
-        display: none
-        border: 0px solid green
-        position: relative
-        height: 100%
-        overflow: hidden
-        border-radius: 10px
-        @media screen and (min-width: 992px)
-            display: block
-        .cabeceraTop
-            display: grid
-            grid-template-columns: repeat(4,1fr)
-            position: relative
-            .logoOctogonos
-                grid-column: 3 / -1
-                margin: 1rem 1rem 0 0
-                justify-self: end
-                img
-                    width: 120px
-                    height: auto
-            .logoTambo
-                grid-column: 1 / -1
-                margin-top: -.95rem
-                img
-                    width: 280px
-                    height: auto
-        .centerCarrusel
-            // position: relative
-            // left: 50%
-            // transform: translateX(-50%)
-            // bottom: 5.5rem
-            border: 1px solid green
-            width: 90%
-            margin: 7rem auto 0
-            @media screen and (min-width: 992px)
-                margin: 4.5rem auto 0
-            @media screen and (min-width: 1200px)
-                margin: 4.5rem auto 0
-            @media screen and (min-width: 1400px)
-                margin: 7rem auto 0
-            .pasosPromo
-                img
-                    margin: auto
-                    width: auto
-                    height: 250px
-        .cabeceraP,
-        .cabeceraF
-            position: absolute
-            top: 0
-            left: 0
-            height: 40vh
-            overflow: hidden
-            img
-                object-position: 0px -450px
-                object-fit: none
-                @media screen and (min-width: 1400px)
-                    // object-position: 0px 0px
-                    object-position: 0px -415px
-        .cabeceraF
-            bottom: 0
-            top: auto
-            height: 50vh
-            img
-                object-position: 0px -746px
-                // object-position: 0px 0px
-    .pageCenter
+    .contentCenter
         width: 100%
         height: 100%
         display: flex
@@ -118,37 +19,39 @@
         align-content: center
         flex-direction: column
         flex-wrap: wrap
-        .popupContent
-            width: 100%
-            height: auto
+        .contentMessage
+            width: 480px
+            height: 346px
+            background-image: url('/assets/popup.png')
+            background-repeat: repeat
+            background-position: center
+            border-radius: 10px
             position: relative
-            border: 0px solid green
-            margin: 0 auto
-            text-align: center
-            @media screen and (min-width: 992px)
-                width: 643px
-                height: 90vh
-            .boxLegal
-                position: absolute
-                bottom: -0.5rem
-                left: 50%
-                transform: translateX(-50%)
-                width: 280px
-                @media screen and (min-width:992px)
-                    width: 90%
+            box-sizing: border-box
+            .containerInfo
+                padding: 3rem 1.5rem 1rem
+                .containerButton
+                    margin: 1.5rem auto 0
+                    text-align: center
+                    button[type="button"]
+                        width: 293px
+                        height: 52px
+                        border-radius: 10px
+                        border: 1px solid $marron
+                        background: linear-gradient(180deg, #FFD700 0%, #FFB800 100%)
+                        text-transform: uppercase
+                h2
+                    text-align: center
+                    margin-bottom: 1.5rem
                 p
-                    font-size: 7px
+                    font-size: 16px
+                    text-align: center
                     color: white
-                    text-align: left
-                    @media screen and (min-width:992px)
-                        text-align: center
+                    line-height: 1.45em
+                a
+                    color: $amarrillo
+                    text-decoration: none
             .closePopup
-                border: 0
-                background: 0
                 position: absolute
-                top: -.5rem
-                right: 1.5rem
-                z-index: 100
-                @media screen and (min-width: 992px)
-                    top: -1rem
-                    right: -1rem
+                top: -.75rem
+                right: -.75rem

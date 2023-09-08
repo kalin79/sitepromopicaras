@@ -29,6 +29,10 @@ export default function App({ Component, pageProps }) {
         })
     }
 
+    const eliminarDatos = () => {
+        setDatos(VALORES_INICIALES)
+    }
+
     const updateUser = (dato) => {
         setIsuser(dato)
     }
@@ -75,6 +79,7 @@ export default function App({ Component, pageProps }) {
                 updateUser={updateUser}
                 page={page}
                 updatePage={updatePage}
+                eliminarDatos={eliminarDatos}
             />
         </>
     )

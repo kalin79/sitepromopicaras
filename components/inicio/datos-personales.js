@@ -189,10 +189,10 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
                                             onBlur={handleBlur}
                                         >
                                             <option value=''>¿A donde quieres viajar?: *</option>
-                                            <option value='Argentina'>Argentina.</option>
-                                            <option value='Colombia'>Colombia.</option>
-                                            <option value='Chile'>Chile</option>
-                                            <option value='Brasil'>Brasil</option>
+                                            <option value='Bariloche, Argentina '>Bariloche, Argentina </option>
+                                            <option value='Guatapé, Colombia'>Guatapé, Colombia</option>
+                                            <option value='Atacama, Chile'>Atacama, Chile</option>
+                                            <option value='São Paulo, Brasil'>São Paulo, Brasil</option>
                                         </select>
                                         {errores.lugar && <label className='labelError' style={fontMonserratRegular.style}>{errores.lugar}</label>}
 

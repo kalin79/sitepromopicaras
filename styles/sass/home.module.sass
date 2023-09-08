@@ -1,6 +1,9 @@
 @import 'vars/colors'
 @import 'abstracts/mixins'
 
+
+
+
 .homePage
     // height: 100vh
     // overflow: hidden
@@ -8,6 +11,55 @@
         height: auto
         position: relative
         top: 0
+    .pageThankYou
+        min-height: 100vh
+        padding: 15rem 0 0
+        .recordatorioUser
+            display: flex
+            justify-content: center
+            align-content: center
+            flex-direction: column
+            flex-wrap: wrap
+            gap: 1rem
+            margin-top: 3rem
+        .boxButtons
+            display: flex
+            justify-content: center
+            align-content: center
+            flex-direction: column
+            flex-wrap: wrap
+            gap: 1rem
+            button[type="button"]
+                width: 296px
+                height: 52px
+                border-radius: 10px
+                border: 1px solid $marron
+                background: linear-gradient(180deg, #FFD700 0%, #FFB800 100%)
+                text-transform: uppercase
+                font-size: 16px
+                &.butttonTransparent
+                    border: 1.5px solid white
+                    background: transparent
+                    color: white
+        .boxTitle
+            margin: auto
+            text-align: center
+            margin-bottom: 2rem
+            h3
+                font-size: 18px
+                color: white
+                text-align: center
+            h2
+                position: relative
+                display: inline-block
+                .avion1
+                    position: absolute
+                    top: -12rem
+                    left: -24rem
+                .avion2
+                    position: absolute
+                    top: 5.5rem
+                    left: 27.5rem
     .bgRegistro,
     .bgDocumento
         background-image: url('/assets/bg_inicio.png')
@@ -236,8 +288,10 @@
                     h2
                         color: white
                         font-size: 18px
-                        margin: .25rem 0
+                        margin: .25rem 0 1.5rem
                     button[type="submit"]
+                        width: 310px
+                    .contentError
                         width: 310px
                     .viewCode
                         width: 310px
@@ -248,6 +302,28 @@
                         margin: .5rem 0
                         box-sizing: border-box
                         overflow: scroll
+                        .items
+                            border-radius: 8px
+                            margin: .5rem
+                            background: $grisClaro4
+                            border: 1px solid $grisOscuro4
+                            height: 42px
+                            box-sizing: border-box
+                            padding: .5rem
+                            display: flex
+                            justify-content: space-between
+                            align-content: center
+                            .ContentTrash
+                                cursor: pointer
+                                img
+                                    width: 16px
+                                    height: auto
+                                    object-fit: contain
+                            p
+                                font-size: 14px
+                                color: $grisOscuro5
+                                margin: 0
+                                line-height: 1.9em
                     .containerCode
                         width: 310px
                         border-radius: 10px
