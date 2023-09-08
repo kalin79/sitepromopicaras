@@ -2,8 +2,8 @@
 @import 'abstracts/mixins'
 
 .homePage
-    height: 100vh
-    overflow: hidden
+    // height: 100vh
+    // overflow: hidden
     .viewOverflow
         height: auto
         position: relative
@@ -23,12 +23,14 @@
     .bgRegistro
         background-image: url('/assets/fondoConcurso.png')
         background-position: center 63px
+        padding-bottom: 5rem
         @media screen and (min-width: 992px)
             background-position: center 63px
         @media screen and (min-width: 1200px)
             background-position: -19px -19px
         @media screen and (min-width: 1400px)
             background-position: -45px -19px
+        
     
     .gridMain
         display: grid
@@ -230,23 +232,45 @@
         .gridMain
             .itemForm
                 form
+                    margin-bottom: 1.75rem
                     h2
                         color: white
                         font-size: 18px
                         margin: .25rem 0
+                    button[type="submit"]
+                        width: 310px
+                    .viewCode
+                        width: 310px
+                        height: 221px
+                        border-radius: 10px
+                        border: 1px solid $grisClaro3
+                        background: $grisClaro2
+                        margin: .5rem 0
+                        box-sizing: border-box
+                        overflow: scroll
                     .containerCode
                         width: 310px
-                        height: 51px
                         border-radius: 10px
                         border: 1px solid $grisClaro3
                         background: $grisClaro2
                         display: flex
+                        gap: 1rem
+                        padding: .25rem
+                        button[type="button"]
+                            width: 124px
+                            height: 43px
+                            border-radius: 10px
+                            border: 1px solid $marron
+                            background: linear-gradient(180deg, #FFD700 0%, #FFB800 100%)
+                            text-transform: uppercase
+                            font-size: 12px
                         input[type="text"]
-                            width: 200px
-                            height: 51px
+                            width: 160px
+                            height: 43px
                             border: 0
                             background: transparent
                             box-sizing: border-box
+                            font-size: 14px
                             padding: 0 .5rem
                             &:focus
                                 outline: none

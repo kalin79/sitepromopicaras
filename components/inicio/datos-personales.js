@@ -31,14 +31,13 @@ const fontPeckham = localFont({
 
 
 
-const DatosPersonales = () => {
+const DatosPersonales = ({agregarDato, updatePage, datos}) => {
 
     const VALORES_INICIALES = {
         nombre: '',
         apellido: '',
         email: '',
         movil: '',
-        dni: '',
         lugar: '',
         instagram: '',
         politicaDatos: '',
@@ -51,20 +50,16 @@ const DatosPersonales = () => {
     const [submitForm, setSubmitForm] = useState(false)
 
     const { nombre, apellido, email, movil, dni, lugar, instagram, politicaDatos, tyc, edad } = valores
+    const { documento, tipoDoc } = datos
 
-    const submitFormValidate = () => {
+    const submitFormIsValidate = () => {
         const pageID = 'pageCodigo'
         const itemPage = 3
         let height = -1 * window.innerHeight * (itemPage - 1)
         let containerParallax = document.getElementById('viewOverflow')
         if (Object.keys(errores).length === 0){
-            if (!submitForm){
-                console.log('Error')
-                setSubmitForm(true)
-            }else{
-                console.log('pasamos al siguiente')
-                gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
-            }
+            console.log('pasamos al siguiente')
+            updatePage(3)
         }
     }
 
@@ -72,18 +67,16 @@ const DatosPersonales = () => {
         e.preventDefault()
         const erroresValidacion =  validarRegistro(valores)
         await setErrores(erroresValidacion)
-        submitFormValidate()
+        submitFormIsValidate()
         
     }
 
     const handleChange = (e) => {
-        console.log(e.target.name)
-        console.log(e.target.value)
-
         setValores({
             ...valores,
             [e.target.name] : e.target.value
         })
+        agregarDato(e.target.name,e.target.value)
     }
     const handleChangeCheckBox =  (e) => {
         console.log(e.target.name)
@@ -107,10 +100,9 @@ const DatosPersonales = () => {
         setErrores(erroresValidacion)
     }
 
-    // useEffect (() => {
-    //     const erroresValidacion = validarRegistro(valores)
-    //     setErrores(erroresValidacion)
-    // },[])
+    useEffect(() => {
+        setErrores({nombre: ''})
+    },[])
 
 
     return (
@@ -184,7 +176,7 @@ const DatosPersonales = () => {
                                             name="" 
                                             placeholder='Nro. de documento *' 
                                             disabled 
-                                            value={dni}
+                                            value={`${tipoDoc} ${documento}`}
                                         />
 
                                     </div>

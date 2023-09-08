@@ -6,10 +6,35 @@ import '@/styles/sass/globals.sass'
 
 export default function App({ Component, pageProps }) {
 
-    const [datos, setDatos] = useState([])
+    const VALORES_INICIALES = {
+        tipoDoc: '',
+        documento: '',
+        nombre: '',
+        apellido: '',
+        email: '',
+        movil: '',
+        lugar: '',
+        instagram: '',
+    }
 
-    const agregarDato = (dato) => {
+    const [datos, setDatos] = useState(VALORES_INICIALES)
+    const [isuser, setIsuser] = useState(false)
+    const [page, setPage] = useState(1)
 
+    const agregarDato = (llave, dato) => {
+        console.log(datos)
+        setDatos({
+            ...datos,
+            [llave] : dato
+        })
+    }
+
+    const updateUser = (dato) => {
+        setIsuser(dato)
+    }
+
+    const updatePage = (dato) => {
+        setPage(dato)
     }
     
     let GTM_ID = process.env.NEXT_PUBLIC_GTM
@@ -44,10 +69,12 @@ export default function App({ Component, pageProps }) {
                     `}
             </Script>
             <Component {...pageProps} 
-                auth={false}
-                page={0}
                 agregarDato={agregarDato}
                 datos={datos}
+                isuser={isuser}
+                updateUser={updateUser}
+                page={page}
+                updatePage={updatePage}
             />
         </>
     )

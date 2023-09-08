@@ -5,6 +5,12 @@ import localFont from "next/font/local"
 import styles from  '../../styles/sass/home.module.sass'
 
 import { gsap } from 'gsap/dist/gsap.js'
+
+// Validaciones
+
+import validarDNI from '../../hooks/validarDNI'
+
+
 // import { CSSRulePlugin } from 'gsap/dist/CSSRulePlugin.js'
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js'
 // import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin.js'
@@ -26,30 +32,60 @@ const fontMonserratSemiBold = localFont({
     src: "../../fonts/Montserrat-SemiBold.ttf"
 })
 
+const fontMonserratRegular = localFont({ 
+    src: "../../fonts/Montserrat-Regular.ttf"
+})
+
 const fontPeckham = localFont({ 
     src: "../../fonts/PeckhamPress.otf"
 })
 
 
-const Documento = (agregarDato) => {
+const Documento = ({agregarDato,updateUser,updatePage}) => {
 
-    const [tipoDoc , setTipoDoc] = useState('')
-    const [doc , setDoc] = useState('')
-
-    
-    const handleChange = () => {
-
+    const VALORES_INICIALES = {
+        tipoDoc: '',
+        documento: '',
     }
 
-    const handleSubmitDoc = (e) => {
-        e.preventDefault()
+    const [valores, setValores] = useState(VALORES_INICIALES)
+    const { documento, tipoDoc } = valores
+    const [errores, setErrores] = useState({})
+    
+    const handleChange = (e) => {
+        setValores({
+            ...valores,
+            [e.target.name] : e.target.value
+        })
+
+        agregarDato(e.target.name, e.target.value)
+    }
+
+
+    const submitFormIsValidate = async () => {
         const pageID = 'pageRegister'
         const itemPage = 2
         let height = -1 * window.innerHeight * (itemPage - 1)
         let containerParallax = document.getElementById('viewOverflow')
-        console.log(containerParallax)
-        gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+        console.log(Object.keys(errores).length)
+        if (Object.keys(errores).length === 0){
+            updateUser(true)
+            updatePage(2)
+            
+            // gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+        }
+    }
 
+    const handleSubmitDoc = (e) => {
+        e.preventDefault()
+        const erroresValidacion = validarDNI(valores)
+        setErrores(erroresValidacion)
+        submitFormIsValidate()
+    }
+
+    const handleBlur = () => {
+        const erroresValidacion = validarDNI(valores)
+        setErrores(erroresValidacion)
     }
 
     const handlekeyDown = (e) => {
@@ -59,13 +95,9 @@ const Documento = (agregarDato) => {
                 console.log(1)
                 return false
             }else{
-                console.log(2)
-
                 e.preventDefault()
             }
         }else{
-            console.log(3)
-
             return false
         }
     }
@@ -73,7 +105,6 @@ const Documento = (agregarDato) => {
     // Cambios UseEffects
 
     useEffect(() => {
-        console.log(tipoDoc)
         const Input = document.getElementById('documento')
         if (tipoDoc === 'DNI'){
             Input.maxLength='8'
@@ -82,6 +113,10 @@ const Documento = (agregarDato) => {
             Input.maxLength='9'
         }
     },[tipoDoc])
+
+    useEffect(() => {
+        setErrores({documento: ''})
+    },[])
 
     return (
         <>
@@ -104,6 +139,7 @@ const Documento = (agregarDato) => {
                         <form 
                             className={styles.itemForm}
                             onSubmit={handleSubmitDoc}
+                            noValidate
                         >
                             <div className={styles.Form01} style={fontMonserratBold.style}>
                                 <h1>
@@ -111,20 +147,34 @@ const Documento = (agregarDato) => {
                                 tu documento de identidad:
                                 </h1>
                                 <div className={styles.containerDoc}>
-                                    <select 
-                                        id='tipo_doc'
-                                        name='tipo_doc' 
+                                    <select
+                                        name='tipoDoc'
+                                        id='tipoDoc'
                                         syle={fontMonserratSemiBold.style}
-                                        onChange={ e => setTipoDoc(e.target.value)}
-
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
                                     
                                     >
                                         <option value=''>Documento</option>
                                         <option value='DNI'>D.N.I.</option>
                                         <option value='CE'>C.E</option>
                                     </select>
-                                    <input type="text" name="documento" id="documento" maxLength="9" value={doc} onChange={handleChange} syle={fontMonserratSemiBold.style} onKeyDown={handlekeyDown} placeholder='Nro. de documento' />
+                                    <input 
+                                        type="text" 
+                                        name="documento"
+                                        id="documento"
+                                        maxLength="9" 
+                                        value={documento} 
+                                        onChange={handleChange} syle={fontMonserratSemiBold.style} 
+                                        onKeyDown={handlekeyDown} placeholder='Nro. de documento' 
+                                        onBlur={handleBlur}
+                                    />
                                 </div>
+                                {errores.documento && 
+                                    <div className='contentError'>
+                                        <label style={fontMonserratRegular.style}>{errores.documento}</label>
+                                    </div>
+                                }
                                 <div className={styles.boxBtn}>
                                     <button 
                                         type='submit'

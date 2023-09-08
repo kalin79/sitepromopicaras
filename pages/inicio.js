@@ -5,7 +5,7 @@ import DatosPersonales from '../components/inicio/datos-personales'
 // import Gracias from '../components/inicio/gracias'
 
 import styles from  '../styles/sass/home.module.sass'
-export default function Home() {
+export default function Home({agregarDato,datos,isuser,updateUser,page,updatePage}) {
   return (
     <>
         <Layout
@@ -14,11 +14,25 @@ export default function Home() {
         >
             <div className={styles.homePage}>
                 <div className={styles.viewOverflow} id='viewOverflow'>
-                  <Documento />
-                  <DatosPersonales />
-                  
-                  <Codigo />
-                  {/* <Gracias /> */}
+                    { page === 1 &&
+                        <Documento 
+                            agregarDato={agregarDato} 
+                            updateUser={updateUser}
+                            updatePage={updatePage}
+                        />
+                    }
+                    { (isuser && page === 2) &&
+                            <DatosPersonales 
+                                agregarDato={agregarDato}
+                                updatePage={updatePage}
+                                datos={datos}
+                            />
+                    }
+
+                    { (isuser && page === 3) &&
+                        <Codigo />
+                    }
+                    {/* <Gracias /> */}
                 </div>
             </div>
         </Layout>

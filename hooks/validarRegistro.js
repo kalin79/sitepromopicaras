@@ -1,5 +1,6 @@
 export default function validarRegistro(valores) {
     let errores = {}
+    
     if (!valores.nombre){
         errores.nombre = "El nombre es obligatorio"
         // return errores

@@ -104,12 +104,16 @@ const Codigo = () => {
                                 <h2 style={fontMonserratSemiBold.style}>
                                 Puedes registrar todos los códigos <br />que tengas.
                                 </h2>
-                                <div className={styles.containerCode}>
-                                    <input name="code" placeholder='Ingresa tu código...'/>
+                                <div className={styles.containerCode} style={fontMonserratSemiBold.style}>
+                                    <input type="text" maxLength="12" name="code" placeholder='Ingresa tu código...'/>
                                     <button type='button'>AÑADIR CÓDIGO</button>
                                 </div>
                                 <div className={styles.viewCode}>
+                                    <div className={styles.items}>
+                                        <p>12345566</p>
+                                        <div>trash</div>
 
+                                    </div>
                                 </div>
                                 <div>
                                     <button type='submit'>ENVIAR CÓDIGOS</button>
