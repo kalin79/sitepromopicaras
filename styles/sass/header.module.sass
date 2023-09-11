@@ -1,6 +1,75 @@
 @import 'vars/colors'
 @import 'abstracts/mixins'
 
+.opcioNavMovil
+    display: none
+    grid-column: 1 / -1
+    margin-top: 18rem
+    padding-top: 2rem
+    position: relative
+    @media screen and (min-width: 992px)
+        display: none
+    .boxRedes
+        display: flex
+        justify-content: flex-start
+        align-content: center
+        gap: 1rem
+        padding-left: 2.5rem
+        margin-top: 2.5rem
+        img
+            height: 44px
+            width: auto
+            object-fit: contain
+    .contentLink
+        padding-left: 2.5rem
+        a
+            text-decoration: none
+            p
+                font-size: 14px
+                color: white
+                text-transform: uppercase
+                transition: .5s ease-in-out color
+            &:hover,
+            &.active
+                p
+                    color: $amarrillo
+    .boxLinea
+        object-fit: contain
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: auto
+.navbar
+    position: fixed
+    bottom: 1rem
+    right: 1rem
+    width: 52px
+    height: 52px
+    background: $rojo
+    border: 2px solid $marron
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-content: center
+    flex-direction: column
+    flex-wrap: wrap
+    z-index: 40
+    cursor: pointer
+    @media screen and (min-width: 992px)
+        display: none
+.wrapperNavMovil
+    background: url('/assets/bg.png')
+    background-repeat: repeat
+    background-position: center
+    position: fixed
+    width: 100vw
+    height: 100vh
+    left: 0
+    top: -100%
+    z-index: 20
+    @media screen and (min-width: 992px)
+        top: -100%
 .headerMain
     position: absolute
     border: 0px solid green
@@ -8,6 +77,7 @@
     height: 115px
     top: 0
     left: 0
+    z-index: 21
     .gridMain
         position: relative
         z-index: 11
@@ -17,14 +87,25 @@
         padding-top: 1rem
         .itemLeft
             grid-column: 1 / span 2
+        .contentNav
+            position: fixed
+            top: 0
+            left: 0
+            z-index: 30
+            padding: 12rem 0 0 2.5rem
+            @media screen and (min-width: 992px)
+                position: relative
+                padding: 0
         .itemCenter
             grid-column: 3 / span 8
             justify-self: end
-            &.navMain
-                display: flex
-                justify-content: flex-start
-                gap: 1rem
-                padding-top: 2rem
+            .navMain
+                display: none
+                @media screen and (min-width: 992px)
+                    display: flex !important
+                    justify-content: flex-start
+                    gap: 1rem
+                    padding-top: 2rem
                 a
                     text-decoration: none
                     p

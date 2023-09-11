@@ -2,33 +2,61 @@
 @import 'abstracts/mixins'
 
 .boxFind
-    padding-top: 15rem
-    margin-bottom: 15rem
+    padding-top: 12rem
+    padding-bottom: 6rem
+    @media screen and (min-width: 992px)
+        padding-top: 15rem
     .boxTitle
         margin: auto
         text-align: center
-        margin-bottom: 11rem
+        margin-bottom: 4rem
+        @media screen and (min-width: 992px)
+            margin-bottom: 11rem
         h2
             position: relative
             display: inline-block
+            img
+                width: 90%
+                height: auto
+                object-fit: contain
+                @media screen and (min-width: 992px)
+                    width: 430px
+                    height: 69px
+
             .avion1
                 position: absolute
                 top: -12rem
                 left: -24rem
+                display: none
+                width: 452px
+                height: 242px
+                @media screen and (min-width: 992px)
+                    display: block
+
             .avion2
                 position: absolute
                 top: 5.2rem
                 left: 27.5rem
                 z-index: 1
+                display: none
+                width: 339px
+                height: 278px
+                @media screen and (min-width: 992px)
+                    display: block
         h3
             position: relative
-            display: flex
+            // display: flex
+            width: 360px
+            text-align: center
+            margin: auto
+            @media screen and (min-width: 992px)
+                width: 561px
             .franjaYellow
-                display: block
                 position: absolute
-                top: -0.4rem
-                left: 24rem
+                top: 0.4rem
+                left: 0rem
                 z-index: -1
+                width: 100%
             p
                 color: #FFF
                 text-align: center
@@ -36,10 +64,12 @@
                 font-style: normal
                 line-height: normal
                 letter-spacing: -0.36px
-                display: block
-                position: absolute
-                top: 0.8rem
-                left: 28rem
+                position: relative
+                top: 1.25rem
+                @media screen and (min-width: 992px)
+                    top: 1.85rem
+
+                
     .boxSquares
         display: flex
         flex-direction: row

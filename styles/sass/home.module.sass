@@ -22,6 +22,12 @@
             flex-wrap: wrap
             gap: 1rem
             margin-top: 3rem
+            img
+                width: 90%
+                height: auto
+                object-fit: contain
+                @media screen and (min-width: 992px)
+                    width: 470px
         .boxButtons
             display: flex
             justify-content: center
@@ -56,10 +62,16 @@
                     position: absolute
                     top: -12rem
                     left: -24rem
+                    display: none
+                    @media screen and (min-width: 992px)
+                        display: block
                 .avion2
                     position: absolute
                     top: 5.5rem
                     left: 27.5rem
+                    display: none
+                    @media screen and (min-width: 992px)
+                        display: block
     .bgRegistro,
     .bgDocumento
         background-image: url('/assets/bg_inicio.png')
@@ -72,9 +84,13 @@
             background-position: center 63px
         @media screen and (min-width: 1200px)
             background-position: center 43px
+    .bgDocumento
+        background-position: -180px 63px
+        @media screen and (min-width: 992px)
+            background-position: center 63px
     .bgRegistro
         background-image: url('/assets/fondoConcurso.png')
-        background-position: center 63px
+        background-position: -123px -190px
         padding-bottom: 5rem
         @media screen and (min-width: 992px)
             background-position: center 63px
@@ -82,7 +98,11 @@
             background-position: -19px -19px
         @media screen and (min-width: 1400px)
             background-position: -45px -19px
-        
+        .gridMain
+            .itemWorld
+                margin-bottom: 1.5rem
+                @media screen and (min-width: 992px)
+                    margin-bottom: 0rem
     
     .gridMain
         display: grid
@@ -90,9 +110,14 @@
         gap: 1rem
         .itemForm
             border: 0px solid red
-            padding-top: 5.85rem
-            margin-left: -3rem
-            grid-column: 7 / -1
+            padding-top: 0
+            margin-top: -2rem
+            margin-left: 0rem
+            grid-column: 1 / -1
+            @media screen and (min-width: 992px)
+                grid-column: 7 / -1
+                padding-top: 5.85rem
+                margin-left: -3rem
             &.itemFrom2
                 padding-top: 0rem
                 margin-top: -1rem
@@ -151,12 +176,14 @@
                         margin-right: 5px
                         border-radius: 5px
             button[type="submit"]
-                width: 293px
+                width: 100%
                 height: 52px
                 border-radius: 10px
                 border: 1px solid $marron
                 background: linear-gradient(180deg, #FFD700 0%, #FFB800 100%)
                 text-transform: uppercase
+                @media screen and (min-width: 992px)
+                    width: 293px
             input[type="text"]
                 width: 100%
                 height: 52px
@@ -172,8 +199,11 @@
             .grupoFormulario
                 padding: 1rem 0
                 display: grid
-                grid-template-columns: repeat(2,1fr)
+                grid-template-columns: repeat(1,1fr)
                 gap: 1rem
+                @media screen and (min-width: 992px)
+                    grid-template-columns: repeat(2,1fr)
+
             .Form02
                 h2
                     font-size: 18px
@@ -194,7 +224,17 @@
                 
             .Form01
                 .recordatorioUser
-                    margin-top: 2.5rem
+                    margin-top: 1rem
+                    text-align: center
+                    @media screen and (min-width: 992px)
+                        margin-top: 2.5rem
+                    img
+                        width: 90%
+                        height: auto
+                        object-fit: contain
+                        @media screen and (min-width: 992px)
+                            width: 470px
+
                 h1
                     font-size: 18px
                     line-height: 1.25em
@@ -206,13 +246,14 @@
                     border: 2px solid $marron
                     border-radius: 10px
                     background: white
-                    width: 291px
                     height: 52px
                     display: flex
                     overflow: hidden
                     gap: .5rem
                     padding: .25rem
-                    
+                    width: 100%
+                    @media screen and (min-width: 992px)
+                        width: 291px
                     select
                         width: 113px
                         height: 42px
@@ -233,8 +274,10 @@
                         &:focus
                             outline: none
         .itemWorld
-            grid-column: 1 / span 6
+            grid-column: 1 / -1
             justify-self: end
+            @media screen and (min-width: 992px)
+                grid-column: 1 / span 6
             .contentWorld
                 position: relative
                 button[type='button']
@@ -271,7 +314,7 @@
                         width: 47px
                         height: 32px
                 .containerImg
-                    width: 380px
+                    width: 300px
                     height: auto 
                     @media screen and (min-width: 992px)
                         width: 380px
@@ -281,7 +324,37 @@
                         width: 460px
 
     .pageCodigo
+        background-image: url('/assets/fondoConcurso.png')
+        background-position: -85px -185px
+        padding-bottom: 5rem
+        @media screen and (min-width: 992px)
+            background-position: center 63px
+        @media screen and (min-width: 1200px)
+            background-position: -19px -19px
+        @media screen and (min-width: 1400px)
+            background-position: -45px -19px
+        .recordatorioUser
+            display: flex
+            justify-content: center
+            align-content: center
+            flex-direction: column
+            flex-wrap: wrap
+            gap: 1rem
+            margin-top: 3rem
+            @media screen and (min-width: 992px)
+                justify-content: flex-start
+                flex-direction: row
+            img
+                width: 90%
+                height: auto
+                object-fit: contain
+                @media screen and (min-width: 992px)
+                    width: 470px
         .gridMain
+            .itemWorld
+                display: none
+                @media screen and (min-width: 992px)
+                    display: block
             .itemForm
                 form
                     margin-bottom: 1.75rem
@@ -290,11 +363,13 @@
                         font-size: 18px
                         margin: .25rem 0 1.5rem
                     button[type="submit"]
-                        width: 310px
+                        width: 100%
+                        @media screen and (min-width: 992px)
+                            width: 310px
                     .contentError
                         width: 310px
                     .viewCode
-                        width: 310px
+                        width: 100%
                         height: 221px
                         border-radius: 10px
                         border: 1px solid $grisClaro3
@@ -302,6 +377,8 @@
                         margin: .5rem 0
                         box-sizing: border-box
                         overflow: scroll
+                        @media screen and (min-width: 992px)
+                            width: 310px
                         .items
                             border-radius: 8px
                             margin: .5rem
@@ -325,32 +402,39 @@
                                 margin: 0
                                 line-height: 1.9em
                     .containerCode
-                        width: 310px
+                        width: 100%
                         border-radius: 10px
                         border: 1px solid $grisClaro3
                         background: $grisClaro2
                         display: flex
                         gap: 1rem
                         padding: .25rem
+                        @media screen and (min-width: 992px)
+                            width: 310px
                         button[type="button"]
-                            width: 124px
+                            width: 100%
                             height: 43px
                             border-radius: 10px
                             border: 1px solid $marron
                             background: linear-gradient(180deg, #FFD700 0%, #FFB800 100%)
                             text-transform: uppercase
                             font-size: 12px
+                            @media screen and (min-width: 992px)
+                                width: 124px
                         input[type="text"]
-                            width: 160px
+                            width: 100%
                             height: 43px
                             border: 0
                             background: transparent
                             box-sizing: border-box
                             font-size: 14px
                             padding: 0 .5rem
+                            @media screen and (min-width: 992px)
+                                width: 160px
                             &:focus
                                 outline: none
                 .containerImgCodigo
+                    margin: 3rem 0 1rem
                     img
                         width: 340px
                         height: 183px

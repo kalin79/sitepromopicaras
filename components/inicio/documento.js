@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
  
 import Image from 'next/image'
+import PopupVideo from '../popup/videoPopup'
 import localFont from "next/font/local"
 import styles from  '../../styles/sass/home.module.sass'
 
@@ -102,6 +103,14 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
         }
     }
 
+
+    const handleVideo = () => {
+        const tl = gsap.timeline()
+        const codePopup = document.getElementById("videoPopup")
+        tl.to(codePopup, {display:'block'})
+        tl.to(codePopup, {opacity: 1})
+    }
+
     // Cambios UseEffects
 
     useEffect(() => {
@@ -120,13 +129,14 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
 
     return (
         <>
+            <PopupVideo />
             <div className={`${styles.bgDocumento} heightView`} id='pageDNI'>
                 <div className='container'>
                     <div className={`${styles.gridMain} separationTopMain`}>
                         <div className={styles.itemWorld}>
                             <div className={styles.contentWorld}>
                                 <Image src='/assets/mundo.png' width="288" height="288" className={styles.containerImg} alt='Comente el Mundo viajando' />
-                                <button type='button'>
+                                <button type='button' onClick={handleVideo}>
                                     <Image src='/assets/play.png' alt='Mira el video de la promo' width="47" height="32" />
                                     <span style={fontPeckham.style}>
                                         mira el <br />

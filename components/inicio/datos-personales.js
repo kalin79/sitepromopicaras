@@ -166,6 +166,7 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
                                             value={movil}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
+                                            maxLength="12"
                                         />
                                         {errores.movil && <label className='labelError' style={fontMonserratRegular.style}>{errores.movil}</label>}
 

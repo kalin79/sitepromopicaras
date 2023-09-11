@@ -64,82 +64,85 @@ const Terminos = () => {
                                 
                                 <br></br>
 
-                                <div className={styles.tablas}>
-                                    <table className={styles.table}>
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">SORTEO 1: 09/10/2023</th>
-                                            </tr>
-                                            <tr>
-                                                <th>CANTIDAD</th>
-                                                <th>DESCRIPCIÓN</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Viaje doble según destino a elección*</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Gopro9</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Amazon Fire TV</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Scooter Eléctrico</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Alexa Amazon Parlante</td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>GiftCards S/.200</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div className={styles.scrollTable}>
 
-                                    <table className={styles.table}>
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">SORTEO 2: 31/10/2023</th>
-                                            </tr>
-                                            <tr>
-                                                <th>CANTIDAD</th>
-                                                <th>DESCRIPCIÓN</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Viaje doble según destino a elección*</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Gopro9</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Amazon Fire TV</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Scooter Eléctrico</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Alexa Amazon Parlante</td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>GiftCards S/.200</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div className={styles.tablas}>
+                                        <table className={styles.table}>
+                                            <thead>
+                                                <tr>
+                                                    <th colSpan={2}>SORTEO 1: 09/10/2023</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>CANTIDAD</th>
+                                                    <th>DESCRIPCIÓN</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Viaje doble según destino a elección*</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Gopro9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Amazon Fire TV</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Scooter Eléctrico</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Alexa Amazon Parlante</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>GiftCards S/.200</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table className={styles.table}>
+                                            <thead>
+                                                <tr>
+                                                    <th colSpan={2}>SORTEO 2: 31/10/2023</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>CANTIDAD</th>
+                                                    <th>DESCRIPCIÓN</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Viaje doble según destino a elección*</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Gopro9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Amazon Fire TV</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Scooter Eléctrico</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Alexa Amazon Parlante</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>GiftCards S/.200</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                                 <br></br>
 
@@ -187,83 +190,85 @@ const Terminos = () => {
                                         </ul>
                                     <p>Distribuidos de la siguiente manera:</p>
                                     
-                                    <br></br>                                
-                                    <div className={styles.tablas}>
-                                        <table className={styles.table}>
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">SORTEO 1: 09/10/2023</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>CANTIDAD</th>
-                                                    <th>DESCRIPCIÓN</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Viaje doble según destino a elección*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Gopro9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Amazon Fire TV</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Scooter Eléctrico</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Alexa Amazon Parlante</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>GiftCards S/.200</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <br></br>   
+                                    <div className={styles.scrollTable}>                             
+                                        <div className={styles.tablas}>
+                                            <table className={styles.table}>
+                                                <thead>
+                                                    <tr>
+                                                        <th colSpan={2}>SORTEO 1: 09/10/2023</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>CANTIDAD</th>
+                                                        <th>DESCRIPCIÓN</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Viaje doble según destino a elección*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Gopro9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Amazon Fire TV</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Scooter Eléctrico</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Alexa Amazon Parlante</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>GiftCards S/.200</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
-                                        <table className={styles.table}>
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">SORTEO 2: 31/10/2023</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>CANTIDAD</th>
-                                                    <th>DESCRIPCIÓN</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Viaje doble según destino a elección*</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Gopro9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Amazon Fire TV</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Scooter Eléctrico</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Alexa Amazon Parlante</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>10</td>
-                                                    <td>GiftCards S/.200</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                            <table className={styles.table}>
+                                                <thead>
+                                                    <tr>
+                                                        <th colSpan={2}>SORTEO 2: 31/10/2023</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>CANTIDAD</th>
+                                                        <th>DESCRIPCIÓN</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Viaje doble según destino a elección*</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Gopro9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Amazon Fire TV</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Scooter Eléctrico</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Alexa Amazon Parlante</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>GiftCards S/.200</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                     <br></br>
 
@@ -398,7 +403,7 @@ const Terminos = () => {
                                 <p>Se informa al participante que sus datos personales serán usados para la ejecución de la promoción, razón por la cual COMPAÑÍA NACIONAL DE CHOCOLATES DE PERÚ S.A compartirá con la agencia Océano Azul Soluciones Integrales S.A.C., con RUC Nº  20601509157, domiciliado en Av. Gerardo Unger Mz G Lt 4C. Comas –Lima., Lima, la información del ganador para la entrega de los premios. La información será usada por la agencia por un lapso no mayor a 3 meses.</p>
                                 <p>COMPAÑÍA NACIONAL DE CHOCOLATES DE PERÚ S.A declara que ha adoptado las medidas de seguridad adecuadas para mantener segura la información que el participante proporciona.
                                 Los datos personales de los(as) consumidores(as) participantes serán de uso confidencial de las empresas involucradas.
-                                Consulte	nuestra	Política	de	Protección	de	Datos	Personales	en	 <a href="https://chocolates.com.pe/wp-content/uploads/2021/01/PDFPoli%CC%81ticadeTratamientodeDatos-V3-CNCH.pdf">https://chocolates.com.pe/wp-content/uploads/2021/01/PDFPoli%CC%81ticadeTratamientodeDatos-V3-CNCH.pdf</a>
+                                Consulte	nuestra	Política	de	Protección	de	Datos	Personales	en	 <a href="https://chocolates.com.pe/wp-content/uploads/2021/01/PDFPoli%CC%81ticadeTratamientodeDatos-V3-CNCH.pdf">click aqu&iacute; </a>
                                 </p>
                         </div>
                     </div>
