@@ -27,51 +27,52 @@ const Preguntas = () => {
     <>
       <div className='' id='preguntasFrecuentes'>
         <div className='container'>
-          <div className={styles.boxFaq}>
-            <div className={styles.boxTitle}>
-                <h2>
-                    <Image src='/assets/faq.svg' width='420' height='80' alt='Titulo' />
-                    <Image src='/assets/plane1.png' className={styles.avion1} width='452' height='242' alt='Avion' />
-                    <Image src='/assets/plane2.png' className={styles.avion2} width='339' height='278' alt='Avion' />
-                </h2>
-            </div>
 
-            <div className={styles.faq}>
-              {faqData.map((item, index) => (
-                <div
-                  key={index}
-                  className={styles.question}
-                >
-                
-                    
-
-                  <div className={styles.questionDiv}>
-                    <div className={styles.borde}>
-                        <Image src='/assets/borde1.png' width='885' height='78' alt='Borde' />
-
-                    </div>
-                    <h4 style={fontMontserratBold.style}>{item.question}</h4>
-                    <div
-                      className={styles.toggleButton}
-                      onClick={() => handleQuestionClick(index)}
-                    >
-                      {activeQuestions[index] ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
-                          <path d="M29.6533 18.1283C24.5478 12.3161 19.7991 6.207 14.6993 0.394874C14.0029 -0.397158 12.8459 0.109512 12.5351 0.971431C11.1364 4.86753 9.63985 8.74034 7.60225 12.3453C5.56464 15.9502 3.01476 19.2115 0.367023 22.3738C-0.0876962 22.9154 -0.156767 23.6958 0.367023 24.2258C0.833256 24.6975 1.74269 24.7674 2.19742 24.2258C4.98329 20.9004 7.68859 17.4643 9.83556 13.6672C11.9825 9.87015 13.5539 5.77022 15.0332 1.67028L12.8689 2.24683C17.9745 8.05895 22.7231 14.1681 27.8229 19.9802C28.9338 21.244 30.7584 19.3862 29.6533 18.1283Z" fill="#FFD700"/>
-                        </svg>
-                      ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
-                          <path d="M0.342807 6.47794C5.44833 12.2901 10.197 18.3992 15.2968 24.2113C15.9932 25.0034 17.1502 24.4967 17.461 23.6348C18.8597 19.7387 20.3562 15.8659 22.3938 12.2609C24.4314 8.65603 26.9813 5.39472 29.6291 2.23241C30.0838 1.6908 30.1529 0.910415 29.6291 0.380452C29.1628 -0.0912736 28.2534 -0.161159 27.7987 0.380452C25.0128 3.70583 22.3075 7.14186 20.1605 10.939C18.0136 14.7361 16.4422 18.836 14.9629 22.9359L17.1272 22.3594C12.0216 16.5472 7.27297 10.4381 2.1732 4.62598C1.0623 3.36222 -0.762335 5.22001 0.342807 6.47794Z" fill="#FFD700"/>
-                        </svg>
-                      )}
-                    </div>
-                  </div>
-                  <div className={`${styles.answer} ${activeQuestions[index] ? styles.visible : styles.hidden}`}>
-                    <p dangerouslySetInnerHTML={ createMarkup(item.answer) } style={fontMontserratRegular.style}></p>
-                  </div>
+            <div className={styles.boxFaq}>
+                <div className={styles.boxTitle}>
+                    <h2>
+                        <Image src='/assets/faq.svg' width='420' height='80' alt='Titulo' />
+                        <Image src='/assets/plane1.png' className={styles.avion1} width='452' height='242' alt='Avion' />
+                        <Image src='/assets/plane2.png' className={styles.avion2} width='339' height='278' alt='Avion' />
+                    </h2>
                 </div>
-              ))}
-            </div>
+
+                <div className={styles.faq}>
+                {faqData.map((item, index) => (
+                    <div
+                    key={index}
+                    className={styles.question}
+                    >
+                    
+                        
+
+                    <div className={styles.questionDiv}>
+                        <div className={styles.borde}>
+                            <Image src='/assets/borde1.png' width='885' height='78' alt='Borde' />
+
+                        </div>
+                        <h4 style={fontMontserratBold.style}>{item.question}</h4>
+                        <div
+                        className={styles.toggleButton}
+                        onClick={() => handleQuestionClick(index)}
+                        >
+                        {activeQuestions[index] ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
+                            <path d="M29.6533 18.1283C24.5478 12.3161 19.7991 6.207 14.6993 0.394874C14.0029 -0.397158 12.8459 0.109512 12.5351 0.971431C11.1364 4.86753 9.63985 8.74034 7.60225 12.3453C5.56464 15.9502 3.01476 19.2115 0.367023 22.3738C-0.0876962 22.9154 -0.156767 23.6958 0.367023 24.2258C0.833256 24.6975 1.74269 24.7674 2.19742 24.2258C4.98329 20.9004 7.68859 17.4643 9.83556 13.6672C11.9825 9.87015 13.5539 5.77022 15.0332 1.67028L12.8689 2.24683C17.9745 8.05895 22.7231 14.1681 27.8229 19.9802C28.9338 21.244 30.7584 19.3862 29.6533 18.1283Z" fill="#FFD700"/>
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
+                            <path d="M0.342807 6.47794C5.44833 12.2901 10.197 18.3992 15.2968 24.2113C15.9932 25.0034 17.1502 24.4967 17.461 23.6348C18.8597 19.7387 20.3562 15.8659 22.3938 12.2609C24.4314 8.65603 26.9813 5.39472 29.6291 2.23241C30.0838 1.6908 30.1529 0.910415 29.6291 0.380452C29.1628 -0.0912736 28.2534 -0.161159 27.7987 0.380452C25.0128 3.70583 22.3075 7.14186 20.1605 10.939C18.0136 14.7361 16.4422 18.836 14.9629 22.9359L17.1272 22.3594C12.0216 16.5472 7.27297 10.4381 2.1732 4.62598C1.0623 3.36222 -0.762335 5.22001 0.342807 6.47794Z" fill="#FFD700"/>
+                            </svg>
+                        )}
+                        </div>
+                    </div>
+                    <div className={`${styles.answer} ${activeQuestions[index] ? styles.visible : styles.hidden}`}>
+                        <p dangerouslySetInnerHTML={ createMarkup(item.answer) } style={fontMontserratRegular.style}></p>
+                    </div>
+                    </div>
+                ))}
+                </div>
           </div>
         </div>
       </div>
@@ -184,4 +185,4 @@ const faqData = [
     `,
   },
   // Agrega más preguntas y respuestas aquí
-];
+ ];
