@@ -64,22 +64,53 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
 
 
     const submitFormIsValidate = async () => {
-        const pageID = 'pageRegister'
-        const itemPage = 2
-        let height = -1 * window.innerHeight * (itemPage - 1)
-        let containerParallax = document.getElementById('viewOverflow')
-        console.log(Object.keys(errores).length)
-        if (Object.keys(errores).length === 0){
-            updateUser(true)
-            updatePage(2)
-            
-            // gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+        const btn = document.getElementsByClassName("boxBtnSubmit")
+        const btnload = document.getElementsByClassName("btnload")
+        const tl = gsap.timeline()
+        tl.to(btn,{"display": "none"})
+        tl.to(btnload,{"display": "block"})
+        // return false
+        try {
+
+            const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}validate-document?numeroDocumento=${documento}`)
+            const resultado = await respuesta.json()
+            console.log(resultado.participante)
+
+            if (resultado.status === 200) {
+                if ((resultado.participante === "") || (resultado.participante === null)){
+                    console.log('nuevo')
+                    console.log(Object.keys(errores).length)
+                    if (Object.keys(errores).length === 0){
+                        updateUser(true)
+                        updatePage(2)
+                        // gsap.to(containerParallax,  { top: height, ease: "Power1.easeInOut" })
+                    }
+                }else{
+                    console.log('existe')
+                    agregarDato('id',resultado.participante.id)
+                    updateUser(true)
+                    updatePage(3)
+                    tl.to(btnload,{"display": "none"})
+                    tl.to(btn,{"display": "block"})
+                    
+                }
+            }
+
+        } catch (e) {
+            console.log(e)
+
+        } finally {
+            tl.to(btnload,{"display": "none"})
+            tl.to(btn,{"display": "block"})
         }
+
+        
     }
 
     const handleSubmitDoc = (e) => {
         e.preventDefault()
         const erroresValidacion = validarDNI(valores)
+        
         setErrores(erroresValidacion)
         submitFormIsValidate()
     }
@@ -185,12 +216,15 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
                                         <label style={fontMonserratRegular.style}>{errores.documento}</label>
                                     </div>
                                 }
-                                <div className={styles.boxBtn}>
+                                <div className={`${styles.boxBtn} boxBtnSubmit`}>
                                     <button 
                                         type='submit'
                                     >
                                         PARTICIPAR
                                     </button>
+                                </div>
+                                <div className='btnload'>
+                                    <span className="loader"></span>
                                 </div>
                                 <div className={styles.recordatorioUser}>
                                     <Image src='/assets/recordarUsuario.png' alt='Mira el video de la promo' width="470" height="119" />
