@@ -178,7 +178,7 @@ const Codigo = ({updatePage,datos}) => {
                                 <Image src='/assets/codigo.png' width="340" height="183" alt='Comente el Mundo viajando' />
                             </div>
                             <div className={styles.imgTitle}>
-                                <Image src='/assets/txtregistra.svg' width="371" height="42" alt='Registra los codigos de tus empaques' />
+                                <Image src='/assets/txtregistra3.svg' width="380" height="52" alt='Registra los codigos de tus empaques' />
                             </div>
                             <form
                                 onSubmit={handleSubmitCode}

@@ -72,37 +72,35 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
         const tl = gsap.timeline()
         tl.to(btn,{"display": "none"})
         tl.to(btnload,{"display": "block"})
+        console.log(Object.keys(errores).length)
+        if (Object.keys(errores).length === 0){
+            try {
+                const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}register-participant`, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type" : "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
 
-        try {
-            const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}register-participant`, {
-                method: 'POST',
-                headers: {
-                    "Content-Type" : "application/json",
-                },
-                body: JSON.stringify(data),
-            })
+                const resultado = await respuesta.json()
 
-            const resultado = await respuesta.json()
+                // console.log(resultado)
+                // console.log(resultado.participante)
+                // console.log(resultado.participante.id)
 
-            // console.log(resultado)
-            // console.log(resultado.participante)
-            // console.log(resultado.participante.id)
-
-            if (resultado.status === 200) {
-                // console.log(Object.keys(errores).length)
-                if (Object.keys(errores).length === 0){
+                if (resultado.status === 200) {
                     // console.log('pasamos al siguiente')
                     agregarDato('id',resultado.participante.id)
                     updatePage(3)
-                }else{
-                    console.log('error')
-                    tl.to(btnload,{"display": "none"})
-                    tl.to(btn,{"display": "block"})
                 }
+            } catch (e) {
+                console.log(e)
+            } finally {
+                tl.to(btnload,{"display": "none"})
+                tl.to(btn,{"display": "block"})
             }
-        } catch (e) {
-            console.log(e)
-        } finally {
+        }else{
             tl.to(btnload,{"display": "none"})
             tl.to(btn,{"display": "block"})
         }
