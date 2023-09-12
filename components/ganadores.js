@@ -46,7 +46,7 @@ const Ganadores = () => {
 
                         <div className={styles.subTitle}>
                             <p style={fontMonserratBold.style}>
-                                Estos son nuestros afortunados ganadores <br></br>del primer SORTEO 1: 06/10/2023
+                                SORTEO 1: 09/10/2023
                             </p>
                         </div>
 

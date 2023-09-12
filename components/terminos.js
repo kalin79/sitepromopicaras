@@ -50,7 +50,7 @@ const Terminos = () => {
                             <h6 style={fontMonserratBold.style}>1.- GENERALES</h6>
                                 <p>1.1.- Nombre de la promoción: PROMO CÓMETE AL MUNDO VIAJANDO CON PÍCARAS</p>
                                 <p>1.2.-Empresa responsable el “Organizador”: “COMPAÑÍA NACIONAL DE CHOCOLATES DE PERÚ S.A.” con domicilio en: Av. Maquinarias 2360, urbanización Conde de las Torres, distrito de Lima. RUC 20514584789.</p>
-                                <p>1.3.- Ámbito de validez: Promoción válida a nivel nacional. Participan las siguientes presentaciones de productos de la marca Pícaras que cuenten con el código alfanumérico en la parte posterior:</p>
+                                <p>1.3.- Ámbito de validez: Promoción válida a nivel nacional. Participan las siguientes presentaciones de productos de la marca Pícaras que cuentan con el código alfanumérico dentro del empaque:</p>
                                     <ul>
                                         <li>Pícaras Clásica x40g</li>
                                         <li>Pícaras Extrema x40g</li>
@@ -125,11 +125,11 @@ const Terminos = () => {
                                                     <td>Gopro9</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2</td>
+                                                    <td>3</td>
                                                     <td>Amazon Fire TV</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2</td>
+                                                    <td>3</td>
                                                     <td>Scooter Eléctrico</td>
                                                 </tr>
                                                 <tr>
@@ -251,11 +251,11 @@ const Terminos = () => {
                                                         <td>Gopro9</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>2</td>
+                                                        <td>3</td>
                                                         <td>Amazon Fire TV</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>2</td>
+                                                        <td>3</td>
                                                         <td>Scooter Eléctrico</td>
                                                     </tr>
                                                     <tr>
@@ -271,13 +271,6 @@ const Terminos = () => {
                                         </div>
                                     </div>
                                     <br></br>
-
-                                    <li>5.2. Detalle de los premios:</li>
-                                    <p>En caso de robo y/o hurto de los premios al ganador y/o portador del premio, COMPAÑÍA NACIONAL DE CHOCOLATES DE PERÚ S.A no es responsable de los mismos. </p>
-                                    <p>Todos los premios de gift cards no pueden cambiarse por dinero en efectivo y son de uso exclusivo al portador. En caso de daño o adulteración la gift cards, estas pierden su validez para cualquier efecto, no reembolsable en caso de expiración, pérdida, robo o destrucción de la tarjeta.</p>
-                                    <p>COMPAÑÍA NACIONAL DE CHOCOLATES DE PERÚ S.A no se hace responsable de la atención y/o calidad del servicio donde canjear los premios.</p>
-                                    <p>El ganador debe considerar que las gift cards no son recargables, los consumos mayores al monto de la gift card será asumido por el participante. Se puede utilizar las gift cards para pagar el valor total o parte del valor de los artículos que compres en cualquiera de las tiendas físicas y/o virtuales, cabe señalar que hay gift cards que solo son de un solo uso.</p>
-                                    <p>Además de lo antes señalado, cada premio se encuentra sujeto a las condiciones específicas siguientes:</p>
 
                                     <li>5.2. Detalle de los premios:</li>
                                     <p>En caso de robo y/o hurto de los premios al ganador y/o portador del premio, COMPAÑÍA NACIONAL DE CHOCOLATES DE PERÚ S.A no es responsable de los mismos. </p>
@@ -302,7 +295,7 @@ const Terminos = () => {
                                             </li>
                                             <br></br>
                                             <li>
-                                                <b>GLAMPLING - COLOMBIA:</b> Este premio es para (02) personas, incluye (02) boletos aéreos Medellín/Lima vía LATAM Airlines y (02) boletos aéreos Lima/Medellín vía LATAM Airlines, así como hospedaje: tres (03) días y dos (02) noches de alojamiento en Bubblesky Guatapé Hotel (experiencia Glamping tipo Domo) u hotel de la misma categoría, incluye desayunos. Incluye traslados Aeropuerto-hotel Guatapé y viceversa. Punto de encuentro: Aeropuerto Jorge Chavez (Lima Perú). Los viajeros deberán presentarse en el aeropuerto 3 horas antes de la hora de embarque para garantizar la salida, el premio no cubre reprogramaciones producto de pérdidas del vuelo por tardanza. Especificaciones: Los pasajes son Tarifa Light, la cual incluye un (01) equipaje de mano con un peso máximo de 10 Kgs y un (01) bolso o mochila pequeña (alto = 45 cm x ancho= 35cm x profundidad=20 cm) por viajero. El alojamento consiste en (01) habitacion Crystal Glamping con Jacuzzi y Sauna o de similar categoría, incluye el impuesto hotelero (los viajeros deberán presentarse a la llegada a Colombia al módulo de migraciones para que les coloquen el sello PT que los exonera del pago de impuestos por viaje de turismo), el Check in y el Check Out se encuentran sujetas al horario del hotel. Programación de viaje: Entre el 27 de noviembre y el 20 de diciembre de 2023 del 2023. No aplica para feriados y temporada alta. Premio no transferible.
+                                                <b>GLAMPLING - COLOMBIA:</b> Este premio es para (02) personas, incluye (02) boletos aéreos Medellín/Lima vía LATAM Airlines y (02) boletos aéreos Lima/Medellín vía LATAM Airlines, así como hospedaje: tres (03) días y dos (02) noches de alojamiento en Bubblesky Guatapé Hotel (experiencia Glamping tipo Domo) u hotel de la misma categoría, incluye desayunos. Incluye traslados Aeropuerto-hotel Guatapé y viceversa. Punto de encuentro: Aeropuerto Jorge Chavez (Lima Perú). Los viajeros deberán presentarse en el aeropuerto 3 horas antes de la hora de embarque para garantizar la salida, el premio no cubre reprogramaciones producto de pérdidas del vuelo por tardanza. Especificaciones: Los pasajes son Tarifa Light, la cual incluye un (01) equipaje de mano con un peso máximo de 10 Kgs y un (01) bolso o mochila pequeña (alto = 45 cm x ancho= 35cm x profundidad=20 cm) por viajero. El alojamento consiste en (01) habitacion Crystal Glamping con Jacuzzi y Sauna o de similar categoría, incluye el impuesto hotelero (los viajeros deberán presentarse a la llegada a Colombia al módulo de migraciones para que les coloquen el sello PT que los exonera del pago de impuestos por viaje de turismo), el Check in y el Check Out se encuentran sujetas al horario del hotel. Programación de viaje: Entre el 27 de noviembre y el 20 de diciembre del 2023. No aplica para feriados y temporada alta. Premio no transferible.
                                             </li>
                                             <br></br>
                                             <li>
@@ -310,7 +303,7 @@ const Terminos = () => {
                                             </li>
                                             <br></br>
                                             <li>
-                                                <b>CCXP – BRASIL:</b> Este premio es para dos (02) personas, incluye dos (02) boletos aéreos Lima/Sao Paulo vía LATAM Airlines y dos (02) boletos aéreos Sao Paulo – Lima vía LATAM Airlines, así como hospedaje: cuatro (04) días y tres (03) noches de alojamiento en QOYA by Hilton Sao Paulo u hotel de la misma categoría, se incluye desayunos. Incluye traslados aeropuerto – hotel y viceversa. Punto de encuentro: Aeropuerto Jorge Chavez (Lima Perú). Los viajeros deberán presentarse en el aeropuerto 3 horas antes de la hora de embarque para garantizar la salida, el premio no cubre reprogramaciones producto de pérdidas del vuelo por tardanza. Especificaciones: Los pasajes son Tarifa Light, la cual incluye un (01) equipaje de mano con un peso máximo de 10 Kgs y un (01) bolso o mochila pequeña (alto = 45 cm x ancho= 35cm x profundidad=20 cm) por viajero. El alojamento consiste en (01) habitación Superior Qoya o de similar categoría, incluye el impuesto hotelero, el Check in y el Check Out se encuentran sujetas al horario del hotel. Se incluye boletos dobles para asistir a las CCXP Sao Paulo 2023 por 3 días (se incluye movilidad del hotel al evento y viceversa). Programación de viaje: Entre el 29 de noviembre y el 03 de diciembre. Premio no transferible.
+                                                <b>CCXP – BRASIL:</b> Este premio es para dos (02) personas, incluye dos (02) boletos aéreos Lima/Sao Paulo vía LATAM Airlines y dos (02) boletos aéreos Sao Paulo – Lima vía LATAM Airlines, así como hospedaje: cuatro (04) días y tres (03) noches de alojamiento en QOYA by Hilton Sao Paulo u hotel de la misma categoría, se incluye desayunos. Incluye traslados aeropuerto – hotel y viceversa. Punto de encuentro: Aeropuerto Jorge Chavez (Lima Perú). Los viajeros deberán presentarse en el aeropuerto 3 horas antes de la hora de embarque para garantizar la salida, el premio no cubre reprogramaciones producto de pérdidas del vuelo por tardanza. Especificaciones: Los pasajes son Tarifa Light, la cual incluye un (01) equipaje de mano con un peso máximo de 10 Kgs y un (01) bolso o mochila pequeña (alto = 45 cm x ancho= 35cm x profundidad=20 cm) por viajero. El alojamento consiste en (01) habitación Superior Qoya o de similar categoría, incluye el impuesto hotelero, el Check in y el Check Out se encuentran sujetas al horario del hotel. Se incluye boletos dobles para asistir a las CCXP Sao Paulo 2023 por 3 días (se incluye movilidad del hotel al evento y viceversa). Programación de viaje: Entre el 29 de noviembre y el 03 de diciembre del 2023. Premio no transferible.
                                             </li>
                                             <br></br>
                                         </ul>
