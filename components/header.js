@@ -35,12 +35,12 @@ export default function Header() {
           if (contentNav.getAttribute("menu")){
                tl.to(_Nav, {"display": "none"})
                tl.to(opcioNavMovil, {"display": "none"},'-=.5')
-               tl.to(contentNav, {y: "-100%", duration: 2})
+               tl.to(contentNav, {y: "-150%", duration: 2})
                contentNav.removeAttribute("menu")
           }else{
                
                contentNav.setAttribute("menu","activo")
-               tl.to(contentNav, {y: "100%"})
+               tl.to(contentNav, {y: "150%"})
                tl.to(_Nav, {"display": "block"})
                tl.to(opcioNavMovil, {"display": "block"},'-=.5')
           }
