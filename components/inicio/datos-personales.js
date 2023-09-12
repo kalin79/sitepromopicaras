@@ -49,18 +49,65 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
     const [errores, setErrores] = useState({})
     const [submitForm, setSubmitForm] = useState(false)
 
-    const { nombre, apellido, email, movil, dni, lugar, instagram, politicaDatos, tyc, edad } = valores
+    const { nombre, apellido, email, movil, lugar, instagram, politicaDatos, tyc, edad } = valores
     const { documento, tipoDoc } = datos
 
-    const submitFormIsValidate = () => {
-        const pageID = 'pageCodigo'
-        const itemPage = 3
-        let height = -1 * window.innerHeight * (itemPage - 1)
-        let containerParallax = document.getElementById('viewOverflow')
-        if (Object.keys(errores).length === 0){
-            console.log('pasamos al siguiente')
-            updatePage(3)
+    const submitFormIsValidate = async () => {
+
+        const data = {
+            nombres: nombre,
+            apellidos: apellido,
+            email: email,
+            movil: movil,
+            donde_viajar: lugar,
+            numero_documento: documento,
+            instagram: instagram,
+            mayor_edad: edad === true ? 1 : 0,
+            tyc: tyc === true ? 1 : 0,      
+            politica_privacidad: politicaDatos === true ? 1 : 0,  
         }
+
+        const btn = document.getElementsByClassName("boxBtnSubmit")
+        const btnload = document.getElementsByClassName("btnload")
+        const tl = gsap.timeline()
+        tl.to(btn,{"display": "none"})
+        tl.to(btnload,{"display": "block"})
+
+        try {
+            const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}register-participant`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type" : "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+
+            const resultado = await respuesta.json()
+
+            // console.log(resultado)
+            // console.log(resultado.participante)
+            // console.log(resultado.participante.id)
+
+            if (resultado.status === 200) {
+                // console.log(Object.keys(errores).length)
+                if (Object.keys(errores).length === 0){
+                    // console.log('pasamos al siguiente')
+                    agregarDato('id',resultado.participante.id)
+                    updatePage(3)
+                }else{
+                    console.log('error')
+                    tl.to(btnload,{"display": "none"})
+                    tl.to(btn,{"display": "block"})
+                }
+            }
+        } catch (e) {
+            console.log(e)
+        } finally {
+            tl.to(btnload,{"display": "none"})
+            tl.to(btn,{"display": "block"})
+        }
+
+        
     }
 
     const handleSubmit = async (e) => {
@@ -236,12 +283,15 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
                                     </div>
                                 </div>
 
-                                <div className={styles.boxBtn}>
+                                <div className={`${styles.boxBtn} boxBtnSubmit`}>
                                     <button 
                                         type='submit'
                                     >
                                         PARTICIPAR
                                     </button>
+                                </div>
+                                <div className='btnload'>
+                                    <span className="loader"></span>
                                 </div>
                             </div>
                         </form>

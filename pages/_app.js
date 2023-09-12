@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
         movil: '',
         lugar: '',
         instagram: '',
+        id: '',
     }
 
     const [datos, setDatos] = useState(VALORES_INICIALES)

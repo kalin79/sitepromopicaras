@@ -47,15 +47,51 @@ const Codigo = ({updatePage,datos}) => {
     const [codigos, setCodigos] = useState([])
     const [errorCode, setErrorCode] = useState("")
    
-   
+    const { id } = datos
 
-    const handleSubmitCode = (e) => {
+    const handleSubmitCode =  async (e) => {
         e.preventDefault()
-        console.log(codigos)
+        
+        const btn = document.getElementsByClassName("btnaddSend")
+        const btnload = document.getElementsByClassName("btnload2")
+        const tll = gsap.timeline()
+
         if (codigos.length > 0){
             // Debemos hacer la implementacion de la api
-            console.log("pase")
-            updatePage(4)
+            const data = {
+                participante_id: id,
+                codigos: codigos,
+            }
+    
+            try {
+                tll.to(btn,{"display": "none"})
+                tll.to(btnload,{"display": "block"})
+                const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}register-participant-code`, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type" : "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+    
+                const resultado = await respuesta.json()
+    
+                console.log(resultado)
+    
+                if (resultado.status === 200) {
+                    // console.log("pase")
+                    updatePage(4)
+                }else{
+                    tll.to(btnload,{"display": "none"})
+                    tll.to(btn,{"display": "block"})
+                }
+            } catch (e) {
+                console.log(e)
+            } finally {
+                tll.to(btnload,{"display": "none"})
+                tll.to(btn,{"display": "block"})
+            }
+            
 
         }else{
             console.log('error')
@@ -67,24 +103,54 @@ const Codigo = ({updatePage,datos}) => {
         setErrorCode("")
         console.log(inputCode.current.value)
         const _code = await inputCode.current.value
-        // Comprobar si hay existe el codigo dentro del arreglo
         if (_code.trim().length != 0){
+            // Comprobar si existe el codigo dentro del arreglo
             if (codigos.some(codigoState => codigoState === _code )){
                 console.log('Ya existe')
                 setErrorCode("Ya ingreso ese código")
             }else{
+                // Si el codigo no existe en la BD mostramos el POPUP
+                const btn = document.getElementsByClassName("btnaddCodigo")
+                const btnload = document.getElementsByClassName("btnload")
+                const tll = gsap.timeline()
+                try {
+                    
+                    
+                    tll.to(btn,{"display": "none"})
+                    tll.to(btnload,{"display": "block"})
+                    const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}validate-codigo?codigo=${_code}`)
+                    const resultado = await respuesta.json()
+                    console.log(resultado)
+        
+                    if (resultado.status === 200) {
+                        if ( resultado.success === false ){
+                            // Indica que el codigo no pertenece a la lista de codigos del negocio
+                            const tl = gsap.timeline()
+                            const codePopup = document.getElementById("codePopup")
+                            tl.to(codePopup, {display:'block'})
+                            tl.to(codePopup, {opacity: 1})
 
-                if (_code === "123456") {
-                    // Si el codigo no existe en la BD mostramos el POPUP
-                    const tl = gsap.timeline()
-                    const codePopup = document.getElementById("codePopup")
-                    tl.to(codePopup, {display:'block'})
-                    tl.to(codePopup, {opacity: 1})
-                }else{
-                    // si el codigo no existe en el arreglo entonces lo agregamos
-                    setCodigos([_code,...codigos])
-                    inputCode.current.value = ""
+                            tll.to(btnload,{"display": "none"})
+                            tll.to(btn,{"display": "block"})
+
+                        }else{
+                            // Es un codigo valido
+                            // si el codigo no existe en el arreglo entonces lo agregamos
+                            setCodigos([_code,...codigos])
+                            inputCode.current.value = ""
+
+                            tll.to(btnload,{"display": "none"})
+                            tll.to(btn,{"display": "block"})
+                        }
+                    }
+        
+                } catch (e) {
+                    console.log(e)
+                } finally {
+                    tll.to(btnload,{"display": "none"})
+                    tll.to(btn,{"display": "block"})
                 }
+
             }
         }else{
             setErrorCode("Debe ingresar el código")
@@ -123,7 +189,10 @@ const Codigo = ({updatePage,datos}) => {
                                 </h2>
                                 <div className={styles.containerCode} style={fontMonserratSemiBold.style}>
                                     <input type="text" ref={inputCode} maxLength="12" name="code" placeholder='Ingresa tu código...'/>
-                                    <button type='button' onClick={handleAddCode} style={fontMonserratBold.style}>AÑADIR CÓDIGO</button>
+                                    <button type='button' className='btnaddCodigo' onClick={handleAddCode} style={fontMonserratBold.style}>AÑADIR CÓDIGO</button>
+                                    <div className='btnload'>
+                                        <span className="loader"></span>
+                                    </div>
                                 </div>
                                 {errorCode && 
                                     <div className={`contentError ${styles.contentError}`}>
@@ -142,7 +211,10 @@ const Codigo = ({updatePage,datos}) => {
                                     
                                 </div>
                                 <div>
-                                    <button type='submit' style={fontMonserratBold.style}>ENVIAR CÓDIGOS</button>
+                                    <button type='submit' className='btnaddSend' style={fontMonserratBold.style}>ENVIAR CÓDIGOS</button>
+                                    <div className='btnload2'>
+                                        <span className="loader"></span>
+                                    </div>
                                 </div>
                             </form>
                             <div className={styles.recordatorioUser}>
