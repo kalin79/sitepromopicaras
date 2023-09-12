@@ -23,8 +23,8 @@ export default function Footer() {
                          </div>
                          <div>
                               <nav style={fontMonserratBold.style}>
-                                   <Link href="terminos-condiciones" >TÉRMINOS Y CONDICIONES</Link>
-                                   <Link href="" >PREGUNTAS FRECUENTES</Link>
+                                   <Link href="/terminos-condiciones" >TÉRMINOS Y CONDICIONES</Link>
+                                   <Link href="/preguntas-frecuentes" >PREGUNTAS FRECUENTES</Link>
                               </nav>
                               <div className={styles.containerSocial}>
                                    <a href="" target='_blank'>

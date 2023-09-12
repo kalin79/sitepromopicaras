@@ -1,0 +1,53 @@
+@import 'vars/colors'
+@import 'abstracts/mixins'
+
+.pagePremios
+    padding: 15rem 0 8rem
+    .listPremios
+        width: 100%
+        height: 680px
+        position: relative
+        overflow: hidden
+    .subTitle
+        display: flex
+        justify-content: center
+        .boxMarco
+            width: 561px
+            height: 65px
+            position: relative
+            p
+                position: relative
+                z-index: 2
+                text-align: center
+                font-size: 18px
+                color: white
+                padding: .75rem 0 0
+                line-height: 1.35em
+            .ContainerImg
+                position: absolute
+                top: 0
+                left: 0
+                img
+                    width: 561
+                    height: auto
+                    object-fit: contain
+    .boxTitle
+        display: flex
+        justify-content: center
+        h2
+            position: relative
+            .avion
+                position: absolute
+                &.avion1
+                    top: -12.5rem
+                    left: -30.5rem
+                    display: none
+                    @media screen and (min-width: 992px)
+                        display: block
+                &.avion2
+                    top: 5.32rem
+                    left: 21.5rem
+                    z-index: 1
+                    display: none
+                    @media screen and (min-width: 992px)
+                        display: block
