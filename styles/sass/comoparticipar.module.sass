@@ -1,0 +1,222 @@
+@import 'vars/colors'
+@import 'abstracts/mixins'
+
+.boxFind
+    padding-top: 12rem
+    padding-bottom: 6rem
+    @media screen and (min-width: 992px)
+        padding-top: 15rem
+
+    .boxTitle
+        margin: auto
+        text-align: center
+        margin-bottom: 6rem
+        @media screen and (min-width: 992px)
+            margin-bottom: 6rem
+        h2
+            position: relative
+            display: inline-block
+            img
+                @media screen and (max-width: 992px)
+                    height: auto
+                    object-fit: contain
+                    width: 90%
+
+            .avion1
+                position: absolute
+                top: -12rem
+                left: -24rem
+                display: none
+                width: 452px
+                height: 242px
+                @media screen and (min-width: 992px)
+                    display: block
+
+            .avion2
+                position: absolute
+                top: 5.2rem
+                left: 27.5rem
+                z-index: 1
+                display: none
+                width: 339px
+                height: 278px
+                @media screen and (min-width: 992px)
+                    display: block
+        h3
+            position: relative
+            // display: flex
+            // width: 387px
+            text-align: center
+            margin: auto
+            @media screen and (max-width: 992px)
+                margin-bottom: 3rem
+            .franjaYellow
+                position: absolute
+                top: 0.4rem
+                left: 10rem
+                z-index: -1
+                @media screen and (max-width: 600px)
+                    top: 0.4rem
+                    left: 0rem
+                @media screen and (min-width: 1200px)
+                    top: 0.4rem
+                    left: 29rem
+            p
+                color: #FFF
+                text-align: center
+                font-size: 18px
+                font-style: normal
+                line-height: normal
+                letter-spacing: -0.36px
+                position: relative
+                top: 1rem
+                @media screen and (max-width: 992px)
+
+    .boxPremiosDesktop
+        margin: auto
+        text-align: center
+        margin-bottom: 3rem
+        position: relative
+        @media screen and (max-width: 992px)
+            display: none
+        @media screen and (max-width: 1200px)
+            display: none
+
+        h2
+            position: relative
+            display: inline-block
+            z-index: 1
+            img
+        .boxPasos
+            .boxPaso1
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                position: absolute
+                left: 123px
+                top: 69px
+                img
+                    margin: 7px 0 0 0
+            .boxPaso2
+                display: flex
+                flex-direction: column
+                align-items: center
+                position: absolute
+                right: 47px
+                top: 112px
+                img
+                    margin: 7px 0 0 0
+            .boxPaso3
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                position: absolute
+                left: 94px
+                bottom: 212px
+                z-index: -1
+                img
+                    margin: 7px 0 0 0
+            .boxPaso4
+                position: absolute
+                right: 47px
+                bottom: 220px
+                img
+                    margin: 7px 0 0 0
+
+    .boxPremiosMobile
+        display: none
+        @media screen and (max-width: 1200px)
+            display: flex
+            flex-direction: column
+            align-items: center
+        .boxPasos
+            margin-bottom: 5rem
+            display: flex
+            flex-direction: column
+            .boxPaso1
+                margin: 2rem
+                @media screen and (max-width: 1200px)
+                    display: flex
+                    flex-direction: column
+            .boxPaso2
+                margin: 2rem
+                @media screen and (max-width: 1200px)
+                    display: flex
+                    flex-direction: column
+            .boxPaso3
+                margin: 2rem 1rem
+                @media screen and (max-width: 1200px)
+                    display: flex
+                    flex-direction: column
+            .boxPaso4
+                margin: 3rem 1rem
+
+    .boxParticipantes
+        position: relative
+        @media screen and (max-width: 992px)
+
+        .fondo2
+            position: absolute
+            z-index: 1
+            left: -71px
+            top: -118px
+            @media screen and (max-width: 992px)
+                display: none
+
+        .boxTitle2
+            margin: auto
+            text-align: center
+            margin-bottom: 2rem
+            position: relative
+            z-index: 1
+            @media screen and (max-width: 992px)
+                margin: 0
+            h2
+                position: relative
+                display: inline-block
+                img
+                    @media screen and (max-width: 992px)
+                        height: auto
+                        object-fit: contain
+                        width: 90%
+
+        .boxSquares
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            flex-wrap: wrap
+            z-index: 1
+            @media screen and (max-width: 1200px)
+                display: flex
+                flex-direction: row
+                justify-content: center
+                flex-wrap: wrap
+            .boxSquare
+                display: flex
+                justify-content: space-around
+                align-items: center
+                width: 400px
+                height: 264px
+                margin: 1rem
+                z-index: 1
+                .boxContenedor
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    z-index: 1
+                    img
+                        transform: rotate(-5deg)
+                        flex-shrink: 0
+                        @media screen and (max-width: 992px)
+                            flex-shrink: 0
+                            transform: rotate(5deg)
+                        .xl
+                        @media screen and (max-width: 992px)
+                            width: 90%
+
+                    p
+                        color: #FFF
+                        font-size: 18px
+                        font-style: normal
+                        line-height: 94%
+                        letter-spacing: -0.36px
