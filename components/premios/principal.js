@@ -66,8 +66,110 @@ const Principal = () => {
                 </div>
 
                 <div className={styles.listPremios}>
-                    <div className='boxViewPremio'>
-                        <Image src='/assets/premio1.png' width="3600" height="2730" alt='Argentina' />
+                    <div className={styles.boxViewPremio}>
+                        <Image src='/assets/premio1.png' className={styles.bgPremio} width="3600" height="2730" alt='Argentina' />
+                        <div className={styles.contentPremio}>
+                            <div className={styles.boxSubtitlePremio}>
+                                <Image src='/assets/franjaSubtitle.png' width="207" height="35" alt='3 DÍAS DE FULL AVENTURA EN LA NIEVE' />
+                                <h3 style={fontMonserratBold.style}>3 DÍAS DE FULL AVENTURA <br />EN LA NIEVE</h3>
+                            </div>
+                            <div className={styles.boxTitlePremio}>
+                                <Image src='/assets/franjaTitle.png' className={styles.bgTitle} width="448" height="140" alt='snowboarding' />
+                                <div className={styles.imgTitle}>
+                                    <Image src='/assets/ptitle1.png' width="299" height="24" alt='snowboarding' />
+                                </div>
+                                <div className={styles.boxLugar}>
+                                    <Image src='/assets/p_argentina.png' className={styles.bandera} width="60" height="43" alt='Argentina' />
+                                    <h4>
+                                    <Image src='/assets/premioargentina.png' width="139" height="30" alt='snowboarding' />
+                                    </h4>
+                                </div>
+                                <div className={styles.boxDescriptionpremio}>
+                                    <p className={fontMonserratSemiBold.style}>
+                                    Si eres amante de la aventura y lo extremo, este premio es ideal para ti. Uno de los lugares por excelencia, para practicar este deporte y disfrutar la nieve, en Latinoamérica. Además, podrás observar paisajes increíbles, pendientes, bosques, y hermosos lugares que ofrece este destino.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.boxViewPremio}>
+                        <Image src='/assets/premio21.png' className={styles.bgPremio} width="3600" height="2730" alt='Argentina' />
+                        <div className={styles.contentPremio}>
+                            <div className={styles.boxSubtitlePremio}>
+                                <Image src='/assets/franjaSubtitle.png' width="207" height="35" alt='3 DÍAS DE FULL AVENTURA EN LA NIEVE' />
+                                <h3 style={fontMonserratBold.style}>LA MEJOR CONVENCIÓN <br /> DE LATINOAMERICA</h3>
+                            </div>
+                            <div className={styles.boxTitlePremio}>
+                                <Image src='/assets/franjaTitle2.png' className={`${styles.bgTitle}`} width="448" height="140" alt='snowboarding' />
+                                <div className={`${styles.imgTitle} ${styles.big}`}>
+                                    <Image src='/assets/ptitle2.png' width="299" height="24" alt='snowboarding' />
+                                </div>
+                                <div className={styles.boxLugar}>
+                                    <Image src='/assets/p_brazil.png' className={styles.bandera} width="45" height="32" alt='Argentina' />
+                                    <h4>
+                                    <Image src='/assets/premiosubtitle2.png' width="139" height="30" alt='snowboarding' />
+                                    </h4>
+                                </div>
+                                <div className={styles.boxDescriptionpremio}>
+                                    <p className={fontMonserratSemiBold.style}>
+                                    Sol, playa y arena, es lo primero que se nos viene a la mente cuando pensamos en este destino. Ahora imagínate también poder vivir el evento de comic más grande del continente. Si eres fan seguro este premio te encantará. Alista el traje de baño y también ese traje de super héroe que este destino te espera.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.boxViewPremio}>
+                        <Image src='/assets/premio31.png' className={styles.bgPremio} width="3600" height="2730" alt='Argentina' />
+                        <div className={styles.contentPremio}>
+                            <div className={styles.boxSubtitlePremio}>
+                                <Image src='/assets/franjaSubtitle.png' width="207" height="35" alt='3 DÍAS DE FULL AVENTURA EN LA NIEVE' />
+                                <h3 style={fontMonserratBold.style}>3 DÍAS DE FULL AVENTURA <br />EN LA NIEVE</h3>
+                            </div>
+                            <div className={styles.boxTitlePremio}>
+                                <Image src='/assets/franjaTitle.png' className={styles.bgTitle} width="448" height="140" alt='snowboarding' />
+                                <div className={styles.imgTitle}>
+                                    <Image src='/assets/ptitle1.png' width="299" height="24" alt='snowboarding' />
+                                </div>
+                                <div className={styles.boxLugar}>
+                                    <Image src='/assets/p_argentina.png' className={styles.bandera} width="60" height="43" alt='Argentina' />
+                                    <h4>
+                                    <Image src='/assets/ptitle1.png' width="299" height="24" alt='snowboarding' />
+                                    </h4>
+                                </div>
+                                <div className={styles.boxDescriptionpremio}>
+                                    <p className={fontMonserratSemiBold.style}>
+                                    Sol, playa y arena, es lo primero que se nos viene a la mente cuando pensamos en este destino. Ahora imagínate también poder vivir el evento de comic más grande del continente. Si eres fan seguro este premio te encantará. Alista el traje de baño y también ese traje de super héroe que este destino te espera.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.boxViewPremio}>
+                        {/* <Image src='/assets/premio41.png' className={styles.bgPremio2} width="3600" height="2730" alt='Argentina' /> */}
+                        <Image src='/assets/premio41.png' className={styles.bgPremio} width="3600" height="2730" alt='Argentina' />
+                        <div className={styles.contentPremio}>
+                            <div className={styles.boxSubtitlePremio}>
+                                <Image src='/assets/franjaSubtitle.png' width="207" height="35" alt='3 DÍAS DE FULL AVENTURA EN LA NIEVE' />
+                                <h3 style={fontMonserratBold.style}>3 DÍAS DE FULL AVENTURA <br />EN LA NIEVE</h3>
+                            </div>
+                            <div className={styles.boxTitlePremio}>
+                                <Image src='/assets/franjaTitle.png' className={styles.bgTitle} width="448" height="140" alt='snowboarding' />
+                                <div className={styles.imgTitle}>
+                                    <Image src='/assets/ptitle1.png' width="299" height="24" alt='snowboarding' />
+                                </div>
+                                <div className={styles.boxLugar}>
+                                    <Image src='/assets/p_argentina.png' className={styles.bandera} width="60" height="43" alt='Argentina' />
+                                    <h4>
+                                    <Image src='/assets/ptitle1.png' width="299" height="24" alt='snowboarding' />
+                                    </h4>
+                                </div>
+                                <div className={styles.boxDescriptionpremio}>
+                                    <p className={fontMonserratSemiBold.style}>
+                                    Sol, playa y arena, es lo primero que se nos viene a la mente cuando pensamos en este destino. Ahora imagínate también poder vivir el evento de comic más grande del continente. Si eres fan seguro este premio te encantará. Alista el traje de baño y también ese traje de super héroe que este destino te espera.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

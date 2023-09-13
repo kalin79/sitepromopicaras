@@ -67,7 +67,7 @@ export default function Header() {
                                              <p style={fontMont.style}>INICIO</p>
                                         </Link>
                                         <Link href='/como-participar' className={router.pathname == "/como-participar" ? `${styles.active}` : ""}>
-                                             <p style={fontMont.style}>¿COMO PARTICIPAR?</p>
+                                             <p style={fontMont.style}>¿CÓMO PARTICIPAR?</p>
                                         </Link>
                                         <Link href='/premios' className={router.pathname == "/premios" ? `${styles.active}` : ""}>
                                              <p style={fontMont.style}>PREMIOS</p>
