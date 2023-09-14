@@ -38,7 +38,7 @@ const EncuentraPicaras = () => {
 
                         <div className={styles.boxTitle}>
                             <h2>
-                                <Image src='/assets/title33.png' width="430" height="69" alt='Titulo' />
+                                <Image src='/assets/title33.png?v=2' width="430" height="69" alt='Titulo' />
                                 <Image src='/assets/plane1.png' className={styles.avion1} width="452" height="242" alt='Avion' />
                                 <Image src='/assets/plane2.png' className={styles.avion2} width="339" height="278" alt='Avion' />
                             </h2>

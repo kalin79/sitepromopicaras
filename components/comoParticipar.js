@@ -38,7 +38,7 @@ const ComoParticipar = () => {
 
                         <div className={styles.boxTitle}>
                             <h2>
-                                <Image src='/assets/title4.png?v=1' width="420" height="81" alt='Titulo' />
+                                <Image src='/assets/title4.png?v=2' width="420" height="81" alt='Titulo' />
                                 <Image src='/assets/plane1.png' className={styles.avion1} width="452" height="242" alt='Avion' />
                                 <Image src='/assets/plane2.png' className={styles.avion2} width="339" height="278" alt='Avion' />
                             </h2>
