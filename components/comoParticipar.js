@@ -50,23 +50,23 @@ const ComoParticipar = () => {
 
                         <div className={styles.boxPremiosDesktop}>
                             <h2>
-                                <Image src='/assets/chicapremio.svg' width="720" height="1021" alt='Chica' />
+                                <Image src='/assets/chicapremio.png' width="720" height="1021" alt='Chica' />
                             </h2>
                             <div className={styles.boxPasos}>
                                 <div className={styles.boxPaso1}>
                                     <Image src='/assets/grupo1.png' width="329" height="102" alt='Paso1' />  
-                                    <Image src='/assets/pasos/paso1.svg' width="265" height="72" alt='Paso1' />
+                                    <Image src='/assets/pasos/paso1.png' width="265" height="72" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso2}>
-                                    <Image src='/assets/pasos/grupo2.svg' width="210" height="43" alt='Paso1' />  
-                                    <Image src='/assets/pasos/paso2.svg' width="325" height="94" alt='Paso1' />
+                                    <Image src='/assets/pasos/grupo2.png' width="210" height="43" alt='Paso1' />  
+                                    <Image src='/assets/pasos/paso2.png' width="325" height="94" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso3}>
-                                    <Image src='/assets/pasos/grupo3.svg' width="340" height="184" alt='Paso1' />  
-                                    <Image src='/assets/pasos/paso3.svg' width="353" height="78" alt='Paso1' />
+                                    <Image src='/assets/pasos/grupo3.png' width="340" height="184" alt='Paso1' />  
+                                    <Image src='/assets/pasos/paso3.png' width="353" height="78" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso4}>
-                                    <Image src='/assets/pasos/paso4.svg' width="347" height="124" alt='Paso1' />
+                                    <Image src='/assets/pasos/paso4.png' width="347" height="124" alt='Paso1' />
                                 </div>
                             </div>
 
@@ -76,18 +76,18 @@ const ComoParticipar = () => {
                             <div className={styles.boxPasos}>
                                 <div className={styles.boxPaso1}>
                                     <Image src='/assets/grupo1.png?v=2' width="329" height="102" alt='Paso1' />  
-                                    <Image src='/assets/pasos/paso1.svg' width="265" height="72" alt='Paso1' />
+                                    <Image src='/assets/pasos/paso1.png' width="265" height="72" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso2}>
-                                    <Image src='/assets/pasos/grupo2.svg' width="210" height="43" alt='Paso1' />  
-                                    <Image src='/assets/pasos/paso2.svg' width="325" height="94" alt='Paso1' />
+                                    <Image src='/assets/pasos/grupo2.png' width="210" height="43" alt='Paso1' />  
+                                    <Image src='/assets/pasos/paso2.png' width="325" height="94" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso3}>
-                                    <Image src='/assets/pasos/grupo3.svg' width="340" height="184" alt='Paso1' />  
-                                    <Image src='/assets/pasos/paso3.svg' width="353" height="78" alt='Paso1' />
+                                    <Image src='/assets/pasos/grupo3.png' width="340" height="184" alt='Paso1' />  
+                                    <Image src='/assets/pasos/paso3.png' width="353" height="78" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso4}>
-                                    <Image src='/assets/pasos/paso4.svg' width="347" height="124" alt='Paso1' />
+                                    <Image src='/assets/pasos/paso4.png' width="347" height="124" alt='Paso1' />
                                 </div>
 
                             </div>
@@ -97,7 +97,7 @@ const ComoParticipar = () => {
                         
                         <div className={styles.boxParticipantes}>
                             <div className={styles.fondo2}>
-                                <Image src='/assets/bg-2.png' width="1440" height="1003" alt='Titulo' />
+                                <Image src='/assets/bg-3.png' width="1440" height="1003" alt='Titulo' />
                             </div>
 
                             <div className={styles.boxTitle2}>
