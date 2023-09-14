@@ -27,13 +27,13 @@ export default function Footer() {
                                    <Link href="/preguntas-frecuentes" >PREGUNTAS FRECUENTES</Link>
                               </nav>
                               <div className={styles.containerSocial}>
-                                   <a href="" target='_blank'>
+                                   <a href="https://www.facebook.com/galletaspicaras?mibextid=ZbWKwL" target='_blank'>
                                         <Image src="/assets/facebook.svg" width="26" height="26" alt="Picaras :: Facebook" />
                                    </a>
-                                   <a href="" target='_blank'>
+                                   <a href="https://www.instagram.com/galletaspicaras/" target='_blank'>
                                         <Image src="/assets/instagram.svg" width="26" height="26" alt="Picaras :: Instagram" />
                                    </a>
-                                   <a href="" target='_blank'>
+                                   <a href="https://www.youtube.com/channel/UC3pfCnNPojflo_rP8oWmt-Q" target='_blank'>
                                         <Image src="/assets/youtube.svg" width="26" height="26" alt="Picaras :: YouTube" />
                                    </a>
                               </div>
