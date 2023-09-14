@@ -19,10 +19,10 @@ const Preguntas = () => {
       
       <p>Para participar de la promoción debes cumplir los siguientes pasos:</p>
       <ol>
-      <li>Compra tu galleta Pícaras favorita (La clásica, La XL, La Extrema, La Fresa, La Chips o La Menta) identificada con el cintillo amarillo de la promoción.</li>
-      <li>Ingresa a <a href="https://www.promopicaras.pe" target="_blank">www.promopicaras.pe</a>, regístrate y selecciona el destino al que quisieras viajar.</li>
-      <li>Ingresa tu código alfanumérico (8 dígitos) que se encuentra dentro del empaque</li>
-      <li>¡Listo! Ya estas participando de los sorteos.</li>
+      <li>Compra tu galleta Pícaras favorita (La Clásica, La XL, La Extrema, La Fresa, La Chips o La Menta) identificada con el cintillo amarillo de la promoción.</li>
+      <li>Ingresa a <a href="https://www.promopicaras.pe" target="_blank">www.promopicaras.pe</a>, regístrate y selecciona el destino al que quieres viajar.</li>
+      <li>Ingresa tu código alfanumérico (8 dígitos) que se encuentra dentro del empaque.</li>
+      <li>¡Listo! Ya estás participando de los sorteos.</li>
       </ol>
       
       <p>Recuerda guardar todos tus empaques con el código alfanumérico con los que participas para poder verificar en caso ser acreedor del premio.</p>
@@ -36,7 +36,7 @@ const Preguntas = () => {
       <p>Participan las siguientes presentaciones identificadas con el cintillo amarillo:</p>
       <ul>
       <li>Pícaras Clásica 40g</li>
-      <li>Pícaras Extema 40g</li>
+      <li>Pícaras Extrema 40g</li>
       <li>Pícaras Fresa 40g</li>
       <li>Pícaras Chips 40g</li>
       <li>Pícaras Menta 40g</li>
@@ -100,7 +100,7 @@ const Preguntas = () => {
       <ol>
       <li>Carta poder con firma legalizada notarial autorizando al tercero el recojo.</li>
       <li>Copia del documento de identidad (DNI) o carné de extranjería del usuario ganador; y la persona delegada para el recojo del premio deberá presentar físicamente su documento de identidad (DNI) o carné de extranjería.</li>
-      <li>El empaque ganador, donde se pueda visualizer de forma legible el código alfanumérico ganador.</li>
+      <li>El empaque ganador, donde se pueda visualizar de forma legible el código alfanumérico ganador.</li>
       </ol>
       <p>Para más información, ver <a href="https://promopicaras.pe/terminos-condiciones">Términos y Condiciones</a></p>
       `,

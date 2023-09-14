@@ -116,7 +116,9 @@ const ComoParticipar = () => {
                                 <div className={styles.boxSquare}>
                                     <div className={styles.boxContenedor}>
                                         <Image src='/assets/galletas/clasica.svg' width="340" height="188" alt='Logo' />
-                                        <p style={fontPeckham.style}>la clasica</p>
+                                        <p> 
+                                            <Image className={styles.clasicatxt} src='/assets/galletas/clasicatxt.svg' width="149" height="22" alt='Logo' />
+                                        </p>
                                     </div>                            
                                 </div>
                                 <div className={styles.boxSquare}>

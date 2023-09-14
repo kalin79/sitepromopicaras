@@ -2,106 +2,123 @@
 @import 'abstracts/mixins'
 
 .boxFind
-    padding-top: 16rem
+    padding-top: 13rem
     margin-bottom: 16rem
     .boxTitle
         margin: auto
         text-align: center
         margin-bottom: 11rem
+
+        @media screen and (max-width: 992px)
+            margin-bottom: 2rem
         h2
             position: relative
             display: inline-block
+            img
+                height: auto
+                object-fit: contain
+                width: 100%
+                @media screen and (max-width: 992px)
+                    width: 90%
             .avion1
                 position: absolute
-                top: -14.5rem
-                left: -20.5rem
+                top: -11.5rem
+                left: -22.5rem
+                width: 70%
+                display: none
+                @media screen and (min-width: 992px)
+                    display: block
             .avion2
                 position: absolute
-                top: 3.2rem
-                left: 31.5rem
+                top: 5.2rem
+                left: 29.5rem
+                width: 70%
                 z-index: 1
+                display: none
+                @media screen and (min-width: 992px)
+                    display: block
     .subTitle
-        // border: 1px solid blue
-        color: var(--Amarillo, #FFD700)
+        color: #FFD700
         text-align: center
         font-size: 18px
         font-style: normal
         line-height: normal
         letter-spacing: -0.36px
-    .boxSubTitle
-        // border: 1px solid blue
-        position: relative
-        display: flex
-        justify-content: center
-        margin-bottom: 17px
-        svg
+        margin-bottom: 3rem
+    .tabla
+        overflow-x: scroll
+        padding-top: 2rem
+        @media screen and (min-width: 992px)
+            overflow: initial
+
+        .boxEncabezado
+            width: 700px
             position: relative
-            // border: 2px solid pink
-    .boxSubTitleT1
-        width: 50%
-        position: absolute
-        margin-top: 10px
-        margin-bottom: 7px
-        justify-content: center
-        .boxSubTitleT
-            margin-top: 24px
             display: flex
-            flex-direction: row
-            justify-content: space-between
-            align-items: flex-end
-            p
-                color: var(--Amarillo, #FFD700)
-                text-align: center
-                font-size: 18px
-                font-style: normal
-                line-height: 105%
-    .boxGanadores
-        // border: 1px solid blue
-        // position: relative
-        display: flex
-        flex-direction: column
-        align-items: center
-        .boxGanador
-            position: relative
-            margin-top: 10px
-            margin-bottom: 7px
-            justify-content: stretch
-            display: grid
-            grid-template-columns: repeat(12,1fr)
-            gap: 2rem
-            .rowGanadores
-                position: relative
-                display: flex
-                grid-column: 3 / span 4
-                // border: 2px solid blue
-                flex-direction: row
-                justify-content: space-between
-                align-items: flex-end
+            align-items: center
+            margin: auto
+            text-align: center
+            margin-bottom: 3rem
+            svg
+                position: absolute
+                left: 0
+                bottom: -11px
+                margin-top: 1rem
+            .Ganadores
+                width: 350px
                 p
-                    color: #FFF
+                    color: var(--Amarillo, #FFD700)
+                    text-align: center
                     font-size: 18px
                     font-style: normal
-                    line-height: normal
-                    letter-spacing: -0.36px
-            .contenedorPremios
-                // border: 3px solid red
+                    line-height: 105%
+            .Premios
+                width: 350px
+                p
+                    color: var(--Amarillo, #FFD700)
+                    text-align: center
+                    font-size: 18px
+                    font-style: normal
+                    line-height: 105%
+
+        .boxAnunciando
+            .boxGanador
+                width: 700px
+                position: relative
                 display: flex
+                margin: auto
+                text-align: center
                 align-items: center
-                justify-content: flex-start
-                gap: 13px
-                grid-column: 7/10
-                .descripcionPremios
-                    flex-grow: 1
-                    h2
-                        color: #FFF
-                        text-align: center
-                        font-size: 18px
-                        font-style: normal
-                        // line-height: 105%
-                        text-align: left
+                margin-top: 2rem
+                svg
+                    position: absolute
+                    bottom: -11px
+                .contenedorNombre
+                    width: 350px
                     p
                         color: #FFF
-                        font-size: 16px
+                        font-size: 18px
                         font-style: normal
-                        line-height: .5rem
-                        letter-spacing: -0.32px
+                        line-height: normal
+                        letter-spacing: -0.36px
+                .contenedorPremios
+                    display: flex
+                    align-items: center
+                    .contenedorImagen
+                        padding: 0 10px
+                    .descripcionPremios
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        h2
+                            color: #FFF
+                            text-align: center
+                            font-size: 18px
+                            font-style: normal
+                            text-align: left
+                        p
+                            color: #FFF
+                            font-size: 16px
+                            font-style: normal
+                            line-height: .5rem
+                            letter-spacing: -0.32px

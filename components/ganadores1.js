@@ -44,180 +44,114 @@ const Ganadores1 = () => {
                             </h2>
                         </div>
 
+                        
+
                         <div className={styles.subTitle}>
                             <p style={fontMonserratBold.style}>
-                                Estos son nuestros afortunados ganadores <br></br>del primer SORTEO 1: 06/10/2023
+                                SORTEO 1: 09/10/2023
                             </p>
                         </div>
 
-                        <div className={styles.boxSubTitle}>                             
-                            <svg xmlns="http://www.w3.org/2000/svg" width="703" height="80" viewBox="0 0 703 80" fill="none">
-                                <path d="M1 11L7.33672 71L694.079 79L702 1L1 11Z" stroke="#FFB800" stroke-width="1.5"/>
-                            </svg>
-                            <div className={styles.boxSubTitleT1}>
-                                <div className={styles.boxSubTitleT}>
+
+                        <div className={styles.tabla}>
+                            <div className={styles.boxEncabezado}>                             
+                                <svg xmlns="http://www.w3.org/2000/svg" width="703" height="80" viewBox="0 0 703 80" fill="none">
+                                    <path d="M1 11L7.33672 71L694.079 79L702 1L1 11Z" stroke="#FFB800" stroke-width="1.5"/>
+                                </svg>
+                                <div className={styles.Ganadores}>
                                     <p style={fontPeckham.style}>GANADOR(A)</p>
+                                </div>
+                                <div className={styles.Premios}>
                                     <p style={fontPeckham.style}>PREMIO</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className={styles.boxGanadores}>
-
-                            <div className={styles.boxGanador}>
-                                <div className={styles.rowGanadores}>
-                                    <div>
-                                        <p style={fontMonserratBold.style}>
-                                        Carlos Augusto Espinoza
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={styles.contenedorPremios}>
-                                    <Image src='/assets/argentina.svg' width="50" height="50" alt='Titulo' />
-                                    <div className={styles.descripcionPremios}>
-                                        <h2 style={fontPeckham.style}>SNOW BOARDING</h2>
-                                        <p style={fontMonserratSemiBold.style}>Bariloche, Argentina</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
-
-                            <div className={styles.boxGanador}>
-                                <div className={styles.rowGanadores}>
-                                    <div>
-                                        <p style={fontMonserratBold.style}>
-                                        Mery Andia
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={styles.contenedorPremios}>
-                                    <Image src='/assets/brasil.svg' width="50" height="50" alt='Titulo' />
-                                    <div className={styles.descripcionPremios}>
-                                        <h2 style={fontPeckham.style}>EVENTO COMIC</h2>
-                                        <p style={fontMonserratSemiBold.style}>Bariloche, Argentina</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
 
 
-                            <div className={styles.boxGanador}>
-                                <div className={styles.rowGanadores}>
-                                    <div>
-                                        <p style={fontMonserratBold.style}>
-                                        Victor Corzo Remundo
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={styles.contenedorPremios}>
-                                    <Image src='/assets/alexa.svg' width="80" height="80" alt='Titulo' />
-                                    <div className={styles.descripcionPremios}>
-                                        <h2 style={fontPeckham.style}>EVENTO COMIC</h2>
-                                        <p style={fontMonserratSemiBold.style}>Sao Paulo, Brasil</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className={styles.boxAnunciando}>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
+                                <div className={styles.boxGanador}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
+                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
+                                    </svg>
 
-
-                            <div className={styles.boxGanador}>
-                                    <div className={styles.rowGanadores}>
-                                        <div>
-                                            <p style={fontMonserratBold.style}>
-                                            Victor Corzo Remundo
-                                            </p>
-                                        </div>
+                                    <div className={styles.contenedorNombre}>
+                                        <p style={fontMonserratBold.style}> Mery Andia</p>
                                     </div>
                                     <div className={styles.contenedorPremios}>
-                                        <Image src='/assets/brasil.svg' width="50" height="50" alt='Titulo' />
+                                        <div className={styles.contenedorImagen}>
+                                            <Image src='/assets/argentina.svg' width="70" height="70" alt='Titulo' />
+                                        </div>
                                         <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>EVENTO COMIC</h2>
+                                            <h2 style={fontPeckham.style}>snowboarding</h2>
+                                            <p style={fontMonserratSemiBold.style}>Bariloche, Argentina</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={styles.boxGanador}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
+                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
+                                    </svg>
+
+                                    <div className={styles.contenedorNombre}>
+                                        <p style={fontMonserratBold.style}> Mery Andia</p>
+                                    </div>
+                                    <div className={styles.contenedorPremios}>
+                                        <div className={styles.contenedorImagen}>
+                                            <Image src='/assets/brasil.svg' width="70" height="70" alt='Titulo' />
+                                        </div>
+                                        <div className={styles.descripcionPremios}>
+                                            <h2 style={fontPeckham.style}>evento comic</h2>
                                             <p style={fontMonserratSemiBold.style}>Sao Paulo, Brasil</p>
                                         </div>
                                     </div>
                                 </div>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
 
-                            <div className={styles.boxGanador}>
-                            <div className={styles.rowGanadores}>
-                                        <div>
-                                            <p style={fontMonserratBold.style}>
-                                            Carlos Augusto Espinoza
-                                            </p>
-                                        </div>
+                                <div className={styles.boxGanador}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
+                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
+                                    </svg>
+
+                                    <div className={styles.contenedorNombre}>
+                                        <p style={fontMonserratBold.style}> Mery Andia</p>
                                     </div>
                                     <div className={styles.contenedorPremios}>
-                                        <Image src='/assets/brasil.svg' width="50" height="50" alt='Titulo' />
+                                        <div className={styles.contenedorImagen}>
+                                            <Image src='/assets/alexa1.svg' width="80" height="80" alt='Titulo' />
+                                        </div>
                                         <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>EVENTO COMIC</h2>
-                                            <p style={fontMonserratSemiBold.style}>Sao Paulo, Brasil</p>
+                                            <h2 style={fontPeckham.style}>PARLANTE <br></br> ALEXA</h2>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
 
-                            <div className={styles.boxGanador}>
-                                <div className={styles.rowGanadores}>
-                                    <p style={fontMonserratBold.style}>
-                                    Yoshiro Geofrey Olivera                                    
-                                    </p>
+                                <div className={styles.boxGanador}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
+                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
+                                    </svg>
+
+                                    <div className={styles.contenedorNombre}>
+                                        <p style={fontMonserratBold.style}> Mery Andia</p>
+                                    </div>
                                     <div className={styles.contenedorPremios}>
-                                        <Image src='/assets/alexa.svg' width="130" height="46" alt='Titulo' />
+                                        <div className={styles.contenedorImagen}>
+                                            <Image src='/assets/goPro.svg' width="70" height="70" alt='Titulo' />
+                                        </div>
                                         <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>PARLANTE <br></br>ALEXA</h2>
-                                            {/* <p style={fontMonserratSemiBold.style}>Bariloche, Argentina</p> */}
+                                            <h2 style={fontPeckham.style}>GO <br></br> PRO 9</h2>
                                         </div>
                                     </div>
                                 </div>
+  
                             </div>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
+                        </div> 
+                    </div>                       
 
-                            <div className={styles.boxGanador}>
-                                <div className={styles.rowGanadores}>
-                                    <p style={fontMonserratBold.style}>
-                                        Mery Andia Quiroga
-                                    </p>
-                                    <div className={styles.contenedorPremios}>
-                                        <Image src='/assets/gopro.svg' width="90" height="56" alt='Titulo' />
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>GO PRO</h2>
-                                            {/* <p style={fontMonserratSemiBold.style}>Texto a la derecha de la imagen</p> */}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" stroke-width="1.5"/>
-                            </svg>
-
-
-                            
-                            
-                        
-                        </div>                        
-
-                    </div>
                 </div>
+            </div>
         </>
     )
 }
