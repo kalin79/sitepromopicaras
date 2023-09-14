@@ -8,6 +8,122 @@
         height: 680px
         position: relative
         overflow: hidden
+        margin-top: 8rem
+        .boxViewPremio
+            position: absolute
+            top: 0
+            left: 0
+            width: 25%
+            height: 100%
+            cursor: pointer
+            transition: all 0.5s ease-in-out
+            z-index: 1
+            .boxDescriptionpremio
+                // display: none
+                height: 88px
+                border: 0px solid red
+                overflow: hidden
+                p
+                    font-size: 16px
+                    color: white
+                    line-height: 22px
+                    opacity: 0
+            .bgPremio,
+            .bgPremio2
+                width: 100%
+                object-fit: cover
+                height: 100%
+                position: relative
+           
+                    
+            &:nth-of-type(2)
+                left: 25%
+                
+                .boxLugar
+                    margin-top: .5rem
+            &:nth-of-type(3)
+                left: 50%
+                
+            &:nth-of-type(4)
+                left: 75%
+                // .bgPremio2
+                //     z-index: 3
+                //     object-position: -488px 0px
+                //     opacity: 1
+                //     display: block
+            // &:hover
+            //     width: 100%
+            //     z-index: 2
+            //     left: 0
+            //     .boxDescriptionpremio
+            //         width: 770px
+            //         padding-left: 1.5rem
+            //         margin-top: 1.5rem
+            //         p
+            //             opacity: 1
+
+            .contentPremio
+                position: absolute
+                bottom: 2rem
+                left: 0rem
+                border: 0px solid green
+                .boxTitlePremio
+                    position: relative
+                    padding-top: 2.75rem
+                    padding-left: 1rem
+                    z-index: 10
+                    
+                    .bgTitle
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 448px
+                        height: auto
+                        object-fit: contain
+                        
+                    .imgTitle,
+                    .boxLugar
+                        position: relative 
+                        z-index: 3
+                    .imgTitle
+                        &.big
+                            padding-top: 1.25rem
+                        img
+                            width: 299px
+                            height: auto
+                            object-fit: cover
+                    .boxLugar
+                        display: flex
+                        justify-content: flex-start
+                        align-content: flex-start
+                        h4
+                            margin-top: .5rem
+                        .bandera
+                            width: 60px
+                            height: auto
+                            object-fit: contain
+
+                .boxSubtitlePremio
+                    position: relative
+                    margin-left: 1.5rem
+                    z-index: 10
+                    top: 1.75rem
+                    img
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 207px
+                        height: auto
+                        object-fit: contain
+                    h3
+                        position: relative
+                        z-index: 10
+                        color: $rojoClaro
+                        font-size: 12px
+                        line-height: 1em
+                        padding: .4rem 0 0 .5rem
+                        letter-spacing: -.04em
+
     .subTitle
         display: flex
         justify-content: center
