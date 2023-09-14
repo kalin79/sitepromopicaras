@@ -89,7 +89,7 @@ const Principal = () => {
                                 </div>
                                 <div className={`${styles.boxDescriptionpremio} ${styles.distancia}`}>
                                     <p className={fontMonserratSemiBold.style}>
-                                    Si eres amante de la aventura y lo extremo, este premio es ideal para ti. Uno de los lugares por excelencia, para practicar este deporte y disfrutar la nieve, en Latinoamérica. Además, podrás observar paisajes increíbles, pendientes, bosques, y hermosos lugares que ofrece este destino.
+                                        Si eres amante de la aventura y lo extremo, este premio es ideal para ti. Disfruta 3 días skiando Bariloche, además de paisajes increíbles, pendientes, bosques, y hermosos lugares que ofrece este destino.                                     
                                     </p>
                                 </div>
                             </div>
@@ -115,9 +115,9 @@ const Principal = () => {
                                 </div>
                                 <div className={styles.boxDescriptionpremio}>
                                     <p className={fontMonserratSemiBold.style}>
-                                        Sol, playa y arena, es lo primero que se nos viene a la mente cuando pensamos en este destino. 
-                                        Ahora imagínate también poder vivir el evento de cómic más grande del continente. Si eres fan seguro este premio te encantará. 
-                                        Alista el traje de baño y también ese traje de super héroe que este destino te espera.
+                                    Te llevamos a vivir el festival de cultura pop más grande del continente: 
+                                    CCXP23 3 días enteros para hacer cosplay, 
+                                    ver de cerca a las estrellas de Hollywood, disfruta de shows en vivo y más.
                                     </p>
                                 </div>
                             </div>
@@ -143,7 +143,9 @@ const Principal = () => {
                                 </div>
                                 <div className={styles.boxDescriptionpremio}>
                                     <p className={fontMonserratSemiBold.style}>
-                                    Ver las estrellas es sin suda algo fascinante, ahora imagínate hacerlo en el lugar del planeta con la mejor vista y la tecnología para poder hacerlo. ¡Exacto! Para amantes del universo y de la astronomía, esta experiencia original y única sin duda será la ideal.
+                                    Ver las estrellas es sin suda algo fascinante, ahora imagínate hacerlo en el lugar 
+                                    del planeta con la mejor vista y la tecnología para poder hacerlo. ¡Exacto! Para amantes 
+                                    del universo y de la astronomía, esta experiencia original y única sin duda será la ideal.                                     
                                     </p>
                                 </div>
                             </div>
@@ -170,9 +172,9 @@ const Principal = () => {
                                 </div>
                                 <div className={styles.boxDescriptionpremio}>
                                     <p className={fontMonserratSemiBold.style}>
-                                    Despertar en medio de un paraíso, no es algo que suceda todos los días. 
+                                    Despertar en medio de un paraíso, no es algo que suceda todos los días.
                                     Si lo que buscas es relajarte y tener una experiencia en medio de la naturaleza, 
-                                    este premio tiene que ser tuyo. Obviamente, sin perder el estilo y glamour desde la comodidad de un increíble Glamping.
+                                    este premio tiene que ser tuyo. Obviamente, sin perder el estilo y coolness desde la comodidad de un Glamping. 
                                     </p>
                                 </div>
                             </div>
