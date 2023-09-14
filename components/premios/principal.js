@@ -101,22 +101,24 @@ const Principal = () => {
                         <div className={styles.contentPremio}>
                             <div className={styles.boxSubtitlePremio}>
                                 <Image src='/assets/franjaSubtitle.png' width="207" height="35" alt='3 DÍAS DE FULL AVENTURA EN LA NIEVE' />
-                                <h3 style={fontMonserratBold.style}>LA MEJOR CONVENCIÓN <br /> DE LATINOAMERICA</h3>
+                                <h3 style={fontMonserratBold.style}>LA MEJOR CONVENCIÓN <br /> DE LATINOAMÉRICA</h3>
                             </div>
                             <div className={styles.boxTitlePremio}>
                                 <Image src='/assets/franjaTitle2.png' className={`${styles.bgTitle}`} width="448" height="140" alt='snowboarding' />
                                 <div className={`${styles.imgTitle} ${styles.big}`}>
-                                    <Image src='/assets/ptitle2.png' width="299" height="24" alt='snowboarding' />
+                                    <Image src='/assets/ptitle_221.png' width="299" height="24" alt='snowboarding' />
                                 </div>
                                 <div className={styles.boxLugar}>
                                     <Image src='/assets/p_brazil.png' className={styles.bandera} width="45" height="32" alt='Argentina' />
-                                    <h4>
-                                    <Image src='/assets/premiosubtitle2.png' width="139" height="30" alt='snowboarding' />
+                                    <h4 className={styles.estiloTexto2}>
+                                    <Image src='/assets/premiosubtitle22.png' width="139" height="30" alt='snowboarding' />
                                     </h4>
                                 </div>
                                 <div className={styles.boxDescriptionpremio}>
                                     <p className={fontMonserratSemiBold.style}>
-                                    Sol, playa y arena, es lo primero que se nos viene a la mente cuando pensamos en este destino. Ahora imagínate también poder vivir el evento de comic más grande del continente. Si eres fan seguro este premio te encantará. Alista el traje de baño y también ese traje de super héroe que este destino te espera.
+                                        Sol, playa y arena, es lo primero que se nos viene a la mente cuando pensamos en este destino. 
+                                        Ahora imagínate también poder vivir el evento de cómic más grande del continente. Si eres fan seguro este premio te encantará. 
+                                        Alista el traje de baño y también ese traje de super héroe que este destino te espera.
                                     </p>
                                 </div>
                             </div>
@@ -164,12 +166,14 @@ const Principal = () => {
                                 <div className={`${styles.boxLugar}  ${styles.pos4}`}>
                                     <Image src='/assets/p_colombia.png' className={styles.bandera} width="60" height="43" alt='Argentina' />
                                     <h4>
-                                    <Image src='/assets/premiocolombia.png' width="118" height="30" alt='snowboarding' />
+                                    <Image src='/assets/premiocolombia4.png' width="118" height="30" alt='snowboarding' />
                                     </h4>
                                 </div>
                                 <div className={styles.boxDescriptionpremio}>
                                     <p className={fontMonserratSemiBold.style}>
-                                    Despertar en medio de un paraíso, no es algo que suceda todos los días.Si lo que buscas es relajarte y tener una experiencia en medio de la naturaleza, este premio tiene que ser tuyo. Obviamente, sin perder el estilo y coolness desde la comodidad de un Glamping.
+                                    Despertar en medio de un paraíso, no es algo que suceda todos los días. 
+                                    Si lo que buscas es relajarte y tener una experiencia en medio de la naturaleza, 
+                                    este premio tiene que ser tuyo. Obviamente, sin perder el estilo y glamour desde la comodidad de un increíble Glamping.
                                     </p>
                                 </div>
                             </div>
@@ -179,7 +183,7 @@ const Principal = () => {
 
                 <div className={styles.boxButton}>
                     <Link href='/' style={fontMonserratBold.style}>
-                        QUIERO PARTICIPAR
+                    ¡Quiero participar!
                     </Link>
                 </div>
 
@@ -190,7 +194,7 @@ const Principal = () => {
 
                     <div className={styles.boxTitleRasgado}>
                         <h2>
-                            <Image src='/assets/titleotros.png' width="520" height="76" alt='Premio' />
+                            <Image src='/assets/titleotros2.png' width="520" height="76" alt='Premio' />
                             <Image src='/assets/plane1.png' className={` ${styles.avion1} ${styles.avion} `} width="452" height="242" alt='Avion' />
                             <Image src='/assets/plane2.png' className={`${styles.avion2} ${styles.avion}`} width="339" height="278" alt='Avion' />
                         </h2>
@@ -213,7 +217,7 @@ const Principal = () => {
                                 <Image src='/assets/parlantes.png' width="389" height="171" alt='Parlantes Alexa' />
                             </div>
                             <div className={styles.contentProducto}>
-                                <Image src='/assets/scooter.png' width="379" height="424" alt='Scooters electricos' />
+                                <Image src='/assets/scooter3.png' width="379" height="424" alt='Scooters electricos' />
                             </div>
                             <div className={styles.contentProducto}>
                                 <Image src='/assets/amazon.png' width="180" height="298" alt='Amazon fire tv' />
@@ -231,7 +235,7 @@ const Principal = () => {
 
                 <div className={styles.boxButton}>
                     <Link href='/' style={fontMonserratBold.style}>
-                        QUIERO PARTICIPAR
+                    ¡Quiero participar!
                     </Link>
                 </div>
 
