@@ -57,7 +57,7 @@ const Principal = () => {
                 <div className={styles.subTitle}>
                     <div className={styles.boxMarco}>
                         <div className={styles.ContainerImg}>
-                            <Image src='/assets/franjamovil.png' width="561" height="65" alt='Franja' />
+                            <Image src='/assets/franjaPremios.png' width="561" height="65" alt='Franja' />
                         </div>
                         {/* <div className={styles.ContainerImg}>
                             <Image src='/assets/franjamovil.png' width="561" height="65" alt='Franja' />
