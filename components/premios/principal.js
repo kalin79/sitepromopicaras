@@ -195,7 +195,7 @@ const Principal = () => {
 
                     <div className={styles.boxTitleRasgado}>
                         <h2>
-                            <Image src='/assets/titleotros2.png' width="520" height="76" alt='Premio' />
+                            <Image src='/assets/titleotros2.png?v=3' width="520" height="76" alt='Premio' />
                             <Image src='/assets/plane1.png' className={` ${styles.avion1} ${styles.avion} `} width="452" height="242" alt='Avion' />
                             <Image src='/assets/plane2.png' className={`${styles.avion2} ${styles.avion}`} width="339" height="278" alt='Avion' />
                         </h2>
