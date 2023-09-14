@@ -47,7 +47,7 @@ function VideoPopup() {
                         <Image src='/assets/close3.png' width="24" height="24" alt='Cerrar PopUp' />
                     </a>
                     <div className={styles.containerInfo}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dUh8k3OLsRI?si=0O6H5IajX-lMQKpB" title="YouTube video player" allowFullScreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aKY7rdCN8dc?si=jnSslSJtjbPe7Mim" title="YouTube video player" ></iframe>
                     </div>
                 </div>
             </div>
