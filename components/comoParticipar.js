@@ -54,7 +54,7 @@ const ComoParticipar = () => {
                             </h2>
                             <div className={styles.boxPasos}>
                                 <div className={styles.boxPaso1}>
-                                    <Image src='/assets/pasos/grupo1.svg' width="329" height="102" alt='Paso1' />  
+                                    <Image src='/assets/grupo1.png' width="329" height="102" alt='Paso1' />  
                                     <Image src='/assets/pasos/paso1.svg' width="265" height="72" alt='Paso1' />
                                 </div>
                                 <div className={styles.boxPaso2}>
