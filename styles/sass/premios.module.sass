@@ -22,7 +22,7 @@
     .contentInfo
         position: relative
         z-index: 3
-        
+        padding-bottom: 3rem
         .containerGrid
             display: grid
             grid-template-columns: repeat(1,1fr)
@@ -33,37 +33,68 @@
                 grid-template-columns: repeat(12,1fr)
                 margin-top: 4rem
             .contentProducto
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-content: center
+                flex-wrap: wrap
+                margin-top: 3rem
                 img
-                    width: 90%
                     height: auto
                     object-fit: contain
-                    @media screen and (min-width: 992px)
-                        width: auto
+                    margin: auto
+                    &:nth-of-type(2)
+                        margin-top: 1rem
                 &:nth-of-type(1)
                     @media screen and (min-width: 992px)
                         grid-column: 1 / span 4
                         justify-self: center
                         align-self: end
+                    img
+                        &:nth-of-type(1)
+                            width: 350px
+                        &:nth-of-type(2)
+                            width: 210px
                 &:nth-of-type(2)
                     @media screen and (min-width: 992px)
                         grid-column: 5 / span 4
                         justify-self: center
                         align-self: end
+                    img
+                        &:nth-of-type(1)
+                            width: 350px
+                        &:nth-of-type(2)
+                            width: 228px
                 &:nth-of-type(3)
                     @media screen and (min-width: 992px)
                         grid-column: 9 / span 4
                         justify-self: center
                         align-self: end
+                    img
+                        &:nth-of-type(1)
+                            width: 200px
+                        &:nth-of-type(2)
+                            width: 147px
                 &:nth-of-type(4)
                     @media screen and (min-width: 992px)
                         grid-column: 3 / span 3
                         justify-self: center
                         align-self: end
+                    img
+                        &:nth-of-type(1)
+                            width: 280px
+                        &:nth-of-type(2)
+                            width: 186px
                 &:nth-of-type(5)
                     @media screen and (min-width: 992px)
                         grid-column: 8 / span 4
                         justify-self: center
                         align-self: end
+                    img
+                        &:nth-of-type(1)
+                            width: 300px
+                        &:nth-of-type(2)
+                            width: 209px
     .fondoRasgado
         position: relative
         padding: 10rem 0 0
@@ -170,6 +201,10 @@
         @media screen and (min-width: 992px)
             height: 680px
             margin-top: 8rem
+        @media screen and (min-width: 1400px)
+            height: 90vh
+        // @media screen and (min-width: 1600px)
+        //     height: 90vh
         .boxViewPremio
             
             cursor: pointer
@@ -187,20 +222,28 @@
                 height: auto
                 border: 0px solid red
                 overflow: hidden
-                padding-top: 1rem
+                padding-top: 2rem
+                padding-bottom: 2rem
+                padding-right: 1rem
                 @media screen and (min-width: 992px)
                     min-height: 88px
+                    padding-right: 0rem
+                    padding-top: 1rem
+                    padding-bottom: 0rem
                 &.distancia
                     padding-top: 0   
                 p
-                    font-size: 16px
+                    font-size: 18px
                     color: white
                     line-height: 22px
                     opacity: 1
                     padding-top: 2rem
+                    text-align: center
                     @media screen and (min-width: 992px)
                         opacity: 0
                         padding-top: 0rem
+                        text-align: left
+                        font-size: 16px
             .bgPremio,
             .bgPremio2
                 width: 100%
@@ -225,21 +268,22 @@
                 //     opacity: 1
                 //     display: block
             &:hover
-                width: 100%
-                z-index: 2
-                left: 0
-                .contentPremio
-                    &.pos1,
-                    &.pos2,
-                    &.pos3,
-                    &.pos4
-                        bottom: 4rem
-                .boxDescriptionpremio
-                    width: 770px
-                    padding-left: 1.5rem
-                    margin-top: 1.5rem
-                    p
-                        opacity: 1
+                @media screen and (min-width:992px)
+                    width: 100%
+                    z-index: 2
+                    left: 0
+                    .contentPremio
+                        &.pos1,
+                        &.pos2,
+                        &.pos3,
+                        &.pos4
+                            bottom: 4rem
+                    .boxDescriptionpremio
+                        width: 770px
+                        padding-left: 1.5rem
+                        margin-top: 1.5rem
+                        p
+                            opacity: 1
 
             .contentPremio
                 position: relative
@@ -252,17 +296,26 @@
                 &.pos1
                     bottom: 0rem
                 &.pos2
-                    bottom: -4.5rem
+                    bottom: 0rem
+                    @media screen and (min-width: 992px)
+                        bottom: -4.5rem
                 &.pos3
-                    bottom: -.5rem
+                    bottom: 0rem
+                    @media screen and (min-width: 992px)
+                        bottom: -.5rem
                 &.pos4
-                    bottom: -.45rem
+                    bottom: 0rem
+                    @media screen and (min-width: 992px)
+                        bottom: -.45rem
+
 
                 .boxTitlePremio
                     position: relative
                     padding-top: 2.75rem
                     padding-left: 1rem
                     z-index: 10
+                   
+
                     &.pos1
                         padding-top: 3.3rem
                     .bgTitle
@@ -325,17 +378,22 @@
                         position: absolute
                         top: 0
                         left: 0
-                        width: 207px
+                        width: 261px
                         height: auto
                         object-fit: contain
+                        @media screen and (min-width: 992px)
+                            width: 261px
                     h3
                         position: relative
                         z-index: 10
                         color: $rojoClaro
-                        font-size: 12px
+                        font-size: 14px
                         line-height: 1em
-                        padding: .4rem 0 0 .5rem
+                        padding: .6rem 0 0 .5rem
                         letter-spacing: -.04em
+                        @media screen and (min-width: 992px)
+                            font-size: 14px
+                            padding: .6rem 0 0 .5rem
 
     .subTitle
         display: flex
@@ -352,7 +410,7 @@
                 text-align: center
                 font-size: 16px
                 color: white
-                padding: .75rem 0 0
+                padding: 1.25rem 0 0
                 line-height: 1.15em
                 @media screen and (min-width: 992px)
                     font-size: 18px

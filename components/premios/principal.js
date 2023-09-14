@@ -213,19 +213,24 @@ const Principal = () => {
                     <div className={`container ${styles.contentInfo}`}>
                         <div className={styles.containerGrid}>
                             <div className={styles.contentProducto}>
-                                <Image src='/assets/parlantes.png' width="389" height="171" alt='Parlantes Alexa' />
+                                <Image src='/assets/premio/parlante.png' width="1556" height="560" alt='Parlantes Alexa' />
+                                <Image src='/assets/premio/txt-parlante.png' width="802" height="163" alt='Parlantes Alexa' />
                             </div>
                             <div className={styles.contentProducto}>
-                                <Image src='/assets/scooter3.png' width="379" height="424" alt='Scooters electricos' />
+                                <Image src='/assets/premio/scooter2.png' width="1516" height="1523" alt='Scooters electricos' />
+                                <Image src='/assets/premio/txt_SCOOTERS.png' width="829" height="172" alt='Scooters electricos' />
                             </div>
                             <div className={styles.contentProducto}>
-                                <Image src='/assets/amazon.png' width="180" height="298" alt='Amazon fire tv' />
+                                <Image src='/assets/premio/amazon2.png' width="720" height="1255" alt='Amazon fire tv' />
+                                <Image src='/assets/premio/txt_amazon.png' width="583" height="164" alt='Amazon fire tv' />
                             </div>
                             <div className={styles.contentProducto}>
-                                <Image src='/assets/go.png' width="320" height="235" alt='Go Pro 9' />
+                                <Image src='/assets/premio/camara.png' width="1280" height="806" alt='Go Pro 9' />
+                                <Image src='/assets/premio/txt_go.png' width="616" height="116" alt='Go Pro 9' />
                             </div>
                             <div className={styles.contentProducto}>
-                                <Image src='/assets/gif.png' width="303" height="245" alt='Gift Card 200' />
+                                <Image src='/assets/premio/card.png' width="1212" height="696" alt='Gift Card 200' />
+                                <Image src='/assets/premio/txt_card.png' width="799" height="76" alt='Gift Card 200' />
                             </div>
                         </div>
                     </div>
