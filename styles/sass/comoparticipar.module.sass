@@ -208,6 +208,8 @@
                         transform: rotate(-5deg)
                         flex-shrink: 0
                     p
+                        transform: rotate(0deg)
+                        text-align: center
                         .clasicatxt
                             transform: rotate(0)
                         @media screen and (max-width: 992px)
@@ -216,6 +218,7 @@
                         .xl
                         @media screen and (max-width: 992px)
                             width: 90%
+                            transform: rotate(0deg)
 
                     p
                         color: #FFF
@@ -223,3 +226,19 @@
                         font-style: normal
                         line-height: 94%
                         letter-spacing: -0.36px
+    .recordatorioUser
+        z-index: 1
+        display: flex
+        justify-content: center
+        align-content: center
+        flex-direction: column
+        flex-wrap: wrap
+        gap: 1rem
+        margin-top: 3rem
+        img
+            z-index: 1
+            width: 90%
+            height: auto
+            object-fit: contain
+            @media screen and (min-width: 992px)
+                width: 470px
