@@ -98,7 +98,7 @@ const Principal = () => {
                     </div>
                     <div className={styles.boxViewPremio}>
                         <Image src='/assets/premio21.png' className={styles.bgPremio} width="3600" height="2730" alt='Argentina' />
-                        <div className={styles.contentPremio}>
+                        <div className={`${styles.contentPremio} ${styles.pos2}`}>
                             <div className={styles.boxSubtitlePremio}>
                                 <Image src='/assets/franjaSubtitle.png' width="207" height="35" alt='3 DÍAS DE FULL AVENTURA EN LA NIEVE' />
                                 <h3 style={fontMonserratBold.style}>LA MEJOR CONVENCIÓN <br /> DE LATINOAMÉRICA</h3>

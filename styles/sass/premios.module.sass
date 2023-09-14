@@ -228,6 +228,12 @@
                 width: 100%
                 z-index: 2
                 left: 0
+                .contentPremio
+                    &.pos1,
+                    &.pos2,
+                    &.pos3,
+                    &.pos4
+                        bottom: 4rem
                 .boxDescriptionpremio
                     width: 770px
                     padding-left: 1.5rem
@@ -242,13 +248,15 @@
                 border: 0px solid green
                 @media screen and (min-width: 992px)
                     position: absolute
-                    bottom: 2rem
+                    bottom: 0rem
                 &.pos1
-                    bottom: 4rem
+                    bottom: 0rem
+                &.pos2
+                    bottom: -4.5rem
                 &.pos3
-                    bottom: 2.75rem
+                    bottom: -.5rem
                 &.pos4
-                    bottom: 2.75rem
+                    bottom: -.45rem
 
                 .boxTitlePremio
                     position: relative
