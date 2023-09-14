@@ -2,32 +2,203 @@
 @import 'abstracts/mixins'
 
 .pagePremios
-    padding: 15rem 0 8rem
-    .listPremios
-        width: 100%
-        height: 680px
+    padding: 10rem 0 8rem
+    @media screen and (min-width: 992px)
+        padding: 15rem 0 8rem
+    .recordatorioUser
+        display: flex
+        justify-content: center
+        align-content: center
+        flex-direction: column
+        flex-wrap: wrap
+        gap: 1rem
+        margin-top: 3rem
+        img
+            width: 90%
+            height: auto
+            object-fit: contain
+            @media screen and (min-width: 992px)
+                width: 470px
+    .contentInfo
         position: relative
-        overflow: hidden
-        margin-top: 8rem
-        .boxViewPremio
+        z-index: 3
+        
+        .containerGrid
+            display: grid
+            grid-template-columns: repeat(1,1fr)
+            // grid-template-rows: repeat(2,1fr)
+            gap: 3rem
+            margin-top: 2rem
+            @media screen and (min-width: 992px)
+                grid-template-columns: repeat(12,1fr)
+                margin-top: 4rem
+            .contentProducto
+                img
+                    width: 90%
+                    height: auto
+                    object-fit: contain
+                    @media screen and (min-width: 992px)
+                        width: auto
+                &:nth-of-type(1)
+                    @media screen and (min-width: 992px)
+                        grid-column: 1 / span 4
+                        justify-self: center
+                        align-self: end
+                &:nth-of-type(2)
+                    @media screen and (min-width: 992px)
+                        grid-column: 5 / span 4
+                        justify-self: center
+                        align-self: end
+                &:nth-of-type(3)
+                    @media screen and (min-width: 992px)
+                        grid-column: 9 / span 4
+                        justify-self: center
+                        align-self: end
+                &:nth-of-type(4)
+                    @media screen and (min-width: 992px)
+                        grid-column: 3 / span 3
+                        justify-self: center
+                        align-self: end
+                &:nth-of-type(5)
+                    @media screen and (min-width: 992px)
+                        grid-column: 8 / span 4
+                        justify-self: center
+                        align-self: end
+    .fondoRasgado
+        position: relative
+        padding: 10rem 0 0
+        margin-top: 4rem
+        .subTitleRasgado
+            display: flex
+            justify-content: center
+            position: relative
+            z-index: 3
+            .boxMarco
+                width: 100%
+                height: 65px
+                position: relative
+                @media screen and (min-width: 992px)
+                    width: 561px
+                p
+                    position: relative
+                    z-index: 2
+                    text-align: center
+                    font-size: 16px
+                    color: white
+                    padding: 1rem 0 0
+                    line-height: 1.35em
+                    @media screen and (min-width: 992px)
+                        font-size: 18px
+                        padding: 1.75rem 0 0
+                .ContainerImg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    img
+                        width: 100%
+                        height: auto
+                        object-fit: contain
+                        @media screen and (min-width: 992px)
+                            width: 561px
+        .boxTitleRasgado
+            display: flex
+            justify-content: center
+            position: relative
+            z-index: 3
+            h2
+                position: relative
+                text-align: center
+                img
+                    width: 90%
+                    height: auto
+                    object-fit: contain
+                    @media screen and (min-width: 992px)
+                        width: 520px
+
+                .avion
+                    position: absolute
+                    &.avion1
+                        top: -15.5rem
+                        left: -25.5rem
+                        display: none
+                        @media screen and (min-width: 992px)
+                            display: block
+                    &.avion2
+                        top: 4.32rem
+                        left: 32.5rem
+                        z-index: 1
+                        display: none
+                        @media screen and (min-width: 992px)
+                            display: block
+        .bgfondo
+            width: 100%
             position: absolute
+            z-index: 1
             top: 0
             left: 0
-            width: 25%
-            height: 100%
+            img
+                width: 100%
+                height: auto
+                object-fit: contain
+
+    .boxButton
+        display: flex
+        justify-content: center
+        align-content: center
+        margin-top: 2.5rem
+        a
+            display: block
+            width: 296px
+            height: 52px
+            border-radius: 10px
+            border: 1px solid $marron
+            color: $marron
+            background: linear-gradient(180deg, #FFD700 0%, #FFB800 100%)
+            text-transform: uppercase
+            font-size: 16px
+            text-align: center
+            text-decoration: none
+            line-height: 3em
+    .listPremios
+        width: 100%
+        
+        position: relative
+        overflow: hidden
+        margin-top: 4rem
+        @media screen and (min-width: 992px)
+            height: 680px
+            margin-top: 8rem
+        .boxViewPremio
+            
             cursor: pointer
-            transition: all 0.5s ease-in-out
-            z-index: 1
+            
+            @media screen and (min-width: 992px)
+                position: absolute
+                top: 0
+                left: 0
+                width: 25%
+                height: 100%
+                transition: all 0.5s ease-in-out
+                z-index: 1
             .boxDescriptionpremio
                 // display: none
-                height: 88px
+                height: auto
                 border: 0px solid red
                 overflow: hidden
+                padding-top: 1rem
+                @media screen and (min-width: 992px)
+                    height: 88px
+                &.distancia
+                    padding-top: 0   
                 p
                     font-size: 16px
                     color: white
                     line-height: 22px
-                    opacity: 0
+                    opacity: 1
+                    padding-top: 2rem
+                    @media screen and (min-width: 992px)
+                        opacity: 0
+                        padding-top: 0rem
             .bgPremio,
             .bgPremio2
                 width: 100%
@@ -51,28 +222,39 @@
                 //     object-position: -488px 0px
                 //     opacity: 1
                 //     display: block
-            // &:hover
-            //     width: 100%
-            //     z-index: 2
-            //     left: 0
-            //     .boxDescriptionpremio
-            //         width: 770px
-            //         padding-left: 1.5rem
-            //         margin-top: 1.5rem
-            //         p
-            //             opacity: 1
+            &:hover
+                width: 100%
+                z-index: 2
+                left: 0
+                .boxDescriptionpremio
+                    width: 770px
+                    padding-left: 1.5rem
+                    margin-top: 1.5rem
+                    p
+                        opacity: 1
 
             .contentPremio
-                position: absolute
-                bottom: 2rem
+                position: relative
+                bottom: 0rem
                 left: 0rem
                 border: 0px solid green
+                @media screen and (min-width: 992px)
+                    position: absolute
+                    bottom: 2rem
+                &.pos1
+                    bottom: 4rem
+                &.pos3
+                    bottom: 2.75rem
+                &.pos4
+                    bottom: 2.75rem
+
                 .boxTitlePremio
                     position: relative
                     padding-top: 2.75rem
                     padding-left: 1rem
                     z-index: 10
-                    
+                    &.pos1
+                        padding-top: 3.3rem
                     .bgTitle
                         position: absolute
                         top: 0
@@ -88,16 +270,30 @@
                     .imgTitle
                         &.big
                             padding-top: 1.25rem
+                            img
+                                width: 277px
                         img
                             width: 299px
                             height: auto
                             object-fit: cover
+                        &.title4
+                            img
+                                width: 191px
+                        &.title3
+                            img
+                                width: 293px
                     .boxLugar
                         display: flex
                         justify-content: flex-start
                         align-content: flex-start
+                        margin-top: .25rem
+                        &.pos1
+                            margin-top: 0
+                        &.pos4
+                            margin-top: .25rem
                         h4
                             margin-top: .5rem
+                            margin-left: .5rem
                         .bandera
                             width: 60px
                             height: auto
@@ -106,7 +302,7 @@
                 .boxSubtitlePremio
                     position: relative
                     margin-left: 1.5rem
-                    z-index: 10
+                    z-index: 11
                     top: 1.75rem
                     img
                         position: absolute
@@ -128,25 +324,36 @@
         display: flex
         justify-content: center
         .boxMarco
-            width: 561px
+            width: 100%
             height: 65px
             position: relative
+            @media screen and (min-width: 992px)
+                width: 561px
             p
                 position: relative
                 z-index: 2
                 text-align: center
-                font-size: 18px
+                font-size: 16px
                 color: white
                 padding: .75rem 0 0
-                line-height: 1.35em
+                line-height: 1.15em
+                @media screen and (min-width: 992px)
+                    font-size: 18px
+                    line-height: 1.35em
+                br
+                    display: none
+                    @media screen and (min-width: 992px)
+                        display: block
             .ContainerImg
                 position: absolute
                 top: 0
                 left: 0
                 img
-                    width: 561
+                    width: 100%
                     height: auto
                     object-fit: contain
+                    @media screen and (min-width: 992px)
+                        width: 561px
     .boxTitle
         display: flex
         justify-content: center
