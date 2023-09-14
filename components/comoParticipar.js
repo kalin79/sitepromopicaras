@@ -44,7 +44,7 @@ const ComoParticipar = () => {
                             </h2>
                             <h3 style={fontMonserratBold.style}>
                                 <Image src='/assets/franjaYellow2.png' className={styles.franjaYellow} width="387" height="41" alt='FranjaAmarilla' />
-                                <p>Es simple, sigue estos pasos...</p>
+                                <p>Es fácil, sigue estos pasos:</p>
                             </h3>
                         </div>
 
@@ -147,6 +147,10 @@ const ComoParticipar = () => {
                                 </div>
                                 
                             </div>
+                        </div>
+
+                        <div className={styles.recordatorioUser}>
+                            <Image src='/assets/recordarUsuario.png' alt='Mira el video de la promo' width="470" height="119" />
                         </div>
 
 

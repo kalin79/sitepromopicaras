@@ -63,8 +63,7 @@ const Principal = () => {
                             <Image src='/assets/franjamovil.png' width="561" height="65" alt='Franja' />
                         </div> */}
                         <p style={fontMonserratBold.style}>
-                        Estas son las increíbles experiencias que podrás <br />
-                        elegir, para vivirlas con un acompañante.
+                        ¡Elige una de estas increíbles experiencias!
                         </p>
                     </div> 
                 </div>
