@@ -63,7 +63,7 @@ export default function Header() {
                               </Link>
                               <div className={`${styles.contentNav} ${styles.itemCenter}`}>
                                    <nav className={`${styles.navMain} `} id="navMain">
-                                        <Link href='/inicio' className={router.pathname == "/inicio" ? `${styles.active}` : ""}>
+                                        <Link href='/' className={router.pathname == "/inicio" ? `${styles.active}` : ""}>
                                              <p style={fontMont.style}>INICIO</p>
                                         </Link>
                                         <Link href='/como-participar' className={router.pathname == "/como-participar" ? `${styles.active}` : ""}>
@@ -75,9 +75,9 @@ export default function Header() {
                                         <Link href='/ganadores' className={router.pathname == "/ganadores" ? `${styles.active}` : ""}>
                                              <p style={fontMont.style}>GANADORES</p>
                                         </Link>
-                                        <Link href='/encuentra-tus-picaras' className={router.pathname == "/encuentra-tus-picaras" ? `${styles.active}` : ""}>
+                                        {/* <Link href='/encuentra-tus-picaras' className={router.pathname == "/encuentra-tus-picaras" ? `${styles.active}` : ""}>
                                              <p style={fontMont.style}>COMPRAR</p>
-                                        </Link>
+                                        </Link> */}
                                    </nav>
                               </div>
                               <div className={`${styles.octaganosNav} ${styles.itemRight}`}>

@@ -67,7 +67,7 @@ const Ganadores = () => {
                             </div>
 
 
-                            <div className={styles.boxAnunciando}>
+                            {/* <div className={styles.boxAnunciando}>
 
                                 <div className={styles.boxGanador}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
@@ -147,7 +147,7 @@ const Ganadores = () => {
 
 
   
-                            </div>
+                            </div> */}
 
                         </div> 
                     </div>                       
