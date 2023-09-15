@@ -1,29 +1,50 @@
-import Head from "next/head"
-import Intriga from '../components/intriga/intriga'
-// import Popup from '../components/popup/promo'
+import Layout from '../components/layout'
+import Documento from '../components/inicio/documento'
+import Codigo from '../components/inicio/codigo'
+import DatosPersonales from '../components/inicio/datos-personales'
+import Gracias from '../components/inicio/gracias'
 
-export default function Home() {
+import styles from  '../styles/sass/home.module.sass'
+export default function Home({agregarDato,datos,isuser,updateUser,page,updatePage,eliminarDatos}) {
   return (
     <>
-        <Head>
-            <title>Promo Picaras</title>
-            <meta name="title" content='Promo Picaras :: ¡Junta tus empaques!' />
-            <meta name="description" content='Muy pronto vas a comerte el mundo' />
-            <meta property="og:image" content="https://promopicaras.pe/assets/post.png" />
-            <meta property="og:image:type" content="png" />
-            <meta property="og:title" content="Promo Picaras" />
-            <meta property="og:description" content="Muy pronto vas a comerte el mundo" />
-            <meta property="og:site_name" content="https://promopicaras.pe/, Lima Peru" />
-            
-            <meta name="twitter:image" content="https://promopicaras.pe/assets/post.png" />
-            <meta name="twitter:title" content="Promo Picaras" />
-            <meta name="twitter:description" content="Muy pronto vas a comerte el mundo" />
-            <meta name="twitter:site" content="@publisher_handle" />
+        <Layout
+            title={'Promo Picaras'}
+            description={'Promo Picaras :: ¡Junta tus empaques!'}
+        >
+            <div className={styles.homePage}>
+                <div className={styles.viewOverflow} id='viewOverflow'>
+                    { page === 1 &&
+                        <Documento 
+                            agregarDato={agregarDato} 
+                            updateUser={updateUser}
+                            updatePage={updatePage}
+                        />
+                    }
+                    { (isuser && page === 2) &&
+                            <DatosPersonales 
+                                agregarDato={agregarDato}
+                                updatePage={updatePage}
+                                datos={datos}
+                            />
+                    }
 
-            <meta name="robots" content="index,follow"/>
-        </Head>
-        <Intriga />
-        {/* <Popup /> */}
+                    { (isuser && page === 3) &&
+                        <Codigo 
+                            updatePage={updatePage}
+                            datos={datos}
+                        />
+                    }
+                    { (isuser && page === 4) &&
+                        <Gracias 
+                            updateUser={updateUser}
+                            updatePage={updatePage}
+                            eliminarDatos={eliminarDatos}
+                        />
+                    }
+                </div>
+            </div>
+        </Layout>
     </>
   )
 }
