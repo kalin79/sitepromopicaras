@@ -261,14 +261,14 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
                                     <div className={styles.boxCheckbox}>
                                         <div className={styles.contentCheckbox} style={fontMonserratSemiBold.style}>
                                             <input type="checkbox" id='politicaDatos' name="politicaDatos"  onChange={handleChangeCheckBox} onBlur={handleBlur} value={politicaDatos}/>
-                                            <label htmlFor="politicaDatos">Acepto la <a href='#' target='_blank'>política de privacidad de datos</a> y la <a href='#' target='_blank'>política de tratamiento de datos</a>.</label>
+                                            <label htmlFor="politicaDatos">Acepto la <a href='/terminos-condiciones' target='_blank'>política de privacidad de datos</a> y la <a href='/terminos-condiciones' target='_blank'>política de tratamiento de datos</a>.</label>
                                         </div>
                                         {errores.politicaDatos && <label className='labelError' style={fontMonserratRegular.style}>{errores.politicaDatos}</label>}
                                     </div>
                                     <div className={styles.boxCheckbox}>
                                         <div className={styles.contentCheckbox} style={fontMonserratSemiBold.style}>
                                             <input type="checkbox" id='tyc' name="tyc" onChange={handleChangeCheckBox} onBlur={handleBlur} value={tyc}/>
-                                            <label htmlFor="tyc">Acepto <a href='#' target='_blank'>Términos y Condiciones</a>.</label>
+                                            <label htmlFor="tyc">Acepto <a href='/terminos-condiciones' target='_blank'>Términos y Condiciones</a>.</label>
                                         </div>
                                         {errores.tyc && <label className='labelError' style={fontMonserratRegular.style}>{errores.tyc}</label>}
                                     </div>
