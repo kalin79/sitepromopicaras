@@ -174,7 +174,7 @@ const Principal = () => {
                                     <p className={fontMonserratSemiBold.style}>
                                     Despertar en medio de un paraíso, no es algo que suceda todos los días.
                                     Si lo que buscas es relajarte y tener una experiencia en medio de la naturaleza, 
-                                    este premio tiene que ser tuyo. Obviamente, sin perder el estilo y coolness desde la comodidad de un Glamping. 
+                                    este premio tiene que ser tuyo. Obviamente, sin perder el estilo y glamour desde la comodidad de un increíble Glamping. 
                                     </p>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@ const Principal = () => {
                             </div>
                             <div className={styles.contentProducto}>
                                 <Image src='/assets/premio/scooter2.png' width="1516" height="1523" alt='Scooters electricos' />
-                                <Image src='/assets/premio/txt_SCOOTERS.png' width="829" height="172" alt='Scooters electricos' />
+                                <Image src='/assets/premio/txt_SCOOTERS2.png' width="829" height="172" alt='Scooters electricos' />
                             </div>
                             <div className={styles.contentProducto}>
                                 <Image src='/assets/premio/amazon2.png' width="720" height="1255" alt='Amazon fire tv' />
