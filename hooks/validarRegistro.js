@@ -23,10 +23,9 @@ export default function validarRegistro(valores) {
         errores.lugar = "El nombre es obligatorio"
         // return errores
     }
-    if (!valores.instagram){
-        errores.instagram = "El nombre es obligatorio"
-        // return errores
-    }
+    // if (!valores.instagram){
+    //     errores.instagram = "El nombre es obligatorio"
+    // }
     if (!valores.email){
         errores.email = "El email es obligatorio"
         // return errores

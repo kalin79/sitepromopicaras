@@ -50,3 +50,34 @@ From participantes
 
 Select count(*)
 From participante_codigo
+
+-- Buscar a un participante
+
+Select *
+From participantes
+Where numero_documento is null
+
+
+-- Codigos que se repiten mas de 1 vez
+
+Select t4.codigo, count(*) cantidad
+From (Select t1.numero_documento as numero_documento , t1.nombres as nombres, t1.apellidos as apellidos,
+(Select codigo From codigos Where id = t2.codigo_id) as codigo,
+t2.codigo_id as idcodigo, t2.id as id, t2.fecha_registro
+From participantes t1
+inner join participante_codigo t2
+on t1.id = t2.participante_id) t4
+group by t4.codigo
+HAVING count(*) > 1
+
+-- buscar un codigo en especifico
+Select *
+From codigos
+Where codigo = '04RCVY5X'
+
+
+04RCVY5X => 2402199
+
+75702562
+
+6945808

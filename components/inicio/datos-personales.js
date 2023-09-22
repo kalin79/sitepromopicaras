@@ -247,12 +247,12 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
                                         <input 
                                             type="text" 
                                             name="instagram" 
-                                            placeholder='Cuenta de instagram: *' 
+                                            placeholder='Cuenta de instagram:' 
                                             value={instagram}
                                             onChange={handleChange}
                                             onBlur={handleBlur}
                                         />
-                                        {errores.instagram && <label className='labelError' style={fontMonserratRegular.style}>{errores.instagram}</label>}
+                                        {/* {errores.instagram && <label className='labelError' style={fontMonserratRegular.style}>{errores.instagram}</label>} */}
 
                                     </div>
                                 </div>
