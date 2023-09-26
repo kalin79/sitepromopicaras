@@ -50,6 +50,7 @@ From participantes
 
 Select count(*)
 From participante_codigo
+where deleted_at is null
 
 -- Buscar a un participante
 
@@ -76,8 +77,8 @@ From codigos
 Where codigo = '04RCVY5X'
 
 
-04RCVY5X => 2402199
 
-75702562
+04RCVY5X
 
-6945808
+
+2402199

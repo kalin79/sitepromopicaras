@@ -63,8 +63,17 @@ const Principal = () => {
                             <Image src='/assets/franjamovil.png' width="561" height="65" alt='Franja' />
                         </div> */}
                         <p style={fontMonserratBold.style}>
-                        ¡Elige una de estas increíbles experiencias!
+                            ¡Serán 02 ganadores!
                         </p>
+                        <h3 style={fontPeckham.style}>
+                            Elige una de estas <br/>
+                            <span className={styles.boxTilde}>
+                            <Image src='/assets/tilde.png' width="12" height="8" alt='' />
+                            increibles experiencias
+                            </span>
+                        </h3>
+
+
                     </div> 
                 </div>
 

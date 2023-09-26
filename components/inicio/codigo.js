@@ -2,6 +2,7 @@ import { useState, useEffect,useRef } from 'react'
  
 import Image from 'next/image'
 import Popup from '../../components/popup/codigoError'
+import Popup2 from '../../components/popup/codigoUtilizado'
 import styles from  '../../styles/sass/home.module.sass'
 import localFont from "next/font/local"
 
@@ -109,7 +110,7 @@ const Codigo = ({updatePage,datos}) => {
                 console.log('Ya existe')
                 setErrorCode("Ya ingreso ese código")
             }else{
-                // Si el codigo no existe en la BD mostramos el POPUP
+                // Si el codigo no existe en la BD mostramos el POPUP o ya ha sido utilizado
                 const btn = document.getElementsByClassName("btnaddCodigo")
                 const btnload = document.getElementsByClassName("btnload")
                 const tll = gsap.timeline()
@@ -125,13 +126,23 @@ const Codigo = ({updatePage,datos}) => {
                     if (resultado.status === 200) {
                         if ( resultado.success === false ){
                             // Indica que el codigo no pertenece a la lista de codigos del negocio
-                            const tl = gsap.timeline()
-                            const codePopup = document.getElementById("codePopup")
-                            tl.to(codePopup, {display:'block'})
-                            tl.to(codePopup, {opacity: 1})
+                            if (resultado.error_message === "El código ya fue utilizado"){
+                                const tl2 = gsap.timeline()
+                                const codePopup2 = document.getElementById("codePopupUti")
+                                tl2.to(codePopup2, {display:'block'})
+                                tl2.to(codePopup2, {opacity: 1})
 
-                            tll.to(btnload,{"display": "none"})
-                            tll.to(btn,{"display": "block"})
+                                tll.to(btnload,{"display": "none"})
+                                tll.to(btn,{"display": "block"})
+                            }else{
+                                const tl = gsap.timeline()
+                                const codePopup = document.getElementById("codePopup")
+                                tl.to(codePopup, {display:'block'})
+                                tl.to(codePopup, {opacity: 1})
+
+                                tll.to(btnload,{"display": "none"})
+                                tll.to(btn,{"display": "block"})
+                            }
 
                         }else{
                             // Es un codigo valido
@@ -165,6 +176,7 @@ const Codigo = ({updatePage,datos}) => {
     return (
         <>
             <Popup />
+            <Popup2 />
             <div className={`${styles.bgRegistro} ${ styles.pageCodigo }  heightView`} id='pageCodigo'>
                 <div className='container'>
                 <div className={`${styles.gridMain} separationTopMain2`}>
