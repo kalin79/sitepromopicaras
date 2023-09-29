@@ -74,7 +74,7 @@ const DatosPersonales = ({agregarDato, updatePage, datos}) => {
         tl.to(btnload,{"display": "block"})
         console.log(Object.keys(errores).length)
         // if (Object.keys(errores).length === 0){
-        if ((Object.keys(errores).length === 0) || (Object.keys(errores).length === 1)){
+        if ((Object.keys(errores).length === 0) ){
             try {
                 const respuesta = await fetch (`${process.env.NEXT_PUBLIC_URL}register-participant`, {
                     method: 'POST',
