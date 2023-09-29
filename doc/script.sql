@@ -71,14 +71,13 @@ on t1.id = t2.participante_id) t4
 group by t4.codigo
 HAVING count(*) > 1
 
+60
+
 -- buscar un codigo en especifico
 Select *
 From codigos
-Where codigo = '04RCVY5X'
+Where codigo = 'DYE86ZMA'
 
-
-
-04RCVY5X
-
-
-2402199
+Select *
+From participante_codigo
+Where codigo_id = '5565319'
