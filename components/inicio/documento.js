@@ -233,7 +233,8 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
                         </form>
                     </div>
                     <div className='fechaSorteo'>
-                        <Image src='/assets/FECHAS3.png' width='200' height='30' />
+                        {/* <Image src='/assets/FECHAS3.png' width='200' height='30' /> */}
+                        <img src='/assets/FECHAS3.png' />
                     </div>
                 </div>
             </div>
