@@ -232,6 +232,9 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
                             </div>
                         </form>
                     </div>
+                    <div className='fechaSorteo'>
+                        <Image src='/assets/FECHAS3.png' width='200' height='30' />
+                    </div>
                 </div>
             </div>
         </>

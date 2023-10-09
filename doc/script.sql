@@ -81,3 +81,15 @@ Where codigo = 'DYE86ZMA'
 Select *
 From participante_codigo
 Where codigo_id = '5565319'
+
+
+4412494
+
+-- Ver todas las etiquetas de un usuario en especifico 
+Select t1.numero_documento, t1.nombres, t1.apellidos,
+(Select codigo From codigos Where id = t2.codigo_id),
+t2.codigo_id, t2.id, t2.fecha_registro, t2.created_user_id
+From participantes t1
+inner join participante_codigo t2
+on t1.id = t2.participante_id
+Where t2.codigo_id = '4414486'
