@@ -88,24 +88,7 @@ const Ganadores = () => {
                                     </div>
                                 </div>
 
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
-
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>Elmer Antonio Jorge Trujillo</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/camara.png' width="120" height="75" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>GO PRO 9 </h2>
-                                            {/* <p style={fontMonserratSemiBold.style}>Sao Paulo, Brasil</p> */}
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
 
                                 <div className={styles.boxGanador}>
@@ -127,41 +110,9 @@ const Ganadores = () => {
                                 </div>
 
 
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
+                                
 
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>José Luis Bullon Chavez</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/amazon2.png' width="60" height="81" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>AMAZON FIRE TV</h2>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
-
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>Jonathan Ray Segura de la Vega</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/scooter2.png' width="100" height="101" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>SCOOTER ELECTRICO</h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div className={styles.boxGanador}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
@@ -235,41 +186,9 @@ const Ganadores = () => {
                                     </div>
                                 </div>
 
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
+                                
 
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>Daniela Reinoso</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/parlante.png' width="180" height="64" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>ALEXA PARLANTE</h2>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
-
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>Vianca Tupac Yupanqui</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/parlante.png' width="180" height="64" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>ALEXA PARLANTE</h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div className={styles.boxGanador}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
@@ -289,23 +208,7 @@ const Ganadores = () => {
                                     </div>
                                 </div>
 
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
-
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>Flores Yataco</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/card.png' width="100" height="58" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>GIFT CARD <span style={fontMonserratBold.style}>S/200</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div className={styles.boxGanador}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
@@ -362,23 +265,7 @@ const Ganadores = () => {
                                 </div>
 
 
-                                <div className={styles.boxGanador}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
-                                        <path d="M1 5.00002C190.667 2.33335 593.8 -1.39998 689 5.00002" stroke="#FFD700" />
-                                    </svg>
-
-                                    <div className={styles.contenedorNombre}>
-                                        <p style={fontMonserratBold.style}>Raul Cansines</p>
-                                    </div>
-                                    <div className={styles.contenedorPremios}>
-                                        <div className={styles.contenedorImagen}>
-                                            <Image src='/assets/premio/card.png' width="100" height="58" alt='Titulo' />
-                                        </div>
-                                        <div className={styles.descripcionPremios}>
-                                            <h2 style={fontPeckham.style}>GIFT CARD <span style={fontMonserratBold.style}>S/200</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                                 <div className={styles.boxGanador}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="690" height="6" viewBox="0 0 690 6" fill="none">
