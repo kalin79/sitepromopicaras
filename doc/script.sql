@@ -80,7 +80,7 @@ Where codigo = 'DYE86ZMA'
 
 Select *
 From participante_codigo
-Where codigo_id = '5565319'
+Where codigo_id = '5482309'
 
 
 4412494
