@@ -48,7 +48,10 @@ const Ganadores = () => {
 
                         <div className={styles.subTitle}>
                             <p style={fontMonserratBold.style}>
-                                SORTEO 1: 09/10/2023
+                            ¡Ellos manifestaron y ganaron!
+                            </p>
+                            <p style={fontMonserratBold.style}>
+                                Primer sorteo: 09/10/2023
                             </p>
                         </div>
 

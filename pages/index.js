@@ -4,6 +4,8 @@ import Codigo from '../components/inicio/codigo'
 import DatosPersonales from '../components/inicio/datos-personales'
 import Gracias from '../components/inicio/gracias'
 
+import Ganadores from '../components/ganadores'
+
 import styles from  '../styles/sass/home.module.sass'
 export default function Home({agregarDato,datos,isuser,updateUser,page,updatePage,eliminarDatos}) {
   return (
@@ -14,7 +16,8 @@ export default function Home({agregarDato,datos,isuser,updateUser,page,updatePag
         >
             <div className={styles.homePage}>
                 <div className={styles.viewOverflow} id='viewOverflow'>
-                    { page === 1 &&
+                    <Ganadores />
+                    {/* { page === 1 &&
                         <Documento 
                             agregarDato={agregarDato} 
                             updateUser={updateUser}
@@ -41,7 +44,7 @@ export default function Home({agregarDato,datos,isuser,updateUser,page,updatePag
                             updatePage={updatePage}
                             eliminarDatos={eliminarDatos}
                         />
-                    }
+                    } */}
                 </div>
             </div>
         </Layout>
