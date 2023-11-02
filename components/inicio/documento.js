@@ -234,7 +234,7 @@ const Documento = ({agregarDato,updateUser,updatePage}) => {
                     </div>
                     <div className='fechaSorteo'>
                         {/* <Image src='/assets/FECHAS3.png' width='200' height='30' /> */}
-                        <img src='/assets/FECHAS3.png' />
+                        {/* <Image src='/assets/FECHAS3.png' /> */}
                     </div>
                 </div>
             </div>
