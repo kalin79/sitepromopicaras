@@ -76,7 +76,7 @@ HAVING count(*) > 1
 -- buscar un codigo en especifico
 Select *
 From codigos
-Where codigo = 'DYE86ZMA'
+Where codigo = '6CGZ89PQ'
 
 Select *
 From participante_codigo
